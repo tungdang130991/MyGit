@@ -1,0 +1,77 @@
+﻿/*
+Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.html or http://ckeditor.com/license
+*/
+
+body
+{
+	/* Font */
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 14px;
+
+	/* Text color */
+	color: #222;
+
+	/* Remove the background color to make it transparent */
+	background-color: #fff;
+	
+}
+
+ol,ul,dl
+{
+	/* IE7: reset rtl list margin. (#7334) */
+	*margin-right:0px;
+	/* preserved spaces for rtl list item bullets. (#6249)*/
+    padding-right:40px;
+}
+table
+{
+    margin:auto;
+}
+.Normal
+{
+	-x-system-font:none;
+	font-family:Arial !important;
+	word-spacing:1px;
+	text-align:left !important;
+	/*font-size:14px !important;/
+}
+p
+{	
+    -x-system-font:none;
+	font-family:Arial !important;
+	text-align:left !important;
+	word-spacing:1px;
+}
+p span
+{	
+    -x-system-font:none;
+	font-family:Arial !important;
+	/*font-size:14px !important;*/
+	text-align:left !important;
+	word-spacing:1px;
+}
+/*p
+{	
+    -x-system-font:none;
+	font-family:Arial !important;
+	text-align:left !important;
+	
+	word-spacing:1px;
+}*/
+.MsoNormal
+{	
+    -x-system-font:none;
+	text-align:left;
+	font-family:Arial !important;
+	/*font-size:14px !important;*/
+	word-spacing:1px;
+}
+.MsoListParagraphCxSpMiddle
+{	
+    -x-system-font:none;
+	font-family:Arial !important;
+	/*font-size:14px !important;*/
+	text-align:left !important;
+	word-spacing:1px;
+}

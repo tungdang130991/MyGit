@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5EA19E6B-1E26-448B-8DF8-B9647ECDBBB3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HPCInfo</RootNamespace>
+    <AssemblyName>HPCInfo</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="T_Anh.cs" />
+    <Compile Include="T_AnPham.cs" />
+    <Compile Include="T_AnPhamMau.cs" />
+    <Compile Include="T_AnPhamMau_Layout.cs" />
+    <Compile Include="T_Chucnang.cs" />
+    <Compile Include="T_Chucvu.cs" />
+    <Compile Include="T_ChuyenMuc.cs" />
+    <Compile Include="T_Congviec.cs" />
+    <Compile Include="T_Datbao.cs" />
+    <Compile Include="T_Doituong.cs" />
+    <Compile Include="T_File_Dinhkem.cs" />
+    <Compile Include="T_Hopdong.cs" />
+    <Compile Include="T_KhachHang.cs" />
+    <Compile Include="T_Kichthuoc.cs" />
+    <Compile Include="T_Layout.cs" />
+    <Compile Include="T_Layout_SoBao.cs" />
+    <Compile Include="T_LichsuThanhtoan.cs" />
+    <Compile Include="T_Lichsu_Thaotac_Hethong.cs" />
+    <Compile Include="T_Lichsu_Thaotac_TinBai.cs" />
+    <Compile Include="T_Lichsu_Truycap_Hethong.cs" />
+    <Compile Include="T_Nguoidung.cs" />
+    <Compile Include="T_Nguoidung_Chucnang.cs" />
+    <Compile Include="T_Nguoidung_Chuyenmuc.cs" />
+    <Compile Include="T_Nguoidung_Doituong.cs" />
+    <Compile Include="T_Nguoidung_Nhom.cs" />
+    <Compile Include="T_Nhom.cs" />
+    <Compile Include="T_Nhom_Chucnang.cs" />
+    <Compile Include="T_Nhom_Chuyenmuc.cs" />
+    <Compile Include="T_NhuanBut.cs" />
+    <Compile Include="T_Phathanh.cs" />
+    <Compile Include="T_PhienBan.cs" />
+    <Compile Include="T_Phienban_Anh.cs" />
+    <Compile Include="T_Phongban.cs" />
+    <Compile Include="T_QuangCao.cs" />
+    <Compile Include="T_QuangCao_Sobao.cs" />
+    <Compile Include="T_Quytrinh.cs" />
+    <Compile Include="T_Sobao.cs" />
+    <Compile Include="T_TinBai.cs" />
+    <Compile Include="T_Tinbai_Anh.cs" />
+    <Compile Include="T_Vitri_Congviec.cs" />
+    <Compile Include="T_Vitri_Quangcao.cs" />
+    <Compile Include="T_Vitri_Tinbai.cs" />
+    <Compile Include="T_Vung.cs" />
+    <Compile Include="T_Yeucau.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Prev_Template.cs" />
+    <Compile Include="T_ActionHistory.cs" />
+    <Compile Include="T_AdsPos.cs" />
+    <Compile Include="T_Album_Categories.cs" />
+    <Compile Include="T_Album_Photo.cs" />
+    <Compile Include="T_Allotment.cs" />
+    <Compile Include="T_AutoSave.cs" />
+    <Compile Include="T_AutoSaves.cs" />
+    <Compile Include="T_Butdanh.cs" />
+    <Compile Include="T_Customers.cs" />
+    <Compile Include="T_Customer_Ads.cs" />
+    <Compile Include="T_FileQuangCao.cs" />
+    <Compile Include="T_Idiea.cs" />
+    <Compile Include="T_IdieaVersion.cs" />
+    <Compile Include="T_ImageFiles.cs" />
+    <Compile Include="T_Logo.cs" />
+    <Compile Include="T_Multimedia.cs" />
+    <Compile Include="T_News.cs" />
+    <Compile Include="T_NewsVersion.cs" />
+    <Compile Include="T_NgonNgu.cs" />
+    <Compile Include="T_PhienBanQuangCao.cs" />
+    <Compile Include="T_Photo_Event.cs" />
+    <Compile Include="T_Publish_Pdf.cs" />
+    <Compile Include="T_Publish_QuangCao.cs" />
+    <Compile Include="T_RolePermission.cs" />
+    <Compile Include="T_Ten_Quytrinh.cs" />
+    <Compile Include="T_Tulieu.cs" />
+    <Compile Include="T_UserLogin.cs" />
+    <Compile Include="T_WebLinks.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

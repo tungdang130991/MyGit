@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D80B035B-A0C5-4ED5-B4CB-B94949D782E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HPCBusinessLogic</RootNamespace>
+    <AssemblyName>HPCBusinessLogic</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SSOLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ToasoanTTXVN\DLL\SSOLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\ActionHistoryDAL.cs" />
+    <Compile Include="DAL\AdsPosDAL.cs" />
+    <Compile Include="DAL\AnhDAL.cs" />
+    <Compile Include="DAL\AnPhamDAL.cs" />
+    <Compile Include="DAL\AnPhamMauDAL.cs" />
+    <Compile Include="DAL\AnPhamMau_LayoutDAL.cs" />
+    <Compile Include="DAL\AutoSavesDAL.cs" />
+    <Compile Include="DAL\ChucnangDAL.cs" />
+    <Compile Include="DAL\ChuyenmucDAL.cs" />
+    <Compile Include="DAL\PreviewTemplateDAL.cs" />
+    <Compile Include="DAL\DatbaoDAL.cs" />
+    <Compile Include="DAL\HopdongDAL.cs" />
+    <Compile Include="DAL\ImageFilesDAL.cs" />
+    <Compile Include="DAL\Layout_SobaoDAL.cs" />
+    <Compile Include="DAL\LichsuthanhtoanDAL.cs" />
+    <Compile Include="DAL\LoginChatDAL.cs" />
+    <Compile Include="DAL\NgonNgu_DAL.cs" />
+    <Compile Include="DAL\NhuanbutDAL.cs" />
+    <Compile Include="DAL\PhathanhDAL.cs" />
+    <Compile Include="DAL\PhongBan_DAL.cs" />
+    <Compile Include="DAL\QuangCaoDAL.cs" />
+    <Compile Include="DAL\TenQuyTrinh_DAL.cs" />
+    <Compile Include="DAL\TinBaiAnhDAL.cs" />
+    <Compile Include="DAL\T_Album_CategoriesDAL.cs" />
+    <Compile Include="DAL\T_Album_PhotoDAL.cs" />
+    <Compile Include="DAL\T_AllotmentDAL.cs" />
+    <Compile Include="DAL\T_AutoSave_DAL.cs" />
+    <Compile Include="DAL\T_BaoCao.cs" />
+    <Compile Include="DAL\T_ButdanhDAL.cs" />
+    <Compile Include="DAL\T_CustomersDAL.cs" />
+    <Compile Include="DAL\T_Customer_AdsDAL.cs" />
+    <Compile Include="DAL\T_IdieaDAL.cs" />
+    <Compile Include="DAL\T_LichsuthaotactinbaiDAL.cs" />
+    <Compile Include="DAL\T_LogoDAL.cs" />
+    <Compile Include="DAL\T_MultimediaDAL.cs" />
+    <Compile Include="DAL\T_NewsDAL.cs" />
+    <Compile Include="DAL\T_Photo_EventDAL.cs" />
+    <Compile Include="DAL\T_WebLinksDAL.cs" />
+    <Compile Include="DAL\VitriTinbaiDAL.cs" />
+    <Compile Include="DAL\YeucauDAL.cs" />
+    <Compile Include="DAL\CongviecDAL.cs" />
+    <Compile Include="DAL\DoituongDAL.cs" />
+    <Compile Include="DAL\KhachhangDAL.cs" />
+    <Compile Include="DAL\KichthuocDAL.cs" />
+    <Compile Include="DAL\LayoutDAL.cs" />
+    <Compile Include="DAL\Lichsu_Thaotac_HethongDAL.cs" />
+    <Compile Include="DAL\Lichsu_Truycap_HethongDAL.cs" />
+    <Compile Include="DAL\NguoidungDAL.cs" />
+    <Compile Include="DAL\NhomDAL.cs" />
+    <Compile Include="DAL\QuyTrinhDAL.cs" />
+    <Compile Include="DAL\SobaoDAL.cs" />
+    <Compile Include="DAL\TinBaiDAL.cs" />
+    <Compile Include="DAL\UltilFuncDAL.cs" />
+    <Compile Include="DAL\NguoidungChucnangDAL.cs" />
+    <Compile Include="DAL\Utils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HPCInfo\HPCInfo.csproj">
+      <Project>{5EA19E6B-1E26-448B-8DF8-B9647ECDBBB3}</Project>
+      <Name>HPCInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HPCServerDataAccess\HPCServerDataAccess.csproj">
+      <Project>{137C5DF9-0B1A-4033-8A0F-C1893F29453E}</Project>
+      <Name>HPCServerDataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HPCShareDLL\HPCShareDLL.csproj">
+      <Project>{91BE61C0-204F-4CE4-9BA0-F382DF672D6A}</Project>
+      <Name>HPCShareDLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

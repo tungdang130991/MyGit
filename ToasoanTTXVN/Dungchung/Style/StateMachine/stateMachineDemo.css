@@ -1,0 +1,222 @@
+#demo {
+	margin-top:5em;
+}
+
+.w { 
+	min-width:10em;
+	padding:0.8em;
+	position:absolute;
+	border: 1px solid #1E90FF;
+	z-index:4;
+	border-radius:1em;
+	border:1px solid #00BFFF;
+    box-shadow: 2px 2px 19px #e0e0e0;
+   -o-box-shadow: 2px 2px 19px #e0e0e0;
+   -webkit-box-shadow: 2px 2px 19px #e0e0e0;
+   -moz-box-shadow: 2px 2px 19px #e0e0e0;
+    -moz-border-radius:0.5em;
+    border-radius:0.5em;
+    opacity:0.8;
+    filter:alpha(opacity=80);
+    cursor:move;
+    color:#1E90FF;
+    text-align:center;
+    font-family: arial;
+    font-weight: bold;
+    background: #F0F8FF;
+}
+
+.w:hover 
+{
+    color:#FF8C00;
+    border:1px dotted #FFA500;
+    box-shadow: 2px 2px 19px #FF8C00;
+   -o-box-shadow: 2px 2px 19px #FF8C00;
+   -webkit-box-shadow: 2px 2px 19px #FF8C00;
+   -moz-box-shadow: 2px 2px 19px #fff;
+    opacity:0.9;
+    filter:alpha(opacity=90);
+    background: #FFFFFF;
+}
+
+/*.aLabel {
+	background-color:white;
+	opacity:0.8;
+	padding:0.3em;				
+}*/
+.aLabel {
+    background-color:white; 
+    padding:0.4em; 
+    font:12px sans-serif; 
+    color:#444;
+    z-index:21;
+    border:1px dotted gray;
+    opacity:0.8;
+    filter:alpha(opacity=80);
+    min-width:80px;
+    text-align:center;
+}
+.aLabel:hover {
+    color:#D2691E;
+    border:1px dotted Orange;
+}
+
+.ep {
+	float:left;
+	width:17px;
+	height:17px;
+	cursor:pointer;
+	margin-right:5px;
+	background:url("../../Images/circle_blue.png") no-repeat scroll 1px transparent;
+	display:inline;
+}
+.ep:hover
+{
+	background:url("../../Images/circle_orange.png") no-repeat scroll 1px transparent;
+	cursor:pointer;
+}
+.delItem
+{
+    float:right;
+	width:17px;
+	height:17px;
+	cursor:pointer;
+	margin-left:5px;
+	background:url("../../Images/delete.gif") no-repeat scroll 1px transparent;
+	display:inline;
+	z-index:10;
+}
+.delItem:hover
+{
+    background:url("../Layout/Delitem.png") no-repeat scroll 1px transparent;
+}
+
+._jsPlumb_endpoint {
+	z-index:3;
+}
+/*	._jsPlumb_connector { border:1px solid red; }
+
+#PV {
+	left:17em;
+	top:5em;
+}
+
+#TPBT {
+	left:1em;
+	top:12em;
+	width:7em;
+}
+#TKTS {
+	left:7em;
+	top:22em;
+}
+#KT {
+	left:27em;
+	top:22em;
+}
+#TLBT {
+	left:35em;
+	top:14em;
+}*/
+.dragHover { border:1px dotted red; }
+
+path { cursor:pointer; }
+.savePosition
+{
+    background: url("../../Images/save1.png") no-repeat scroll 1px transparent;
+    border: 0px;
+    color: #777777;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    width:100px;
+    display:inline;
+    min-height:18px;
+    text-align:right; 
+}
+.savePosition:hover
+{
+    color : #FF8C00;
+}
+.addNew
+{
+    background: url("../../Images/add_green.png") no-repeat scroll 1px transparent;
+    border: 0px;
+    color: #777777;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    width:195px;
+    display:inline;
+    min-height:18px;
+    text-align:right;      
+}
+.addNew:hover
+{
+    background: url("../../Images/add_orange.png") no-repeat scroll 1px transparent;
+    color : #FF8C00;
+}
+.addNewDT
+{
+    background: url("../../Images/add_blue.png") no-repeat scroll 1px transparent;
+    border: 0px;
+    color: #777777;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    width:auto;
+    display:inline;
+    min-height:18px;
+    text-align:right;      
+}
+.addNewDT:hover
+{
+    background: url("../../Images/add_orange.png") no-repeat scroll 1px transparent;
+    color : #FF8C00;
+}
+.exitQT
+{
+    background: url("../../Images/Exit1.png") no-repeat scroll 1px transparent;
+    border: 0px;
+    color: #777777;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    width:61px;
+    display:inline;
+    min-height:18px;
+    text-align:right;  
+}
+.exitQT:hover
+{
+    /*background: url("../../Images/Power__Yellow.png") no-repeat scroll 1px transparent;*/
+    color : #FF8C00;
+}
+.resetQT
+{
+    background: url("../../Style/Layout/Refresh-icon.png") no-repeat scroll 1px transparent;
+    border: 0px;
+    color: #777777;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+    width:93px;
+    display:none;
+    min-height:18px;
+    text-align:right;                  
+}
+.resetQT:hover
+{
+    color : #FF8C00;
+}
+.space {
+    background: url("../../Images/spacebtn.png") no-repeat scroll center top transparent;
+    height: 16px;
+    margin: 8px 7px 0;
+    width: 2px;
+}

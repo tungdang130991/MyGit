@@ -1,0 +1,1295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ipClient" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userNameClient" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="displayNameClient" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="loginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginResult" type="tns:LoginResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LoginResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="isAuthenticated" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="authenticationTicket" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="authenticationResult" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="logout">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationTicket" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="logoutResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="checkExpired">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationTicket" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkExpiredResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="checkExpiredResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListContent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationTicket" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListContentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListContentResult" type="tns:ListContent" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ListContent">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="isExpired" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="listTypeInfo" type="tns:ArrayOfTypeInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="listLanguage" type="tns:ArrayOfLanguage" />
+          <s:element minOccurs="0" maxOccurs="1" name="listProduct" type="tns:ArrayOfProduct" />
+          <s:element minOccurs="0" maxOccurs="1" name="listCategory" type="tns:ArrayOfCategory" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTypeInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TypeInfo" nillable="true" type="tns:TypeInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TypeInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TypeID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfLanguage">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Language" nillable="true" type="tns:Language" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Language">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="LanguageID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LanguageName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TypeID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProductID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProduct">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Product" nillable="true" type="tns:Product" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Product">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ProductID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LanguageID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LanguageName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TypeID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCategory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Category" nillable="true" type="tns:Category" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Category">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CategoryID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CategoryName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProductID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TypeID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LanguageID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LanguageName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getListType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationTicket" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListTypeResult" type="tns:ListContent" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListLanguage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationTicket" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListLanguageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListLanguageResult" type="tns:ListContent" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListProduct">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationTicket" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListProductResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListProductResult" type="tns:ListContent" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationTicket" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListCategoryResult" type="tns:ListContent" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListSearchNews">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationTicket" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="typeID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="languageID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="productID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="categoryID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="search" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListSearchNewsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListSearchNewsResult" type="tns:ListNews" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ListNews">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="listNews" type="tns:ArrayOfObjectNews" />
+          <s:element minOccurs="1" maxOccurs="1" name="total" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfObjectNews">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ObjectNews" nillable="true" type="tns:ObjectNews" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ObjectNews">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Index" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Summary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Content" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Author" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProductID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CategoryID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CategoryName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateCreate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalWord" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getContentNewsByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationTicket" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="productID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getContentNewsByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getContentNewsByIDResult" type="tns:ObjectNews" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getContentImageByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationTicket" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="productID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getContentImageByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getContentImageByIDResult" type="tns:ObjectImage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ObjectImage">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Index" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Summary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImageThumb" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImageThumbString" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dataBinary" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Author" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="URLImg" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProductID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CategoryID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CategoryName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateCreate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getListSearchImages">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationTicket" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="typeID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="languageID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="productID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="categoryID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="search" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getListSearchImagesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getListSearchImagesResult" type="tns:ListImage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ListImage">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="listImage" type="tns:ArrayOfObjectImage" />
+          <s:element minOccurs="1" maxOccurs="1" name="total" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfObjectImage">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ObjectImage" nillable="true" type="tns:ObjectImage" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdatePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationTicket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passwordOld" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passwordNew" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdatePasswordResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResult" nillable="true" type="tns:LoginResult" />
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="ListContent" nillable="true" type="tns:ListContent" />
+      <s:element name="ListNews" nillable="true" type="tns:ListNews" />
+      <s:element name="ObjectNews" nillable="true" type="tns:ObjectNews" />
+      <s:element name="ObjectImage" nillable="true" type="tns:ObjectImage" />
+      <s:element name="ListImage" nillable="true" type="tns:ListImage" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="loginSoapIn">
+    <wsdl:part name="parameters" element="tns:login" />
+  </wsdl:message>
+  <wsdl:message name="loginSoapOut">
+    <wsdl:part name="parameters" element="tns:loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="logoutSoapIn">
+    <wsdl:part name="parameters" element="tns:logout" />
+  </wsdl:message>
+  <wsdl:message name="logoutSoapOut">
+    <wsdl:part name="parameters" element="tns:logoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkExpiredSoapIn">
+    <wsdl:part name="parameters" element="tns:checkExpired" />
+  </wsdl:message>
+  <wsdl:message name="checkExpiredSoapOut">
+    <wsdl:part name="parameters" element="tns:checkExpiredResponse" />
+  </wsdl:message>
+  <wsdl:message name="getListContentSoapIn">
+    <wsdl:part name="parameters" element="tns:getListContent" />
+  </wsdl:message>
+  <wsdl:message name="getListContentSoapOut">
+    <wsdl:part name="parameters" element="tns:getListContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="getListTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:getListType" />
+  </wsdl:message>
+  <wsdl:message name="getListTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:getListTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="getListLanguageSoapIn">
+    <wsdl:part name="parameters" element="tns:getListLanguage" />
+  </wsdl:message>
+  <wsdl:message name="getListLanguageSoapOut">
+    <wsdl:part name="parameters" element="tns:getListLanguageResponse" />
+  </wsdl:message>
+  <wsdl:message name="getListProductSoapIn">
+    <wsdl:part name="parameters" element="tns:getListProduct" />
+  </wsdl:message>
+  <wsdl:message name="getListProductSoapOut">
+    <wsdl:part name="parameters" element="tns:getListProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="getListCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:getListCategory" />
+  </wsdl:message>
+  <wsdl:message name="getListCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:getListCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="getListSearchNewsSoapIn">
+    <wsdl:part name="parameters" element="tns:getListSearchNews" />
+  </wsdl:message>
+  <wsdl:message name="getListSearchNewsSoapOut">
+    <wsdl:part name="parameters" element="tns:getListSearchNewsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getContentNewsByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getContentNewsByID" />
+  </wsdl:message>
+  <wsdl:message name="getContentNewsByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getContentNewsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getContentImageByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getContentImageByID" />
+  </wsdl:message>
+  <wsdl:message name="getContentImageByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getContentImageByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getListSearchImagesSoapIn">
+    <wsdl:part name="parameters" element="tns:getListSearchImages" />
+  </wsdl:message>
+  <wsdl:message name="getListSearchImagesSoapOut">
+    <wsdl:part name="parameters" element="tns:getListSearchImagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePassword" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="loginHttpGetIn">
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="ipClient" type="s:string" />
+    <wsdl:part name="userNameClient" type="s:string" />
+    <wsdl:part name="displayNameClient" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="loginHttpGetOut">
+    <wsdl:part name="Body" element="tns:LoginResult" />
+  </wsdl:message>
+  <wsdl:message name="logoutHttpGetIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="logoutHttpGetOut" />
+  <wsdl:message name="checkExpiredHttpGetIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="checkExpiredHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="getListContentHttpGetIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getListContentHttpGetOut">
+    <wsdl:part name="Body" element="tns:ListContent" />
+  </wsdl:message>
+  <wsdl:message name="getListTypeHttpGetIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getListTypeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ListContent" />
+  </wsdl:message>
+  <wsdl:message name="getListLanguageHttpGetIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getListLanguageHttpGetOut">
+    <wsdl:part name="Body" element="tns:ListContent" />
+  </wsdl:message>
+  <wsdl:message name="getListProductHttpGetIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getListProductHttpGetOut">
+    <wsdl:part name="Body" element="tns:ListContent" />
+  </wsdl:message>
+  <wsdl:message name="getListCategoryHttpGetIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getListCategoryHttpGetOut">
+    <wsdl:part name="Body" element="tns:ListContent" />
+  </wsdl:message>
+  <wsdl:message name="getListSearchNewsHttpGetIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+    <wsdl:part name="typeID" type="s:string" />
+    <wsdl:part name="languageID" type="s:string" />
+    <wsdl:part name="productID" type="s:string" />
+    <wsdl:part name="categoryID" type="s:string" />
+    <wsdl:part name="pageIndex" type="s:string" />
+    <wsdl:part name="pageSize" type="s:string" />
+    <wsdl:part name="fromDate" type="s:string" />
+    <wsdl:part name="toDate" type="s:string" />
+    <wsdl:part name="search" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getListSearchNewsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ListNews" />
+  </wsdl:message>
+  <wsdl:message name="getContentNewsByIDHttpGetIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+    <wsdl:part name="productID" type="s:string" />
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getContentNewsByIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:ObjectNews" />
+  </wsdl:message>
+  <wsdl:message name="getContentImageByIDHttpGetIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+    <wsdl:part name="productID" type="s:string" />
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getContentImageByIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:ObjectImage" />
+  </wsdl:message>
+  <wsdl:message name="getListSearchImagesHttpGetIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+    <wsdl:part name="typeID" type="s:string" />
+    <wsdl:part name="languageID" type="s:string" />
+    <wsdl:part name="productID" type="s:string" />
+    <wsdl:part name="categoryID" type="s:string" />
+    <wsdl:part name="pageIndex" type="s:string" />
+    <wsdl:part name="pageSize" type="s:string" />
+    <wsdl:part name="fromDate" type="s:string" />
+    <wsdl:part name="toDate" type="s:string" />
+    <wsdl:part name="search" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getListSearchImagesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ListImage" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePasswordHttpGetIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="passwordOld" type="s:string" />
+    <wsdl:part name="passwordNew" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePasswordHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="loginHttpPostIn">
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="ipClient" type="s:string" />
+    <wsdl:part name="userNameClient" type="s:string" />
+    <wsdl:part name="displayNameClient" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="loginHttpPostOut">
+    <wsdl:part name="Body" element="tns:LoginResult" />
+  </wsdl:message>
+  <wsdl:message name="logoutHttpPostIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="logoutHttpPostOut" />
+  <wsdl:message name="checkExpiredHttpPostIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="checkExpiredHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="getListContentHttpPostIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getListContentHttpPostOut">
+    <wsdl:part name="Body" element="tns:ListContent" />
+  </wsdl:message>
+  <wsdl:message name="getListTypeHttpPostIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getListTypeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ListContent" />
+  </wsdl:message>
+  <wsdl:message name="getListLanguageHttpPostIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getListLanguageHttpPostOut">
+    <wsdl:part name="Body" element="tns:ListContent" />
+  </wsdl:message>
+  <wsdl:message name="getListProductHttpPostIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getListProductHttpPostOut">
+    <wsdl:part name="Body" element="tns:ListContent" />
+  </wsdl:message>
+  <wsdl:message name="getListCategoryHttpPostIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getListCategoryHttpPostOut">
+    <wsdl:part name="Body" element="tns:ListContent" />
+  </wsdl:message>
+  <wsdl:message name="getListSearchNewsHttpPostIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+    <wsdl:part name="typeID" type="s:string" />
+    <wsdl:part name="languageID" type="s:string" />
+    <wsdl:part name="productID" type="s:string" />
+    <wsdl:part name="categoryID" type="s:string" />
+    <wsdl:part name="pageIndex" type="s:string" />
+    <wsdl:part name="pageSize" type="s:string" />
+    <wsdl:part name="fromDate" type="s:string" />
+    <wsdl:part name="toDate" type="s:string" />
+    <wsdl:part name="search" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getListSearchNewsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ListNews" />
+  </wsdl:message>
+  <wsdl:message name="getContentNewsByIDHttpPostIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+    <wsdl:part name="productID" type="s:string" />
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getContentNewsByIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:ObjectNews" />
+  </wsdl:message>
+  <wsdl:message name="getContentImageByIDHttpPostIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+    <wsdl:part name="productID" type="s:string" />
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getContentImageByIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:ObjectImage" />
+  </wsdl:message>
+  <wsdl:message name="getListSearchImagesHttpPostIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+    <wsdl:part name="typeID" type="s:string" />
+    <wsdl:part name="languageID" type="s:string" />
+    <wsdl:part name="productID" type="s:string" />
+    <wsdl:part name="categoryID" type="s:string" />
+    <wsdl:part name="pageIndex" type="s:string" />
+    <wsdl:part name="pageSize" type="s:string" />
+    <wsdl:part name="fromDate" type="s:string" />
+    <wsdl:part name="toDate" type="s:string" />
+    <wsdl:part name="search" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getListSearchImagesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ListImage" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePasswordHttpPostIn">
+    <wsdl:part name="authenticationTicket" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="passwordOld" type="s:string" />
+    <wsdl:part name="passwordNew" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePasswordHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="login">
+      <wsdl:input message="tns:loginSoapIn" />
+      <wsdl:output message="tns:loginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <wsdl:input message="tns:logoutSoapIn" />
+      <wsdl:output message="tns:logoutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkExpired">
+      <wsdl:input message="tns:checkExpiredSoapIn" />
+      <wsdl:output message="tns:checkExpiredSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListContent">
+      <wsdl:input message="tns:getListContentSoapIn" />
+      <wsdl:output message="tns:getListContentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListType">
+      <wsdl:input message="tns:getListTypeSoapIn" />
+      <wsdl:output message="tns:getListTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListLanguage">
+      <wsdl:input message="tns:getListLanguageSoapIn" />
+      <wsdl:output message="tns:getListLanguageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListProduct">
+      <wsdl:input message="tns:getListProductSoapIn" />
+      <wsdl:output message="tns:getListProductSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListCategory">
+      <wsdl:input message="tns:getListCategorySoapIn" />
+      <wsdl:output message="tns:getListCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListSearchNews">
+      <wsdl:input message="tns:getListSearchNewsSoapIn" />
+      <wsdl:output message="tns:getListSearchNewsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getContentNewsByID">
+      <wsdl:input message="tns:getContentNewsByIDSoapIn" />
+      <wsdl:output message="tns:getContentNewsByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getContentImageByID">
+      <wsdl:input message="tns:getContentImageByIDSoapIn" />
+      <wsdl:output message="tns:getContentImageByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListSearchImages">
+      <wsdl:input message="tns:getListSearchImagesSoapIn" />
+      <wsdl:output message="tns:getListSearchImagesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <wsdl:input message="tns:UpdatePasswordSoapIn" />
+      <wsdl:output message="tns:UpdatePasswordSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebService1HttpGet">
+    <wsdl:operation name="login">
+      <wsdl:input message="tns:loginHttpGetIn" />
+      <wsdl:output message="tns:loginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <wsdl:input message="tns:logoutHttpGetIn" />
+      <wsdl:output message="tns:logoutHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkExpired">
+      <wsdl:input message="tns:checkExpiredHttpGetIn" />
+      <wsdl:output message="tns:checkExpiredHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListContent">
+      <wsdl:input message="tns:getListContentHttpGetIn" />
+      <wsdl:output message="tns:getListContentHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListType">
+      <wsdl:input message="tns:getListTypeHttpGetIn" />
+      <wsdl:output message="tns:getListTypeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListLanguage">
+      <wsdl:input message="tns:getListLanguageHttpGetIn" />
+      <wsdl:output message="tns:getListLanguageHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListProduct">
+      <wsdl:input message="tns:getListProductHttpGetIn" />
+      <wsdl:output message="tns:getListProductHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListCategory">
+      <wsdl:input message="tns:getListCategoryHttpGetIn" />
+      <wsdl:output message="tns:getListCategoryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListSearchNews">
+      <wsdl:input message="tns:getListSearchNewsHttpGetIn" />
+      <wsdl:output message="tns:getListSearchNewsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getContentNewsByID">
+      <wsdl:input message="tns:getContentNewsByIDHttpGetIn" />
+      <wsdl:output message="tns:getContentNewsByIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getContentImageByID">
+      <wsdl:input message="tns:getContentImageByIDHttpGetIn" />
+      <wsdl:output message="tns:getContentImageByIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListSearchImages">
+      <wsdl:input message="tns:getListSearchImagesHttpGetIn" />
+      <wsdl:output message="tns:getListSearchImagesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <wsdl:input message="tns:UpdatePasswordHttpGetIn" />
+      <wsdl:output message="tns:UpdatePasswordHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebService1HttpPost">
+    <wsdl:operation name="login">
+      <wsdl:input message="tns:loginHttpPostIn" />
+      <wsdl:output message="tns:loginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <wsdl:input message="tns:logoutHttpPostIn" />
+      <wsdl:output message="tns:logoutHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkExpired">
+      <wsdl:input message="tns:checkExpiredHttpPostIn" />
+      <wsdl:output message="tns:checkExpiredHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListContent">
+      <wsdl:input message="tns:getListContentHttpPostIn" />
+      <wsdl:output message="tns:getListContentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListType">
+      <wsdl:input message="tns:getListTypeHttpPostIn" />
+      <wsdl:output message="tns:getListTypeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListLanguage">
+      <wsdl:input message="tns:getListLanguageHttpPostIn" />
+      <wsdl:output message="tns:getListLanguageHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListProduct">
+      <wsdl:input message="tns:getListProductHttpPostIn" />
+      <wsdl:output message="tns:getListProductHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListCategory">
+      <wsdl:input message="tns:getListCategoryHttpPostIn" />
+      <wsdl:output message="tns:getListCategoryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListSearchNews">
+      <wsdl:input message="tns:getListSearchNewsHttpPostIn" />
+      <wsdl:output message="tns:getListSearchNewsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getContentNewsByID">
+      <wsdl:input message="tns:getContentNewsByIDHttpPostIn" />
+      <wsdl:output message="tns:getContentNewsByIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getContentImageByID">
+      <wsdl:input message="tns:getContentImageByIDHttpPostIn" />
+      <wsdl:output message="tns:getContentImageByIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getListSearchImages">
+      <wsdl:input message="tns:getListSearchImagesHttpPostIn" />
+      <wsdl:output message="tns:getListSearchImagesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <wsdl:input message="tns:UpdatePasswordHttpPostIn" />
+      <wsdl:output message="tns:UpdatePasswordHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="login">
+      <soap:operation soapAction="http://tempuri.org/login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <soap:operation soapAction="http://tempuri.org/logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkExpired">
+      <soap:operation soapAction="http://tempuri.org/checkExpired" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListContent">
+      <soap:operation soapAction="http://tempuri.org/getListContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListType">
+      <soap:operation soapAction="http://tempuri.org/getListType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListLanguage">
+      <soap:operation soapAction="http://tempuri.org/getListLanguage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListProduct">
+      <soap:operation soapAction="http://tempuri.org/getListProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListCategory">
+      <soap:operation soapAction="http://tempuri.org/getListCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListSearchNews">
+      <soap:operation soapAction="http://tempuri.org/getListSearchNews" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getContentNewsByID">
+      <soap:operation soapAction="http://tempuri.org/getContentNewsByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getContentImageByID">
+      <soap:operation soapAction="http://tempuri.org/getContentImageByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListSearchImages">
+      <soap:operation soapAction="http://tempuri.org/getListSearchImages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <soap:operation soapAction="http://tempuri.org/UpdatePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="login">
+      <soap12:operation soapAction="http://tempuri.org/login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <soap12:operation soapAction="http://tempuri.org/logout" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkExpired">
+      <soap12:operation soapAction="http://tempuri.org/checkExpired" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListContent">
+      <soap12:operation soapAction="http://tempuri.org/getListContent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListType">
+      <soap12:operation soapAction="http://tempuri.org/getListType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListLanguage">
+      <soap12:operation soapAction="http://tempuri.org/getListLanguage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListProduct">
+      <soap12:operation soapAction="http://tempuri.org/getListProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListCategory">
+      <soap12:operation soapAction="http://tempuri.org/getListCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListSearchNews">
+      <soap12:operation soapAction="http://tempuri.org/getListSearchNews" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getContentNewsByID">
+      <soap12:operation soapAction="http://tempuri.org/getContentNewsByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getContentImageByID">
+      <soap12:operation soapAction="http://tempuri.org/getContentImageByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListSearchImages">
+      <soap12:operation soapAction="http://tempuri.org/getListSearchImages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <soap12:operation soapAction="http://tempuri.org/UpdatePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1HttpGet" type="tns:WebService1HttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="login">
+      <http:operation location="/login" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <http:operation location="/logout" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="checkExpired">
+      <http:operation location="/checkExpired" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListContent">
+      <http:operation location="/getListContent" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListType">
+      <http:operation location="/getListType" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListLanguage">
+      <http:operation location="/getListLanguage" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListProduct">
+      <http:operation location="/getListProduct" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListCategory">
+      <http:operation location="/getListCategory" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListSearchNews">
+      <http:operation location="/getListSearchNews" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getContentNewsByID">
+      <http:operation location="/getContentNewsByID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getContentImageByID">
+      <http:operation location="/getContentImageByID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListSearchImages">
+      <http:operation location="/getListSearchImages" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <http:operation location="/UpdatePassword" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1HttpPost" type="tns:WebService1HttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="login">
+      <http:operation location="/login" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <http:operation location="/logout" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="checkExpired">
+      <http:operation location="/checkExpired" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListContent">
+      <http:operation location="/getListContent" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListType">
+      <http:operation location="/getListType" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListLanguage">
+      <http:operation location="/getListLanguage" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListProduct">
+      <http:operation location="/getListProduct" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListCategory">
+      <http:operation location="/getListCategory" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListSearchNews">
+      <http:operation location="/getListSearchNews" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getContentNewsByID">
+      <http:operation location="/getContentNewsByID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getContentImageByID">
+      <http:operation location="/getContentImageByID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getListSearchImages">
+      <http:operation location="/getListSearchImages" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <http:operation location="/UpdatePassword" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="http://hp.search.vnanet.vn/webservice1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="http://hp.search.vnanet.vn/webservice1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1HttpGet" binding="tns:WebService1HttpGet">
+      <http:address location="http://hp.search.vnanet.vn/webservice1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1HttpPost" binding="tns:WebService1HttpPost">
+      <http:address location="http://hp.search.vnanet.vn/webservice1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

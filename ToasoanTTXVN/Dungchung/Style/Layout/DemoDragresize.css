@@ -1,0 +1,849 @@
+﻿.drsElement
+{
+    min-width: 10em;
+    padding: 0.7em;
+    position: absolute;
+    border: 1px solid #1E90FF;
+    z-index: 4;
+    border-radius: 1em;
+    border: 1px solid #00BFFF;
+    box-shadow: 2px 2px 19px #e0e0e0;
+    -o-box-shadow: 2px 2px 19px #e0e0e0;
+    -webkit-box-shadow: 2px 2px 19px #e0e0e0;
+    -moz-box-shadow: 2px 2px 19px #e0e0e0;
+    -moz-border-radius: 0.5em;
+    border-radius: 0.5em;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    cursor: move;
+    color: #1E90FF;
+    text-align: center;
+    font-family: arial;
+    font-weight: bold;
+    z-index: 3000 !important;
+    background: #F0F8FF; /*them*/
+    left: 20px;
+    top: 40px;
+    width: 180px;
+    height: 200px;
+}
+.drsElement:hover
+{
+    color: #FF8C00;
+    border: 1px dotted #FFA500;
+    box-shadow: 2px 2px 19px #FF8C00;
+    -o-box-shadow: 2px 2px 19px #FF8C00;
+    -webkit-box-shadow: 2px 2px 19px #FF8C00;
+    -moz-box-shadow: 2px 2px 19px #fff;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}
+
+.drsMoveHandle
+{
+    height: 24px;
+    width: 100%;
+    background-color: #00BFFF;
+    border-bottom: 1px solid #9a9a9a;
+    cursor: move;
+    border-radius: 0.5em 0.5em 0em 0;
+}
+.drsMoveHandle:hover
+{
+    background-color: #FF9719;
+}
+.MoveCustom
+{
+    height: 70px;
+    background-color: White;
+}
+.txtArear
+{
+    height: 75%;
+    width: 97%;
+    border: 0;
+    cursor: text;
+    position: absolute;
+    top: 24px;
+    left: 3px;
+}
+.divtextclass
+{
+    /*height: 75%;             width: 97%;*/
+    border: 0;
+    cursor: text;
+    text-align: left;
+    float: left;
+    width: 100%;
+}
+.divtextclassTitle
+{
+    margin: 7px 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.divtextclassTitle span
+{
+    font-size: 11px;
+    font-style: italic;
+    color: #2f2f2d;
+}
+.divtextclassDes
+{
+    margin-left: 5px;
+    font-style: italic;
+}
+.divtextclassDes span
+{
+    font-size: 11px;
+    font-weight: bold;
+    color: #2f2f2d;
+}
+
+/*Set style backgroung color*/
+.StatusBgColorChoXL
+{
+    background-color: #ffcc01;
+}
+/*chờ xử lý*/
+.StatusBgColorDangXL
+{
+    background-color: Aqua;
+}
+/*đang xử lý*/
+.StatusBgColorTraLai
+{
+    background-color: #ffcc00;
+}
+/*Trả lại*/
+.StatusBgColorXuatBan
+{
+    background-color: #47c603;
+}
+/*xuất bản*/
+.StatusBgColorChuabai
+{
+    background-color: #ff0000;
+}
+/*Chưa có bài*/
+
+.drsDiv_removeChild
+{
+    width: 18px;
+    height: 10px;
+    background: url("Delete_en1.png") no-repeat scroll left top transparent;
+    border: 0;
+    position: absolute;
+    top: -1px;
+    left: 45%;
+    cursor: pointer;
+}
+.dragresize
+{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    font-size: 1px;
+    background: #EEE;
+    border: 1px solid #333;
+}
+.dragresize-tl
+{
+    top: -8px;
+    left: -8px;
+    cursor: nw-resize;
+}
+.dragresize-tm
+{
+    top: -8px;
+    left: 50%;
+    margin-left: -4px;
+    cursor: n-resize;
+}
+.dragresize-tr
+{
+    top: -8px;
+    right: -8px;
+    cursor: ne-resize;
+}
+.dragresize-ml
+{
+    top: 50%;
+    margin-top: -4px;
+    left: -8px;
+    cursor: w-resize;
+}
+.dragresize-mr
+{
+    top: 50%;
+    margin-top: -4px;
+    right: -8px;
+    cursor: e-resize;
+}
+.dragresize-bl
+{
+    bottom: -8px;
+    left: -8px;
+    cursor: sw-resize;
+}
+.dragresize-bm
+{
+    bottom: -8px;
+    left: 50%;
+    margin-left: -4px;
+    cursor: s-resize;
+}
+.dragresize-br
+{
+    bottom: -8px;
+    right: -8px;
+    cursor: se-resize;
+}
+.buttonHandle
+{
+    text-decoration: none;
+    font-weight: bold;
+    color: #003466;
+    padding-right: 7px;
+}
+.buttonHandle:hover
+{
+    color: #006eff;
+}
+.MainWorking
+{
+    width: 100%;
+    float: left;
+    position: relative;
+}
+.Canvas
+{
+    width: 1050px;
+    height: 1110px;
+    background-color: #a2aabb;
+    float: right;
+    border-right: solid 1px #6a8ccb;
+    position: relative;
+    overflow: scroll; /* border: solid 5px #0070ff;             border-radius: 10px 10px 10px 10px;*/
+}
+.colorbg
+{
+    background-color: #fff;
+}
+.separated
+{
+    width: 1px !important;
+    height: 1090px;
+    border: 0;
+    border-left: dotted 1px #9098ab !important;
+    position: inherit;
+    z-index: 42;
+}
+.wraperLayout
+{
+    width: 1234px;
+}
+.MenuTopLayout
+{
+    width: 1222px;
+    border-color: #187ebc #30a3d6 #187ebc #30a3d6;
+    border-width: 1px;
+    border-style: solid;
+    text-align: right;
+    padding-left: 10px;
+    height: 32px;
+    background-color: #f1f1f1;
+    line-height: 32px;
+    float: left;
+    margin-top: 10px;
+}
+.menuLeftLayout
+{
+    border-left: solid 1px #6a8ccb;
+    width: 180px;
+    float: left;
+    min-height: 800px;
+    background: url("bgMenuLeft.png") repeat-y scroll right top transparent;
+}
+
+.btnReset
+{
+    width: 16px;
+    height: 16px;
+    background: url(Refresh-icon.png) left top no-repeat;
+    margin-top: 5px;
+    color: #0B55C4;
+    border: 0;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 11px;
+    float: right;
+}
+.btnReset:hover
+{
+}
+.btnSave
+{
+    width: 16px;
+    height: 16px;
+    background: url(btnSave.png) left top no-repeat;
+    margin: 5px 10px 0 0;
+    color: #0B55C4;
+    border: 0;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 11px;
+    float: right;
+}
+.btnSave:hover
+{
+}
+.btnDelete
+{
+    width: 16px;
+    height: 16px;
+    background: url(delete-icon.png) left top no-repeat;
+    margin-top: 5px;
+    color: #0B55C4;
+    border: 0;
+    cursor: pointer;
+    white-space: nowrap;
+    font-size: 11px;
+    float: right;
+}
+.btnDelete:hover
+{
+}
+.spaceButton
+{
+    float: right;
+    margin: 8px 7px 0 7px;
+    width: 2px;
+    height: 16px;
+    background: url(spacebtn.png) left top no-repeat;
+}
+.lblTitleTinbai
+{
+    font-size: 12px;
+    color: #3B3C3F;
+}
+.listTinbaiItem
+{
+    float: left;
+    width: 48%;
+    margin: 0 10px 5px 0;
+}
+.w input
+{
+    border: 0;
+}
+.iconSave
+{
+    background: url("btnSave.png") no-repeat scroll 2px center transparent;
+    border: 1px solid #F1F1F1;
+    color: #777777;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 6px 6px 6px 22px;
+    float: right;
+    text-decoration: none;
+    display: inline;
+    text-align: left;
+}
+.iconReset
+{
+    background: url("Refresh-icon.png") no-repeat scroll 2px center transparent;
+    border: 1px solid #F1F1F1;
+    color: #777777;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 6px 6px 6px 22px;
+    float: right;
+    text-decoration: none;
+    display: inline;
+    text-align: left;
+}
+.btnSetCongviec
+{
+    background: url("accept.gif") no-repeat scroll 2px center transparent;
+    border: 0;
+    color: #777777;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    display: inline;
+    width: 26px;
+    height: 22px;
+}
+.iconSave:hover
+{
+    color: #1696eb;
+}
+.iconReset:hover
+{
+    color: #1696eb;
+}
+
+.Chugiai
+{
+    width: 70%;
+    float: left;
+    text-align: left;
+}
+.Chugiai img
+{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.Chugiaitext
+{
+    font-weight: bold;
+    margin-left: 180px;
+    margin-right: 15px;
+}
+.ChugiaiTitle
+{
+    margin-right: 10px;
+    color: #1A5F9E;
+}
+.menuLeftLayoutTitle
+{
+    float: left;
+    width: 100%;
+    text-align: left;
+    margin: 7px 0;
+}
+.menuLeftLayoutTitle span
+{
+    padding-left: 5px;
+    font-weight: bold;
+    color: #3d67b3;
+    text-decoration: underline;
+}
+.menuLeftLayoutList
+{
+    clear: both;
+    width: 160px;
+    border: solid 1px red;
+    min-height: 800px;
+}
+.ItemLayout
+{
+    width: 134px;
+    height: 100px;
+    border: solid 1px #000;
+    margin: 2px;
+}
+.Main_Search_Advanded ul
+{
+    float: left;
+    margin-left: 8px;
+}
+.Main_Search_Advanded ul li
+{
+    margin-top: 20px;
+    border: solid 2px #808080;
+}
+.Main_Search_Advanded ul li:hover
+{
+    border: solid 2px #3d6cc0;
+    cursor: pointer;
+}
+.Main_Search_Advanded ul li .active
+{
+    border: solid 2px #3d6cc0;
+}
+.Main_Search_Advanded ul li span
+{
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: Red;
+    font-weight: bold;
+    font-size: 11px;
+    padding-top: 5px;
+}
+.GroupControlTopLayout
+{
+    width: 100%;
+    float: left;
+    text-align: left;
+}
+.btnChontinbai
+{
+    background: url("Sign-Select-icon.png") no-repeat scroll 1px -4px transparent;
+    border: 1px solid #D4D4D4;
+    color: #1d1d1d;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 6px 1px 23px;
+    text-decoration: none;
+    position: absolute;
+    top: 1px;
+    right: 130px;
+    width: 80px;
+    display: inline;
+}
+.btnAdvertis
+{
+    background: url("advertising_icon_menu.png") no-repeat scroll 1px -1px transparent;
+    border: 1px solid #D4D4D4;
+    color: #1d1d1d;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 6px 5px 35px;
+    text-decoration: none;
+    position: absolute;
+    top: 1px;
+    right: 210px;
+    width: 110px;
+    display: inline;
+}
+.btnPhanviec
+{
+    background: url("qlPhanviec.gif") no-repeat scroll 0px center transparent;
+    border: 0px;
+    color: #1d1d1d;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 6px 1px 20px;
+    text-decoration: none;
+    position: absolute;
+    top: 1px;
+    right: 54px;
+    width: 80px;
+    display: inline-block;
+}
+
+.btn
+{
+    background: url("../../Images/button.png") repeat-x scroll center bottom #777777;
+    border: medium none;
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 1px 1px #666666;
+}
+.btnremoveChild
+{
+    background: url("turnoff.png") no-repeat scroll 7px center White;
+    border: 1px solid #DCDCDC;
+    border-radius: 4px;
+    color: Black;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: bold;
+    position: absolute;
+    padding: 5px;
+    float: right;
+    text-decoration: none;
+    margin: 5px;
+    bottom: 1px;
+    right: 3px;
+    width: 70px;
+    display: inline;
+    min-height: 16px;
+    text-align: right;
+}
+.btnremoveChild:hover
+{
+    background: url("turnoff.png") no-repeat scroll 7px center #00BFFF;
+    color: White;
+    border: 1px solid #1E90FF;
+}
+.btnSaveChild
+{
+    background: url("save1.png") no-repeat scroll 7px center White;
+    border: 1px solid #DCDCDC;
+    border-radius: 4px;
+    color: Black;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 11px;
+    font-weight: bold;
+    position: absolute;
+    padding: 5px;
+    float: left;
+    text-decoration: none;
+    bottom: 1px;
+    left: 3px;
+    width: 60px;
+    display: inline;
+    min-height: 16px;
+    text-align: right;
+}
+.btnSaveChild:hover
+{
+    background: url("save1.png") no-repeat scroll 7px center #00BFFF;
+    border: 1px solid #1E90FF;
+    color: White;
+}
+
+
+/*//////////////////////////////////////////////////////////////
+////////////////BEGIN SearchBox///////////////////////////////*/
+.Main_Search
+{
+    float: left;
+    min-height: 810px;
+    position: absolute;
+    z-index: 9999;
+    left: 0;
+}
+.Main_Search_Advanded
+{
+    float: left;
+    width: 171px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #187ebc;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #187ebc;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #187ebc;
+    background-color: #e6e6e6;
+    min-height: 800px;
+    padding-bottom: 5px;
+    height: 1110px;
+    overflow: scroll;
+}
+.Main_Search_Bottom
+{
+    float: left;
+    width: 17px;
+    position: absolute;
+    z-index: 9999;
+    left: 173px;
+    top: 0px;
+}
+.Main_Search_Bottom_Right
+{
+    float: left;
+    background-image: url( 'Search_Bottom_Left.png' );
+    background-repeat: no-repeat;
+    background-position: right top;
+    width: 17px;
+    height: 5px;
+}
+.Main_Search_Bottom_Center
+{
+    float: left;
+    background-image: url( 'Search_Bottom_Center.png' );
+    background-repeat: repeat-y;
+    background-position: top;
+    width: 17px;
+    height: 1000px;
+}
+.Main_Search_Bottom_Left
+{
+    float: left;
+    background-image: url( 'Search_Bottom_Right.png' );
+    background-repeat: no-repeat;
+    background-position: left top;
+    width: 17px;
+    height: 111px;
+}
+.Main_Search_Bottom_Toggle
+{
+    float: right;
+    width: 16px;
+    height: 86px;
+    margin-top: 24px;
+    text-align: center;
+    margin-top: 24px;
+    cursor: pointer;
+}
+.Main_Search_Bottom_Toggle span
+{
+    margin-top: 3px;
+    float: left;
+    font-size: 11px;
+}
+.Main_Search_Bottom_Toggle span a
+{
+    text-decoration: none;
+}
+.Main_Search_Bottom_Toggle span a:hover
+{
+    color: Red;
+}
+.Main_Search_Bottom_Toggle img
+{
+    float: right;
+    width: 8px;
+    height: 18px;
+    margin-right: 5px;
+    margin-top: 33px;
+}
+/*//////////////////////////////////////////////////////////////
+////////////////BEGIN TAB///////////////////////////////*/
+.boundTab
+{
+    float: left;
+    width: 100%;
+}
+.c-right-iL
+{
+    float: left;
+    width: 600px;
+}
+.c-right-iL-tab
+{
+    float: left;
+    width: 600px;
+    height: 33px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 33px;
+    background: url(bgTabhome.png) no-repeat top left;
+}
+.c-right-iL-nd
+{
+    float: left;
+    width: 598px;
+    border-right: 1px solid #b3b3b3;
+    border-left: 1px solid #b3b3b3;
+}
+.c-right-iL-buttom
+{
+    float: left;
+    width: 600px;
+    height: 8px;
+    background: url(bg_buttomTab.png) no-repeat top left;
+}
+.tb-iL
+{
+    float: left;
+    width: 598px;
+    padding-top: 10px;
+    min-height: 378px;
+}
+.tbaoL
+{
+    float: left;
+    margin: 0;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.tbaoL a
+{
+    float: left;
+    line-height: 33px;
+    color: #000;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
+}
+.tbaoL a:hover
+{
+    color: #970303;
+}
+.tbaoL a:active
+{
+    color: #970303;
+}
+.tbaoL-active
+{
+    overflow: hidden;
+    position: relative;
+    float: left;
+    width: auto;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    color: #970303;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.tbaoL-active a
+{
+    float: left;
+    position: relative;
+    display: block;
+    color: #970303;
+    line-height: 33PX;
+    font-size: 13px;
+    height: 33PX;
+    background: url(bg_right_tabAc.png) no-repeat right;
+}
+.tbaoL-active a span
+{
+    float: left;
+    position: relative;
+    display: block;
+    padding: 0px 5px;
+    color: #970303;
+    line-height: 33PX;
+    font-size: 13px;
+    height: 33PX;
+    cursor: pointer;
+    padding-top: 0px;
+    background: url(bg_Left_tabActive.png) no-repeat left top;
+}
+.AddnewItem
+{
+    width: 575px;
+    float: left;
+    margin: 5px 0 5px 20px;
+}
+.AddnewItemLalbel
+{
+    width: 105px;
+    text-align: right;
+    color: #5F5E5D;
+    font-size: 11px;
+    font-weight: bold;
+    float: left;
+}
+.AddnewItemControl
+{
+    width: 465px;
+    float: left;
+    margin-left: 4px;
+}
+.inputtextLayout
+{
+    background-color: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    color: #475156;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 5px;
+    text-decoration: none;
+    width: 440px;
+}
+.inputtextDT
+{
+    border: solid 1px #DCDCDC;
+    width: 100%;
+    height: 22px;
+    float: left;
+    margin: 5px 5px 0 0;
+}
+.lblTitle
+{
+    color: #1E90FF;
+    font-family: Arial;
+    float: left;
+    margin-top: 5px;
+}
+

@@ -1,0 +1,5 @@
+D:\PROJECT\cmsvietnamnews\ToasoanTTXVN\HPCInfo\bin\Debug\HPCInfo.dll
+D:\PROJECT\cmsvietnamnews\ToasoanTTXVN\HPCInfo\bin\Debug\HPCInfo.pdb
+D:\PROJECT\cmsvietnamnews\ToasoanTTXVN\HPCInfo\obj\Debug\ResolveAssemblyReference.cache
+D:\PROJECT\cmsvietnamnews\ToasoanTTXVN\HPCInfo\obj\Debug\HPCInfo.dll
+D:\PROJECT\cmsvietnamnews\ToasoanTTXVN\HPCInfo\obj\Debug\HPCInfo.pdb

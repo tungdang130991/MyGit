@@ -1,0 +1,8 @@
+D:\PROJECT\cmsvietnamnews\ToasoanTTXVN\HPCShareDLL\bin\Debug\HPCShareDLL.dll
+D:\PROJECT\cmsvietnamnews\ToasoanTTXVN\HPCShareDLL\bin\Debug\HPCShareDLL.pdb
+D:\PROJECT\cmsvietnamnews\ToasoanTTXVN\HPCShareDLL\bin\Debug\HPCInfo.dll
+D:\PROJECT\cmsvietnamnews\ToasoanTTXVN\HPCShareDLL\bin\Debug\SSOLib.dll
+D:\PROJECT\cmsvietnamnews\ToasoanTTXVN\HPCShareDLL\bin\Debug\HPCInfo.pdb
+D:\PROJECT\cmsvietnamnews\ToasoanTTXVN\HPCShareDLL\obj\Debug\ResolveAssemblyReference.cache
+D:\PROJECT\cmsvietnamnews\ToasoanTTXVN\HPCShareDLL\obj\Debug\HPCShareDLL.dll
+D:\PROJECT\cmsvietnamnews\ToasoanTTXVN\HPCShareDLL\obj\Debug\HPCShareDLL.pdb

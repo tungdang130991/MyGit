@@ -1,0 +1,73 @@
+﻿
+#header_menu{ width: 1024px;float: left;height: auto; clear: both;border-bottom:3px solid #d0d0d0}
+.menu-main{ width: 1024px; height: 32px;float: left;background-color:#045268}
+.mn-active{}
+.mn-active a{ background: url(_background/bg-menu-active.png) right top repeat; _background-image: url(_background/bg-menu-active.png);}
+.mn-active span{background: url(_background/bg-menu-active.png) left top repeat;background-image: url(_background/bg-menu-active.png);}
+.mn-active .btnhome{ background: url(_background/icon-home.png) center 7px no-repeat !important;}
+div#menu ul li .btnhome{ width: 26px; height: 32px; border: 0; cursor: pointer; background: url(_background/icon-home.png) center 7px no-repeat; float: left;}
+.menu{ float: left; width: 974px; text-align: left; margin: 0; /*position: relative;*/ z-index: 1024;}
+div#menu{ height: 32px; width: 974px;float: left;}
+div#menu ul{ width: 100%;  padding: 0; list-style: none;  float: left; z-index: 10000;}
+div#menu ul li{ position: relative; margin: 0; padding: 0; display: block; float: left; z-index: 99; width: auto; height: 32px;}
+div#menu ul li .mn-line{ background: url(_background/bg-menu-line.png) center top no-repeat; float: left; width: 2px; height: 32px;  padding: 0;margin:0;}
+div#menu li:hover > div{ visibility: visible;}
+div#menu a{  height: 32px; display: block; float: left; white-space: inherit; width: auto;text-align: center;line-height: 32px;margin: 0; padding:0 7px;word-spacing:0px;}
+div#menu span{ display: block; cursor: pointer;text-align: center; padding: 0 4px 0 5px; color: #fff;  height: 32px;  font-size:0.85em}
+div#menu a:hover, div#menu a.over
+{
+    background: url(_background/bg-menu-active.png) right top repeat-x;
+    _background-image: url(_background/bg-menu-active.png);
+}
+div#menu a:hover span, div#menu a.over span{}
+div#menu li.current a, div#menu ul.menu > li:hover > a
+{
+    background: url(_background/bg-menu-active.png) right top repeat-x;
+    _background-image: url(_background/bg-menu-active.png);
+}
+div#menu li.current a span, div#menu ul.menu > li:hover > a span
+{
+    background: url(_background/bg-menu-active.png) left top no-repeat;
+    _background-image: url(_background/bg-menu-active.png);
+}
+div#menu ul.menu > li:hover > a span{ color: #fff;}
+div#menu li.last{ background: none;}
+div#menu li.current a, div#menu li.current a span, div#menu.js-active a:hover, div#menu.js-active a:hover span, div#menu.js-active a, div#menu.js-active span
+{
+    background: none;
+}
+div#menu.js-active ul.menu > li:hover > a, div#menu.js-active ul.menu > li:hover > a span
+{
+    background: none;
+}
+div#menu li.current a.over
+{
+    background: url(_background/bg-menu-active.png) right top repeat-x;
+    _background-image: url(_background/bg-menu-active.png);
+}
+div#menu li.current a.over span
+{
+    background: url(_background/bg-menu-active.png) left top no-repeat;
+    _background-image: url(_background/bg-menu-active.png);
+}
+div#menu a.over span{ color: #fff;}
+.menu-main .extend{width:auto;height:32px;float:right;position:relative; background: url(_background/bg-menu-line.png) left top no-repeat #045268;cursor:pointer;padding-left:0px;}
+.menu-main .extend .ico{width:18px;height:32px;display:block;background: url(_background/show-category.png) center center no-repeat;padding:0 15px;cursor:pointer}
+.menu-main .extend > div{position:absolute;width:auto;height:auto;padding:10px 10px;background-color:#045268;top:32px;right:0;visibility:hidden}
+.menu-main .extend div ul{width:100%;float:left}
+.menu-main .extend div ul li{margin: 0;width:170px;float:left;padding:0 }
+.menu-main .extend div ul li a{color:#fff;font-size:0.85em;padding: 5px 5px;float:left;width:160px}
+.menu-main .extend div ul li a:hover {color:#fff; background: url(_background/bg-menu-active.png) left top repeat;}
+.menu-main .extend div ul li .line{width:100%;height:1px;float:left;background: url(_background/bg-line-submenu.png) center center no-repeat;}
+.menu-main .extend div ul li span{padding:0;}
+.menu-main .extend:hover > div{visibility:visible}
+
+.mn-change-lang{ width: 1024px; height: 25px;float: left;background-color:#eee}
+.mn-change-lang ul{ width: 100%;  padding: 0; list-style: none;  float: left; z-index: 10000;}
+.mn-change-lang ul li{ position: relative; margin: 0; padding: 0; display: block; float: left; z-index: 99; width: auto; height: 25px;line-height:25px;}
+.mn-change-lang ul li .mn-line{ background: url(_background/bg-menu-line.png) center top no-repeat; float: left; width: 2px; height: 32px;  padding: 0;}
+.mn-change-lang a{padding:0 12px 0 11px;font-size:0.9em;color:#023644;text-transform:uppercase}
+.mn-change-lang .active { background-color:#045268;color:#fff}
+.mn-change-lang .active a {color:#fff}
+.mn-change-lang ul li:hover, .mn-change-lang ul li.over{background-color:#045268;color:#fff}
+.mn-change-lang ul li:hover a, .mn-change-lang ul li.over a{color:#fff}

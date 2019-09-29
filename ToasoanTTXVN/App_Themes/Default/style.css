@@ -1,0 +1,68 @@
+
+#ctl00_UpdateProgress2
+{
+    bottom: 7px;
+    right: 308px;
+    position: fixed;
+    width: 300px;
+    height: auto;
+    margin: 0px 0px 0px 20px;
+    background-color: white;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=5, OffY=5, Color=#7D7E7E);
+}
+#ctl00_UpdateProgress1
+{
+    bottom: 7px;
+    right: 1px;
+    position: fixed;
+    width: 300px;
+    height: auto;
+    border: solid 0px #333;
+    margin: 0px 0px 0px 2px;
+    background-color: white;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=5, OffY=5, Color=#7D7E7E);
+}
+#modal .modalTopMessage
+{
+    width: 292px;
+    background-color: Transparent;
+    background-color: #4682B4;
+    background-repeat: repeat-x;
+    padding: 4px;
+    color: #ffffff;
+    text-align: right;
+}
+
+#modal .modalTop
+{
+    width: 292px;
+    background-color: Transparent;
+    background-color: #2F4F4F;
+    background-repeat: repeat-x;
+    padding: 4px 4px;
+    color: #ffffff;
+    text-align: right;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+#modal .modalTitle
+{
+    padding: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    float: left;
+    line-height: 9px;
+}
+
+#modal .modalTop a, .modalTop a:visited
+{
+    color: #ffffff;
+}
+
+#modal .modalBody
+{
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #abcdef;
+}

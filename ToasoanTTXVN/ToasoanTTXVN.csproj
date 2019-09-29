@@ -1,0 +1,3681 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BDDF2412-D188-423E-904E-3A78A4C57EF2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ToasoanTTXVN</RootNamespace>
+    <AssemblyName>ToasoanTTXVN</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="aceoffix, Version=3.0.0.1, Culture=neutral, PublicKeyToken=e6a26169e940f541, processorArchitecture=MSIL" />
+    <Reference Include="AjaxControlToolkit, Version=3.0.20229.20843, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AJAXExtensionsToolbox, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lecourrier\HPCApplication\BIN\AJAXExtensionsToolbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Anthem, Version=1.5.2.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="CKEditor.NET, Version=3.6.6.2, Culture=neutral, PublicKeyToken=e379cdf2f8354999, processorArchitecture=MSIL" />
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL" />
+    <Reference Include="Interop.Office, Version=2.0.0.0, Culture=neutral" />
+    <Reference Include="Interop.Word, Version=8.3.0.0, Culture=neutral" />
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL" />
+    <Reference Include="JockerSoft.Media, Version=1.0.0.1, Culture=neutral, PublicKeyToken=59345589f61c4f31, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="OFFICE, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="PubDataInfor, Version=1.0.5024.22374, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="PutDataBusinessLogic, Version=1.0.5024.22375, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Rainbow.MergeEngine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\QDND_BAOIN\Controls\bin\Debug\Rainbow.MergeEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="ServicesInfor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\ServicesInfor.dll</HintPath>
+    </Reference>
+    <Reference Include="ServicesPutDataBusines, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\ServicesPutDataBusines.dll</HintPath>
+    </Reference>
+    <Reference Include="SSOLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="WDF.Component, Version=1.0.4430.28208, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\WDF.Component.dll</HintPath>
+    </Reference>
+    <Reference Include="WDF.UI.WebControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\WDF.UI.WebControls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aceoffix-runtime\server.aspx.cs">
+      <DependentUpon>server.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aceoffix-runtime\server.aspx.designer.cs">
+      <DependentUpon>server.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\GetData.asmx.cs">
+      <DependentUpon>GetData.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Anh24h\AddMutiPhotos.aspx.cs">
+      <DependentUpon>AddMutiPhotos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Anh24h\AddMutiPhotos.aspx.designer.cs">
+      <DependentUpon>AddMutiPhotos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Anh24h\Edit_PhotoChoDuyet.aspx.cs">
+      <DependentUpon>Edit_PhotoChoDuyet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Anh24h\Edit_PhotoChoDuyet.aspx.designer.cs">
+      <DependentUpon>Edit_PhotoChoDuyet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Anh24h\Edit_PhotoDexuat.aspx.cs">
+      <DependentUpon>Edit_PhotoDexuat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Anh24h\Edit_PhotoDexuat.aspx.designer.cs">
+      <DependentUpon>Edit_PhotoDexuat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Anh24h\List_PhotoDaDuyet.aspx.cs">
+      <DependentUpon>List_PhotoDaDuyet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Anh24h\List_PhotoDaDuyet.aspx.designer.cs">
+      <DependentUpon>List_PhotoDaDuyet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Anh24h\List_PhotosChoDuyet.aspx.cs">
+      <DependentUpon>List_PhotosChoDuyet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Anh24h\List_PhotosChoDuyet.aspx.designer.cs">
+      <DependentUpon>List_PhotosChoDuyet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Anh24h\List_PhotosDexuat.aspx.cs">
+      <DependentUpon>List_PhotosDexuat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Anh24h\List_PhotosDexuat.aspx.designer.cs">
+      <DependentUpon>List_PhotosDexuat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnPhamBao.aspx.cs">
+      <DependentUpon>AnPhamBao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnPhamBao.aspx.designer.cs">
+      <DependentUpon>AnPhamBao.aspx</DependentUpon>
+    </Compile>
+    <Content Include="App_Code\InboxService.cs" />
+    <Compile Include="App_GlobalResources\cms.language.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cms.language.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\cms.language.vi-vn.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cms.language.vi-vn.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BannerDanToc\DanTocDanhSach.aspx.cs">
+      <DependentUpon>DanTocDanhSach.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BannerDanToc\DanTocDanhSach.aspx.designer.cs">
+      <DependentUpon>DanTocDanhSach.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BannerDanToc\DanTocEdit.aspx.cs">
+      <DependentUpon>DanTocEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BannerDanToc\DanTocEdit.aspx.designer.cs">
+      <DependentUpon>DanTocEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Baocaothongke\Baocaolichsuthaotachethong.aspx.cs">
+      <DependentUpon>Baocaolichsuthaotachethong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Baocaothongke\Baocaolichsuthaotachethong.aspx.designer.cs">
+      <DependentUpon>Baocaolichsuthaotachethong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Baocaothongke\Lichsuthaotactinbai.aspx.cs">
+      <DependentUpon>Lichsuthaotactinbai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Baocaothongke\Lichsuthaotactinbai.aspx.designer.cs">
+      <DependentUpon>Lichsuthaotactinbai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Baocaothongke\Thongkethanhtoannhuanbut.aspx.cs">
+      <DependentUpon>Thongkethanhtoannhuanbut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Baocaothongke\Thongkethanhtoannhuanbut.aspx.designer.cs">
+      <DependentUpon>Thongkethanhtoannhuanbut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\ActionHistory_List.aspx.cs">
+      <DependentUpon>ActionHistory_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoCao\ActionHistory_List.aspx.designer.cs">
+      <DependentUpon>ActionHistory_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\GridViewToExcel.cs" />
+    <Compile Include="BaoCao\HistorySource_List.aspx.cs">
+      <DependentUpon>HistorySource_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoCao\HistorySource_List.aspx.designer.cs">
+      <DependentUpon>HistorySource_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\ThongketheoChuyenMuc.aspx.cs">
+      <DependentUpon>ThongketheoChuyenMuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoCao\ThongketheoChuyenMuc.aspx.designer.cs">
+      <DependentUpon>ThongketheoChuyenMuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\ThongketheoUser.aspx.cs">
+      <DependentUpon>ThongketheoUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoCao\ThongketheoUser.aspx.designer.cs">
+      <DependentUpon>ThongketheoUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\ThongKeTruyCap.aspx.cs">
+      <DependentUpon>ThongKeTruyCap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoCao\ThongKeTruyCap.aspx.designer.cs">
+      <DependentUpon>ThongKeTruyCap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\Tindocnhieunhat.aspx.cs">
+      <DependentUpon>Tindocnhieunhat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoCao\Tindocnhieunhat.aspx.designer.cs">
+      <DependentUpon>Tindocnhieunhat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoDienTu\ArticleApproveEdit.aspx.cs">
+      <DependentUpon>ArticleApproveEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoDienTu\ArticleApproveEdit.aspx.designer.cs">
+      <DependentUpon>ArticleApproveEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoDienTu\ArticleApproveEditTB.aspx.cs">
+      <DependentUpon>ArticleApproveEditTB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoDienTu\ArticleApproveEditTB.aspx.designer.cs">
+      <DependentUpon>ArticleApproveEditTB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoDienTu\ArticleApproveImage.aspx.cs">
+      <DependentUpon>ArticleApproveImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoDienTu\ArticleApproveImage.aspx.designer.cs">
+      <DependentUpon>ArticleApproveImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoDienTu\ArticleApproveList.aspx.cs">
+      <DependentUpon>ArticleApproveList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoDienTu\ArticleApproveList.aspx.designer.cs">
+      <DependentUpon>ArticleApproveList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoDienTu\ArticleApproveListTB.aspx.cs">
+      <DependentUpon>ArticleApproveListTB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoDienTu\ArticleApproveListTB.aspx.designer.cs">
+      <DependentUpon>ArticleApproveListTB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoDienTu\ArticleEdit.aspx.cs">
+      <DependentUpon>ArticleEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoDienTu\ArticleEdit.aspx.designer.cs">
+      <DependentUpon>ArticleEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoDienTu\ArticleList.aspx.cs">
+      <DependentUpon>ArticleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoDienTu\ArticleList.aspx.designer.cs">
+      <DependentUpon>ArticleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoDienTu\ArticleSearch.aspx.cs">
+      <DependentUpon>ArticleSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoDienTu\ArticleSearch.aspx.designer.cs">
+      <DependentUpon>ArticleSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoDienTu\ListArticleLock.aspx.cs">
+      <DependentUpon>ListArticleLock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoDienTu\ListArticleLock.aspx.designer.cs">
+      <DependentUpon>ListArticleLock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoDienTu\PublishedEdit.aspx.cs">
+      <DependentUpon>PublishedEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoDienTu\PublishedEdit.aspx.designer.cs">
+      <DependentUpon>PublishedEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoDienTu\PublishedList.aspx.cs">
+      <DependentUpon>PublishedList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoDienTu\PublishedList.aspx.designer.cs">
+      <DependentUpon>PublishedList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoDienTu\PublishingEdit.aspx.cs">
+      <DependentUpon>PublishingEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoDienTu\PublishingEdit.aspx.designer.cs">
+      <DependentUpon>PublishingEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoDienTu\PublishingList.aspx.cs">
+      <DependentUpon>PublishingList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoDienTu\PublishingList.aspx.designer.cs">
+      <DependentUpon>PublishingList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoDienTu\SynFiles.cs" />
+    <Compile Include="Anh24h\UploadAnhTS.ashx.cs">
+      <DependentUpon>UploadAnhTS.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoDienTu\ViewAndPrint.aspx.cs">
+      <DependentUpon>ViewAndPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaoDienTu\ViewAndPrint.aspx.designer.cs">
+      <DependentUpon>ViewAndPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaoDienTu\WriteLogHistory2Database.cs" />
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Captcha.ashx.cs">
+      <DependentUpon>Captcha.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="CaptchaImage.cs" />
+    <Compile Include="ckeditor\plugins\InsertImage2\InsertImages.aspx.cs">
+      <DependentUpon>InsertImages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ckeditor\plugins\InsertImage2\InsertImages.aspx.designer.cs">
+      <DependentUpon>InsertImages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ckeditor\plugins\Insertyoutube\Insertyoutube.aspx.cs">
+      <DependentUpon>Insertyoutube.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ckeditor\plugins\Insertyoutube\Insertyoutube.aspx.designer.cs">
+      <DependentUpon>Insertyoutube.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ckeditor\plugins\insert_image\InsertImage.aspx.cs">
+      <DependentUpon>InsertImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ckeditor\plugins\insert_image\InsertImage.aspx.designer.cs">
+      <DependentUpon>InsertImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ckeditor\plugins\insert_image\UploadImgEditor.ashx.cs">
+      <DependentUpon>UploadImgEditor.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Congviec\EditCongviec.aspx.cs">
+      <DependentUpon>EditCongviec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Congviec\EditCongviec.aspx.designer.cs">
+      <DependentUpon>EditCongviec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Congviec\NoidungCV.aspx.cs">
+      <DependentUpon>NoidungCV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Congviec\NoidungCV.aspx.designer.cs">
+      <DependentUpon>NoidungCV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Congviec\PhanCongCV.aspx.cs">
+      <DependentUpon>PhanCongCV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Congviec\PhanCongCV.aspx.designer.cs">
+      <DependentUpon>PhanCongCV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConstAction.cs" />
+    <Compile Include="ConstNews.cs" />
+    <Compile Include="Danhmuc\EditAnPham.aspx.cs">
+      <DependentUpon>EditAnPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Danhmuc\EditAnPham.aspx.designer.cs">
+      <DependentUpon>EditAnPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Danhmuc\EditChuyenMuc.aspx.cs">
+      <DependentUpon>EditChuyenMuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Danhmuc\EditChuyenMuc.aspx.designer.cs">
+      <DependentUpon>EditChuyenMuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Danhmuc\EditKhachHang.aspx.cs">
+      <DependentUpon>EditKhachHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Danhmuc\EditKhachHang.aspx.designer.cs">
+      <DependentUpon>EditKhachHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Danhmuc\EditSobao.aspx.cs">
+      <DependentUpon>EditSobao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Danhmuc\EditSobao.aspx.designer.cs">
+      <DependentUpon>EditSobao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Danhmuc\ListAnPham.aspx.cs">
+      <DependentUpon>ListAnPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Danhmuc\ListAnPham.aspx.designer.cs">
+      <DependentUpon>ListAnPham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Danhmuc\ListAnPhamMau.aspx.cs">
+      <DependentUpon>ListAnPhamMau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Danhmuc\ListAnPhamMau.aspx.designer.cs">
+      <DependentUpon>ListAnPhamMau.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Danhmuc\ListChuyenMuc.aspx.cs">
+      <DependentUpon>ListChuyenMuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Danhmuc\ListChuyenMuc.aspx.designer.cs">
+      <DependentUpon>ListChuyenMuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Danhmuc\ListDoiTuong.aspx.cs">
+      <DependentUpon>ListDoiTuong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Danhmuc\ListDoiTuong.aspx.designer.cs">
+      <DependentUpon>ListDoiTuong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Danhmuc\ListKhachHang.aspx.cs">
+      <DependentUpon>ListKhachHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Danhmuc\ListKhachHang.aspx.designer.cs">
+      <DependentUpon>ListKhachHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Danhmuc\ListKichthuoc.aspx.cs">
+      <DependentUpon>ListKichthuoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Danhmuc\ListKichthuoc.aspx.designer.cs">
+      <DependentUpon>ListKichthuoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Danhmuc\ListLayout.aspx.cs">
+      <DependentUpon>ListLayout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Danhmuc\ListLayout.aspx.designer.cs">
+      <DependentUpon>ListLayout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Danhmuc\ListSobao.aspx.cs">
+      <DependentUpon>ListSobao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Danhmuc\ListSobao.aspx.designer.cs">
+      <DependentUpon>ListSobao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Danhmuc\List_NgonNgu.aspx.cs">
+      <DependentUpon>List_NgonNgu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Danhmuc\List_NgonNgu.aspx.designer.cs">
+      <DependentUpon>List_NgonNgu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Danhmuc\List_PhongBan.aspx.cs">
+      <DependentUpon>List_PhongBan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Danhmuc\List_PhongBan.aspx.designer.cs">
+      <DependentUpon>List_PhongBan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Danhmuc\PreviewTemplate.aspx.cs">
+      <DependentUpon>PreviewTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Danhmuc\PreviewTemplate.aspx.designer.cs">
+      <DependentUpon>PreviewTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Danhmuc\UploadFile.ashx.cs">
+      <DependentUpon>UploadFile.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Danhmuc\UploadFile.aspx.cs">
+      <DependentUpon>UploadFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Danhmuc\UploadFile.aspx.designer.cs">
+      <DependentUpon>UploadFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Danhmuc\UploadFileLogo.ashx.cs">
+      <DependentUpon>UploadFileLogo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Danhmuc\UploadLogo.aspx.cs">
+      <DependentUpon>UploadLogo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Danhmuc\UploadLogo.aspx.designer.cs">
+      <DependentUpon>UploadLogo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeTai\Edit_DuyetDeTaiTBT.aspx.cs">
+      <DependentUpon>Edit_DuyetDeTaiTBT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeTai\Edit_DuyetDeTaiTBT.aspx.designer.cs">
+      <DependentUpon>Edit_DuyetDeTaiTBT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeTai\Edit_DuyetDeTaiTPPV.aspx.cs">
+      <DependentUpon>Edit_DuyetDeTaiTPPV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeTai\Edit_DuyetDeTaiTPPV.aspx.designer.cs">
+      <DependentUpon>Edit_DuyetDeTaiTPPV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeTai\Edit_Idiea.aspx.cs">
+      <DependentUpon>Edit_Idiea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeTai\Edit_Idiea.aspx.designer.cs">
+      <DependentUpon>Edit_Idiea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeTai\Edit_XuLyCongViec.aspx.cs">
+      <DependentUpon>Edit_XuLyCongViec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeTai\Edit_XuLyCongViec.aspx.designer.cs">
+      <DependentUpon>Edit_XuLyCongViec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeTai\List_DuyetDeTaiTBT.aspx.cs">
+      <DependentUpon>List_DuyetDeTaiTBT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeTai\List_DuyetDeTaiTBT.aspx.designer.cs">
+      <DependentUpon>List_DuyetDeTaiTBT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeTai\List_DuyetDeTaiTPPV.aspx.cs">
+      <DependentUpon>List_DuyetDeTaiTPPV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeTai\List_DuyetDeTaiTPPV.aspx.designer.cs">
+      <DependentUpon>List_DuyetDeTaiTPPV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeTai\List_Idiea.aspx.cs">
+      <DependentUpon>List_Idiea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeTai\List_Idiea.aspx.designer.cs">
+      <DependentUpon>List_Idiea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeTai\List_VietBaiPV.aspx.cs">
+      <DependentUpon>List_VietBaiPV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeTai\List_VietBaiPV.aspx.designer.cs">
+      <DependentUpon>List_VietBaiPV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeTai\List_XuLyCongViec.aspx.cs">
+      <DependentUpon>List_XuLyCongViec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeTai\List_XuLyCongViec.aspx.designer.cs">
+      <DependentUpon>List_XuLyCongViec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeTai\ViewCompare.aspx.cs">
+      <DependentUpon>ViewCompare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeTai\ViewCompare.aspx.designer.cs">
+      <DependentUpon>ViewCompare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeTai\ViewNews1.aspx.cs">
+      <DependentUpon>ViewNews1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeTai\ViewNews1.aspx.designer.cs">
+      <DependentUpon>ViewNews1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dungchung\Commons.aspx.cs">
+      <DependentUpon>Commons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dungchung\Commons.aspx.designer.cs">
+      <DependentUpon>Commons.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Errors\AccessDenied.aspx.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Errors\AccessDenied.aspx.designer.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FuncAlert.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hethong\ButDanh.aspx.cs">
+      <DependentUpon>ButDanh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hethong\ButDanh.aspx.designer.cs">
+      <DependentUpon>ButDanh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hethong\CreateWorkFlowDynamic.aspx.cs">
+      <DependentUpon>CreateWorkFlowDynamic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hethong\CreateWorkFlowDynamic.aspx.designer.cs">
+      <DependentUpon>CreateWorkFlowDynamic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hethong\EditGroup.aspx.cs">
+      <DependentUpon>EditGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hethong\EditGroup.aspx.designer.cs">
+      <DependentUpon>EditGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hethong\EditUser.aspx.cs">
+      <DependentUpon>EditUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hethong\EditUser.aspx.designer.cs">
+      <DependentUpon>EditUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hethong\Edit_CTV.aspx.cs">
+      <DependentUpon>Edit_CTV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hethong\Edit_CTV.aspx.designer.cs">
+      <DependentUpon>Edit_CTV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hethong\Edit_QuyTrinh.aspx.cs">
+      <DependentUpon>Edit_QuyTrinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hethong\Edit_QuyTrinh.aspx.designer.cs">
+      <DependentUpon>Edit_QuyTrinh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hethong\Edit_ThongTinCaNhan.aspx.cs">
+      <DependentUpon>Edit_ThongTinCaNhan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hethong\Edit_ThongTinCaNhan.aspx.designer.cs">
+      <DependentUpon>Edit_ThongTinCaNhan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hethong\ListGroup.aspx.cs">
+      <DependentUpon>ListGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hethong\ListGroup.aspx.designer.cs">
+      <DependentUpon>ListGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hethong\ListUser.aspx.cs">
+      <DependentUpon>ListUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hethong\ListUser.aspx.designer.cs">
+      <DependentUpon>ListUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hethong\List_CTV.aspx.cs">
+      <DependentUpon>List_CTV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hethong\List_CTV.aspx.designer.cs">
+      <DependentUpon>List_CTV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hethong\LoadDoiTuong.aspx.cs">
+      <DependentUpon>LoadDoiTuong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hethong\LoadDoiTuong.aspx.designer.cs">
+      <DependentUpon>LoadDoiTuong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hethong\QuytrinhDynamic.aspx.cs">
+      <DependentUpon>QuytrinhDynamic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hethong\QuytrinhDynamic.aspx.designer.cs">
+      <DependentUpon>QuytrinhDynamic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hethong\SaveQuytrinh.asmx.cs">
+      <DependentUpon>SaveQuytrinh.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HPC-ConvertUni2Vni.cs" />
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\ITC.Master.cs">
+      <DependentUpon>ITC.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Masters\ITC.Master.designer.cs">
+      <DependentUpon>ITC.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\ITCv2.Master.cs">
+      <DependentUpon>ITCv2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Masters\ITCv2.Master.designer.cs">
+      <DependentUpon>ITCv2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\EditMenu.aspx.cs">
+      <DependentUpon>EditMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu\EditMenu.aspx.designer.cs">
+      <DependentUpon>EditMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\ListMenu.aspx.cs">
+      <DependentUpon>ListMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu\ListMenu.aspx.designer.cs">
+      <DependentUpon>ListMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Multimedia\Edit_Multimedia.aspx.cs">
+      <DependentUpon>Edit_Multimedia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Multimedia\Edit_Multimedia.aspx.designer.cs">
+      <DependentUpon>Edit_Multimedia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Multimedia\List_Multimedia.aspx.cs">
+      <DependentUpon>List_Multimedia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Multimedia\List_Multimedia.aspx.designer.cs">
+      <DependentUpon>List_Multimedia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Multimedia\Multimedia_Approve.aspx.cs">
+      <DependentUpon>Multimedia_Approve.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Multimedia\Multimedia_Approve.aspx.designer.cs">
+      <DependentUpon>Multimedia_Approve.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Multimedia\Multimedia_Approve_Edit.aspx.cs">
+      <DependentUpon>Multimedia_Approve_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Multimedia\Multimedia_Approve_Edit.aspx.designer.cs">
+      <DependentUpon>Multimedia_Approve_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Multimedia\Multimedia_Published.aspx.cs">
+      <DependentUpon>Multimedia_Published.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Multimedia\Multimedia_Published.aspx.designer.cs">
+      <DependentUpon>Multimedia_Published.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Multimedia\Multimedia_Published_Edit.aspx.cs">
+      <DependentUpon>Multimedia_Published_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Multimedia\Multimedia_Published_Edit.aspx.designer.cs">
+      <DependentUpon>Multimedia_Published_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Multimedia\ViewVideo.aspx.cs">
+      <DependentUpon>ViewVideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Multimedia\ViewVideo.aspx.designer.cs">
+      <DependentUpon>ViewVideo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Multimedia\ViewVideoPath.aspx.cs">
+      <DependentUpon>ViewVideoPath.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Multimedia\ViewVideoPath.aspx.designer.cs">
+      <DependentUpon>ViewVideoPath.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nhuanbut\Taichinhthanhtoannhuanbut_Anh.aspx.cs">
+      <DependentUpon>Taichinhthanhtoannhuanbut_Anh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nhuanbut\Taichinhthanhtoannhuanbut_Anh.aspx.designer.cs">
+      <DependentUpon>Taichinhthanhtoannhuanbut_Anh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nhuanbut\Taichinhthanhtoannhuanbut_Tinbai.aspx.cs">
+      <DependentUpon>Taichinhthanhtoannhuanbut_Tinbai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nhuanbut\Taichinhthanhtoannhuanbut_Tinbai.aspx.designer.cs">
+      <DependentUpon>Taichinhthanhtoannhuanbut_Tinbai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nhuanbut\Thanhtoannhuanbut_Anh.aspx.cs">
+      <DependentUpon>Thanhtoannhuanbut_Anh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nhuanbut\Thanhtoannhuanbut_Anh.aspx.designer.cs">
+      <DependentUpon>Thanhtoannhuanbut_Anh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nhuanbut\Thanhtoannhuanbut_tinbai.aspx.cs">
+      <DependentUpon>Thanhtoannhuanbut_tinbai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nhuanbut\Thanhtoannhuanbut_tinbai.aspx.designer.cs">
+      <DependentUpon>Thanhtoannhuanbut_tinbai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nhuanbut\Tracuunhuanbut.aspx.cs">
+      <DependentUpon>Tracuunhuanbut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nhuanbut\Tracuunhuanbut.aspx.designer.cs">
+      <DependentUpon>Tracuunhuanbut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Phathanh\AutoCompleteSearch.ashx.cs">
+      <DependentUpon>AutoCompleteSearch.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Phathanh\ChiTiet_PhatHanh_Edit.aspx.cs">
+      <DependentUpon>ChiTiet_PhatHanh_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Phathanh\ChiTiet_PhatHanh_Edit.aspx.designer.cs">
+      <DependentUpon>ChiTiet_PhatHanh_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Phathanh\ChiTiet_PhatHanh_List.aspx.cs">
+      <DependentUpon>ChiTiet_PhatHanh_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Phathanh\ChiTiet_PhatHanh_List.aspx.designer.cs">
+      <DependentUpon>ChiTiet_PhatHanh_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Phathanh\DatbaoEdit.aspx.cs">
+      <DependentUpon>DatbaoEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Phathanh\DatbaoEdit.aspx.designer.cs">
+      <DependentUpon>DatbaoEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Phathanh\DatbaoList.aspx.cs">
+      <DependentUpon>DatbaoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Phathanh\DatbaoList.aspx.designer.cs">
+      <DependentUpon>DatbaoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Phathanh\HopdongPHEdit.aspx.cs">
+      <DependentUpon>HopdongPHEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Phathanh\HopdongPHEdit.aspx.designer.cs">
+      <DependentUpon>HopdongPHEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Phathanh\HopdongPHList.aspx.cs">
+      <DependentUpon>HopdongPHList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Phathanh\HopdongPHList.aspx.designer.cs">
+      <DependentUpon>HopdongPHList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Phathanh\KhachHangEdit.aspx.cs">
+      <DependentUpon>KhachHangEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Phathanh\KhachHangEdit.aspx.designer.cs">
+      <DependentUpon>KhachHangEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Phathanh\KhachHangList.aspx.cs">
+      <DependentUpon>KhachHangList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Phathanh\KhachHangList.aspx.designer.cs">
+      <DependentUpon>KhachHangList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Phathanh\YeucauPHEdit.aspx.cs">
+      <DependentUpon>YeucauPHEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Phathanh\YeucauPHEdit.aspx.designer.cs">
+      <DependentUpon>YeucauPHEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Phathanh\YeucauPHList.aspx.cs">
+      <DependentUpon>YeucauPHList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Phathanh\YeucauPHList.aspx.designer.cs">
+      <DependentUpon>YeucauPHList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PhongSuAnh\Album_Edit.aspx.cs">
+      <DependentUpon>Album_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PhongSuAnh\Album_Edit.aspx.designer.cs">
+      <DependentUpon>Album_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PhongSuAnh\Album_List.aspx.cs">
+      <DependentUpon>Album_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PhongSuAnh\Album_List.aspx.designer.cs">
+      <DependentUpon>Album_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PhongSuAnh\Approved_List.aspx.cs">
+      <DependentUpon>Approved_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PhongSuAnh\Approved_List.aspx.designer.cs">
+      <DependentUpon>Approved_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PhongSuAnh\Approves_List.aspx.cs">
+      <DependentUpon>Approves_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PhongSuAnh\Approves_List.aspx.designer.cs">
+      <DependentUpon>Approves_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PhongSuAnh\AutoCompleteSearch.ashx.cs">
+      <DependentUpon>AutoCompleteSearch.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PhongSuAnh\PhotoAlbum_EditMullti.aspx.cs">
+      <DependentUpon>PhotoAlbum_EditMullti.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PhongSuAnh\PhotoAlbum_EditMullti.aspx.designer.cs">
+      <DependentUpon>PhotoAlbum_EditMullti.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PhongSuAnh\T_Album_Categories_View.aspx.cs">
+      <DependentUpon>T_Album_Categories_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PhongSuAnh\T_Album_Categories_View.aspx.designer.cs">
+      <DependentUpon>T_Album_Categories_View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PhongSuAnh\UploadImgMulti.ashx.cs">
+      <DependentUpon>UploadImgMulti.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QlyAnh\AutoComplete.asmx.cs">
+      <DependentUpon>AutoComplete.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QlyAnh\HandlerUpload.ashx.cs">
+      <DependentUpon>HandlerUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="QlyAnh\ListImages.aspx.cs">
+      <DependentUpon>ListImages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QlyAnh\ListImages.aspx.designer.cs">
+      <DependentUpon>ListImages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QlyAnh\ListImgstores.aspx.cs">
+      <DependentUpon>ListImgstores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QlyAnh\ListImgstores.aspx.designer.cs">
+      <DependentUpon>ListImgstores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QL_SanXuat\BindLayout.aspx.cs">
+      <DependentUpon>BindLayout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QL_SanXuat\BindLayout.aspx.designer.cs">
+      <DependentUpon>BindLayout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QL_SanXuat\BindLayoutAdv.aspx.cs">
+      <DependentUpon>BindLayoutAdv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QL_SanXuat\BindLayoutAdv.aspx.designer.cs">
+      <DependentUpon>BindLayoutAdv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QL_SanXuat\BindLayoutCV.aspx.cs">
+      <DependentUpon>BindLayoutCV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QL_SanXuat\BindLayoutCV.aspx.designer.cs">
+      <DependentUpon>BindLayoutCV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QL_SanXuat\BindLayoutTB.aspx.cs">
+      <DependentUpon>BindLayoutTB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QL_SanXuat\BindLayoutTB.aspx.designer.cs">
+      <DependentUpon>BindLayoutTB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QL_SanXuat\BindListAdv.aspx.cs">
+      <DependentUpon>BindListAdv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QL_SanXuat\BindListAdv.aspx.designer.cs">
+      <DependentUpon>BindListAdv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QL_SanXuat\BindListCongviec.aspx.cs">
+      <DependentUpon>BindListCongviec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QL_SanXuat\BindListCongviec.aspx.designer.cs">
+      <DependentUpon>BindListCongviec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QL_SanXuat\BindReview.aspx.cs">
+      <DependentUpon>BindReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QL_SanXuat\BindReview.aspx.designer.cs">
+      <DependentUpon>BindReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QL_SanXuat\BindText.aspx.cs">
+      <DependentUpon>BindText.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QL_SanXuat\BindText.aspx.designer.cs">
+      <DependentUpon>BindText.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QL_SanXuat\BindTextAdv.aspx.cs">
+      <DependentUpon>BindTextAdv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QL_SanXuat\BindTextAdv.aspx.designer.cs">
+      <DependentUpon>BindTextAdv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QL_SanXuat\BindTextCongviec.aspx.cs">
+      <DependentUpon>BindTextCongviec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QL_SanXuat\BindTextCongviec.aspx.designer.cs">
+      <DependentUpon>BindTextCongviec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QL_SanXuat\DelItemLayout.aspx.cs">
+      <DependentUpon>DelItemLayout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QL_SanXuat\DelItemLayout.aspx.designer.cs">
+      <DependentUpon>DelItemLayout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QL_SanXuat\LayouPhanviec.aspx.cs">
+      <DependentUpon>LayouPhanviec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QL_SanXuat\LayouPhanviec.aspx.designer.cs">
+      <DependentUpon>LayouPhanviec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QL_SanXuat\LayoutAdv.aspx.cs">
+      <DependentUpon>LayoutAdv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QL_SanXuat\LayoutAdv.aspx.designer.cs">
+      <DependentUpon>LayoutAdv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QL_SanXuat\LayoutHandler.ashx.cs">
+      <DependentUpon>LayoutHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="QL_SanXuat\LayoutReview.aspx.cs">
+      <DependentUpon>LayoutReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QL_SanXuat\LayoutReview.aspx.designer.cs">
+      <DependentUpon>LayoutReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QL_SanXuat\Layouts.aspx.cs">
+      <DependentUpon>Layouts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QL_SanXuat\Layouts.aspx.designer.cs">
+      <DependentUpon>Layouts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QL_SanXuat\LayoutTinbai.aspx.cs">
+      <DependentUpon>LayoutTinbai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QL_SanXuat\LayoutTinbai.aspx.designer.cs">
+      <DependentUpon>LayoutTinbai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QL_SanXuat\LoadTinbai.aspx.cs">
+      <DependentUpon>LoadTinbai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QL_SanXuat\LoadTinbai.aspx.designer.cs">
+      <DependentUpon>LoadTinbai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QL_SanXuat\LuuCongviec.ashx.cs">
+      <DependentUpon>LuuCongviec.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="QL_SanXuat\updateItemLayout.aspx.cs">
+      <DependentUpon>updateItemLayout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QL_SanXuat\updateItemLayout.aspx.designer.cs">
+      <DependentUpon>updateItemLayout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quangcao\AdsLogoEdit.aspx.cs">
+      <DependentUpon>AdsLogoEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quangcao\AdsLogoEdit.aspx.designer.cs">
+      <DependentUpon>AdsLogoEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quangcao\AdsLogoList.aspx.cs">
+      <DependentUpon>AdsLogoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quangcao\AdsLogoList.aspx.designer.cs">
+      <DependentUpon>AdsLogoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quangcao\AdsPosEdit.aspx.cs">
+      <DependentUpon>AdsPosEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quangcao\AdsPosEdit.aspx.designer.cs">
+      <DependentUpon>AdsPosEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quangcao\AdsPostList.aspx.cs">
+      <DependentUpon>AdsPostList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quangcao\AdsPostList.aspx.designer.cs">
+      <DependentUpon>AdsPostList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quangcao\CustomerEdit.aspx.cs">
+      <DependentUpon>CustomerEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quangcao\CustomerEdit.aspx.designer.cs">
+      <DependentUpon>CustomerEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quangcao\CustomerList.aspx.cs">
+      <DependentUpon>CustomerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quangcao\CustomerList.aspx.designer.cs">
+      <DependentUpon>CustomerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quangcao\DanTrangQC.aspx.cs">
+      <DependentUpon>DanTrangQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quangcao\DanTrangQC.aspx.designer.cs">
+      <DependentUpon>DanTrangQC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quangcao\Edit_KTQC.aspx.cs">
+      <DependentUpon>Edit_KTQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quangcao\Edit_KTQC.aspx.designer.cs">
+      <DependentUpon>Edit_KTQC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quangcao\Edit_QuangCao.aspx.cs">
+      <DependentUpon>Edit_QuangCao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quangcao\Edit_QuangCao.aspx.designer.cs">
+      <DependentUpon>Edit_QuangCao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quangcao\Edit_TLBTQC.aspx.cs">
+      <DependentUpon>Edit_TLBTQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quangcao\Edit_TLBTQC.aspx.designer.cs">
+      <DependentUpon>Edit_TLBTQC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quangcao\Edit_TPQC.aspx.cs">
+      <DependentUpon>Edit_TPQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quangcao\Edit_TPQC.aspx.designer.cs">
+      <DependentUpon>Edit_TPQC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quangcao\Edit_TTQC.aspx.cs">
+      <DependentUpon>Edit_TTQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quangcao\Edit_TTQC.aspx.designer.cs">
+      <DependentUpon>Edit_TTQC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quangcao\List_KTQC.aspx.cs">
+      <DependentUpon>List_KTQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quangcao\List_KTQC.aspx.designer.cs">
+      <DependentUpon>List_KTQC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quangcao\List_QuangCao.aspx.cs">
+      <DependentUpon>List_QuangCao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quangcao\List_QuangCao.aspx.designer.cs">
+      <DependentUpon>List_QuangCao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quangcao\List_TLBTQC.aspx.cs">
+      <DependentUpon>List_TLBTQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quangcao\List_TLBTQC.aspx.designer.cs">
+      <DependentUpon>List_TLBTQC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quangcao\List_TPQC.aspx.cs">
+      <DependentUpon>List_TPQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quangcao\List_TPQC.aspx.designer.cs">
+      <DependentUpon>List_TPQC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quangcao\List_TTQC.aspx.cs">
+      <DependentUpon>List_TTQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quangcao\List_TTQC.aspx.designer.cs">
+      <DependentUpon>List_TTQC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quangcao\ViewDTQC.aspx.cs">
+      <DependentUpon>ViewDTQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quangcao\ViewDTQC.aspx.designer.cs">
+      <DependentUpon>ViewDTQC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quangcao\ViewPhienBanQC.aspx.cs">
+      <DependentUpon>ViewPhienBanQC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quangcao\ViewPhienBanQC.aspx.designer.cs">
+      <DependentUpon>ViewPhienBanQC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quangcao\View_SoBao.aspx.cs">
+      <DependentUpon>View_SoBao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quangcao\View_SoBao.aspx.designer.cs">
+      <DependentUpon>View_SoBao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quangcao\WebLinksEdit.aspx.cs">
+      <DependentUpon>WebLinksEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quangcao\WebLinksEdit.aspx.designer.cs">
+      <DependentUpon>WebLinksEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quangcao\WeblinksList.aspx.cs">
+      <DependentUpon>WeblinksList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quangcao\WeblinksList.aspx.designer.cs">
+      <DependentUpon>WeblinksList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlynhanbut\Duyetnhanbut_Anh.aspx.cs">
+      <DependentUpon>Duyetnhanbut_Anh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlynhanbut\Duyetnhanbut_Anh.aspx.designer.cs">
+      <DependentUpon>Duyetnhanbut_Anh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlynhanbut\Duyetnhanbut_Tin.aspx.cs">
+      <DependentUpon>Duyetnhanbut_Tin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlynhanbut\Duyetnhanbut_Tin.aspx.designer.cs">
+      <DependentUpon>Duyetnhanbut_Tin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlynhanbut\Number2Text.cs" />
+    <Compile Include="Quanlynhanbut\ThongKeNhuanBut.aspx.cs">
+      <DependentUpon>ThongKeNhuanBut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlynhanbut\ThongKeNhuanBut.aspx.designer.cs">
+      <DependentUpon>ThongKeNhuanBut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlynhanbut\ViewImage.aspx.cs">
+      <DependentUpon>ViewImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlynhanbut\ViewImage.aspx.designer.cs">
+      <DependentUpon>ViewImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quytrinh\AutoSave.asmx.cs">
+      <DependentUpon>AutoSave.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Quytrinh\ChiefEditor.aspx.cs">
+      <DependentUpon>ChiefEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quytrinh\ChiefEditor.aspx.designer.cs">
+      <DependentUpon>ChiefEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quytrinh\ChiefList.aspx.cs">
+      <DependentUpon>ChiefList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quytrinh\ChiefList.aspx.designer.cs">
+      <DependentUpon>ChiefList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quytrinh\PreviewOLD.aspx.cs">
+      <DependentUpon>PreviewOLD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quytrinh\PreviewOLD.aspx.designer.cs">
+      <DependentUpon>PreviewOLD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quytrinh\Dantrang.aspx.cs">
+      <DependentUpon>Dantrang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quytrinh\Dantrang.aspx.designer.cs">
+      <DependentUpon>Dantrang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quytrinh\DeskEditor.aspx.cs">
+      <DependentUpon>DeskEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quytrinh\DeskEditor.aspx.designer.cs">
+      <DependentUpon>DeskEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quytrinh\DeskList.aspx.cs">
+      <DependentUpon>DeskList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quytrinh\DeskList.aspx.designer.cs">
+      <DependentUpon>DeskList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quytrinh\DuyetAnh.aspx.cs">
+      <DependentUpon>DuyetAnh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quytrinh\DuyetAnh.aspx.designer.cs">
+      <DependentUpon>DuyetAnh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quytrinh\Edit_DuyetBai.aspx.cs">
+      <DependentUpon>Edit_DuyetBai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quytrinh\Edit_DuyetBai.aspx.designer.cs">
+      <DependentUpon>Edit_DuyetBai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quytrinh\Edit_PV.aspx.cs">
+      <DependentUpon>Edit_PV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quytrinh\Edit_PV.aspx.designer.cs">
+      <DependentUpon>Edit_PV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quytrinh\List_DuyetBai.aspx.cs">
+      <DependentUpon>List_DuyetBai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quytrinh\List_DuyetBai.aspx.designer.cs">
+      <DependentUpon>List_DuyetBai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quytrinh\List_PublistPDF.aspx.cs">
+      <DependentUpon>List_PublistPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quytrinh\List_PublistPDF.aspx.designer.cs">
+      <DependentUpon>List_PublistPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quytrinh\List_PV.aspx.cs">
+      <DependentUpon>List_PV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quytrinh\List_PV.aspx.designer.cs">
+      <DependentUpon>List_PV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quytrinh\MiTrang.aspx.cs">
+      <DependentUpon>MiTrang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quytrinh\MiTrang.aspx.designer.cs">
+      <DependentUpon>MiTrang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quytrinh\NhapFilePDF.aspx.cs">
+      <DependentUpon>NhapFilePDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quytrinh\NhapFilePDF.aspx.designer.cs">
+      <DependentUpon>NhapFilePDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quytrinh\Preview.aspx.cs">
+      <DependentUpon>Preview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quytrinh\Preview.aspx.designer.cs">
+      <DependentUpon>Preview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quytrinh\Reporter.aspx.cs">
+      <DependentUpon>Reporter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quytrinh\Reporter.aspx.designer.cs">
+      <DependentUpon>Reporter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quytrinh\SearchTacGia.ashx.cs">
+      <DependentUpon>SearchTacGia.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Quytrinh\Send_Email.aspx.cs">
+      <DependentUpon>Send_Email.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quytrinh\Send_Email.aspx.designer.cs">
+      <DependentUpon>Send_Email.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quytrinh\UploadMaketPDF.aspx.cs">
+      <DependentUpon>UploadMaketPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quytrinh\UploadMaketPDF.aspx.designer.cs">
+      <DependentUpon>UploadMaketPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WS_TTX\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TimKiem\BaiNhap.aspx.cs">
+      <DependentUpon>BaiNhap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimKiem\BaiNhap.aspx.designer.cs">
+      <DependentUpon>BaiNhap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimKiem\DisplayContent.aspx.cs">
+      <DependentUpon>DisplayContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimKiem\DisplayContent.aspx.designer.cs">
+      <DependentUpon>DisplayContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimKiem\SearchVietnamNews.aspx.cs">
+      <DependentUpon>SearchVietnamNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimKiem\SearchVietnamNews.aspx.designer.cs">
+      <DependentUpon>SearchVietnamNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimKiem\TimkiemMaketPDF.aspx.cs">
+      <DependentUpon>TimkiemMaketPDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimKiem\TimkiemMaketPDF.aspx.designer.cs">
+      <DependentUpon>TimkiemMaketPDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimKiem\TimKiemTinBaiTrongQuyTrinh.aspx.cs">
+      <DependentUpon>TimKiemTinBaiTrongQuyTrinh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimKiem\TimKiemTinBaiTrongQuyTrinh.aspx.designer.cs">
+      <DependentUpon>TimKiemTinBaiTrongQuyTrinh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quytrinh\ViewPhienBanTinBai.aspx.cs">
+      <DependentUpon>ViewPhienBanTinBai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quytrinh\ViewPhienBanTinBai.aspx.designer.cs">
+      <DependentUpon>ViewPhienBanTinBai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quytrinh\ViewTinbaiDantrang.aspx.cs">
+      <DependentUpon>ViewTinbaiDantrang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quytrinh\ViewTinbaiDantrang.aspx.designer.cs">
+      <DependentUpon>ViewTinbaiDantrang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimKiem\TinBaiXuatBan.aspx.cs">
+      <DependentUpon>TinBaiXuatBan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimKiem\TinBaiXuatBan.aspx.designer.cs">
+      <DependentUpon>TinBaiXuatBan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimKiem\ViewBaiNhap.aspx.cs">
+      <DependentUpon>ViewBaiNhap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimKiem\ViewBaiNhap.aspx.designer.cs">
+      <DependentUpon>ViewBaiNhap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tracuutinnguon\tracuu.aspx.cs">
+      <DependentUpon>tracuu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tracuutinnguon\tracuu.aspx.designer.cs">
+      <DependentUpon>tracuu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TTXTraCuu\SaveImgFromComputer.ashx.cs">
+      <DependentUpon>SaveImgFromComputer.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="TTXTraCuu\TraCuuTin.asmx.cs">
+      <DependentUpon>TraCuuTin.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TTXTraCuu\TraCuuTin.aspx.cs">
+      <DependentUpon>TraCuuTin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TTXTraCuu\TraCuuTin.aspx.designer.cs">
+      <DependentUpon>TraCuuTin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tulieu\List_TuLieuAnh.aspx.cs">
+      <DependentUpon>List_TuLieuAnh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tulieu\List_TuLieuAnh.aspx.designer.cs">
+      <DependentUpon>List_TuLieuAnh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tulieu\List_Tulieutin.aspx.cs">
+      <DependentUpon>List_Tulieutin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tulieu\List_Tulieutin.aspx.designer.cs">
+      <DependentUpon>List_Tulieutin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tulieu\ViewsTulieu.aspx.cs">
+      <DependentUpon>ViewsTulieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tulieu\ViewsTulieu.aspx.designer.cs">
+      <DependentUpon>ViewsTulieu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Until\CropImage.ashx.cs">
+      <DependentUpon>CropImage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Until\FileManager.aspx.cs">
+      <DependentUpon>FileManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Until\FileManager.aspx.designer.cs">
+      <DependentUpon>FileManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Until\HPCImageCrop.cs" />
+    <Compile Include="Until\InsertNewsRelations.aspx.cs">
+      <DependentUpon>InsertNewsRelations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Until\InsertNewsRelations.aspx.designer.cs">
+      <DependentUpon>InsertNewsRelations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Until\UploadImg.ashx.cs">
+      <DependentUpon>UploadImg.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadFileMulti\AutoComplete.asmx.cs">
+      <DependentUpon>AutoComplete.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UploadFileMulti\AutoSelectMulti.ashx.cs">
+      <DependentUpon>AutoSelectMulti.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadFileMulti\FtpClient.cs" />
+    <Compile Include="UploadFileMulti\UploadFilePDF.ashx.cs">
+      <DependentUpon>UploadFilePDF.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadFileMulti\UploadFileQuangcao.ashx.cs">
+      <DependentUpon>UploadFileQuangcao.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadFileMulti\UploadFileQuangCao.aspx.cs">
+      <DependentUpon>UploadFileQuangCao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadFileMulti\UploadFileQuangCao.aspx.designer.cs">
+      <DependentUpon>UploadFileQuangCao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadFileMulti\uploadmedia.ashx.cs">
+      <DependentUpon>uploadmedia.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadFileMulti\UploadVideos.ashx.cs">
+      <DependentUpon>UploadVideos.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadFileMulti\Videos_Managerment.aspx.cs">
+      <DependentUpon>Videos_Managerment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadFileMulti\Videos_Managerment.aspx.designer.cs">
+      <DependentUpon>Videos_Managerment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadFileMulti\Video_News.aspx.cs">
+      <DependentUpon>Video_News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadFileMulti\Video_News.aspx.designer.cs">
+      <DependentUpon>Video_News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadFileMulti\ViewImages.aspx.cs">
+      <DependentUpon>ViewImages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadFileMulti\ViewImages.aspx.designer.cs">
+      <DependentUpon>ViewImages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChiTietTin.aspx.cs">
+      <DependentUpon>ChiTietTin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ChiTietTin.aspx.designer.cs">
+      <DependentUpon>ChiTietTin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewDetails.aspx.cs">
+      <DependentUpon>ViewDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ViewDetails.aspx.designer.cs">
+      <DependentUpon>ViewDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewHistory.aspx.cs">
+      <DependentUpon>ViewHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ViewHistory.aspx.designer.cs">
+      <DependentUpon>ViewHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="word\docstream.aspx.cs">
+      <DependentUpon>docstream.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="word\savefile.aspx.cs">
+      <DependentUpon>savefile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Xuatbandantrang.aspx.cs">
+      <DependentUpon>Xuatbandantrang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Xuatbandantrang.aspx.designer.cs">
+      <DependentUpon>Xuatbandantrang.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dungchung\Images\15200913045763.png" />
+    <Content Include="Dungchung\Images\15200913323201.png" />
+    <Content Include="Dungchung\Images\15200913357373.png" />
+    <Content Include="Dungchung\Images\152009184355302.png" />
+    <Content Include="Dungchung\Images\15200921245810.png" />
+    <Content Include="Dungchung\Images\152009212557508.gif" />
+    <Content Include="Dungchung\Images\196200921312885.png" />
+    <Content Include="Dungchung\Images\1x1.gif" />
+    <Content Include="Dungchung\Images\952009113955801.png" />
+    <Content Include="Dungchung\Images\action.gif" />
+    <Content Include="Dungchung\Images\Active\Arrow.gif" />
+    <Content Include="Dungchung\Images\Active\Center.jpg" />
+    <Content Include="Dungchung\Images\Active\Left.jpg" />
+    <Content Include="Dungchung\Images\Active\Right.jpg" />
+    <Content Include="Dungchung\Images\add.gif" />
+    <Content Include="Dungchung\Images\add.jpg" />
+    <Content Include="Dungchung\Images\addnew.gif" />
+    <Content Include="Dungchung\Images\admin_01.gif" />
+    <Content Include="Dungchung\Images\admin_02.gif" />
+    <Content Include="Dungchung\Images\admin_03.gif" />
+    <Content Include="Dungchung\Images\admin_04.gif" />
+    <Content Include="Dungchung\Images\admin_06.gif" />
+    <Content Include="Dungchung\Images\admin_07.gif" />
+    <Content Include="Dungchung\Images\admin_08.gif" />
+    <Content Include="Dungchung\Images\admin_09.gif" />
+    <Content Include="Dungchung\Images\Answer1.jpg" />
+    <Content Include="Dungchung\Images\Answer2.jpg" />
+    <Content Include="Dungchung\Images\Answer3.jpg" />
+    <Content Include="Dungchung\Images\ark.png" />
+    <Content Include="Dungchung\Images\arrow.gif" />
+    <Content Include="Dungchung\Images\arrow.jpg" />
+    <Content Include="Dungchung\Images\arrow_d.gif" />
+    <Content Include="Dungchung\Images\arrow_r.gif" />
+    <Content Include="Dungchung\Images\a_bmtool.gif" />
+    <Content Include="Dungchung\Images\back.gif" />
+    <Content Include="Dungchung\Images\back2.gif" />
+    <Content Include="Dungchung\Images\back3.gif" />
+    <Content Include="Dungchung\Images\back4.gif" />
+    <Content Include="Dungchung\Images\background.jpg" />
+    <Content Include="Dungchung\Images\banner.jpg" />
+    <Content Include="Dungchung\Images\bgMenu.jpg" />
+    <Content Include="Dungchung\Images\Bgr.gif" />
+    <Content Include="Dungchung\Images\bg_Line.bmp" />
+    <Content Include="Dungchung\Images\bg_menu.gif" />
+    <Content Include="Dungchung\Images\BigLogo.gif" />
+    <Content Include="Dungchung\Images\buble5.ico" />
+    <Content Include="Dungchung\Images\Bus.gif" />
+    <Content Include="Dungchung\Images\button.png" />
+    <Content Include="Dungchung\Images\button\Add.png" />
+    <Content Include="Dungchung\Images\button\Del.png" />
+    <Content Include="Dungchung\Images\button\Exit.png" />
+    <Content Include="Dungchung\Images\button\Find.png" />
+    <Content Include="Dungchung\Images\button\Photo.png" />
+    <Content Include="Dungchung\Images\button\Pub.gif" />
+    <Content Include="Dungchung\Images\button\Reply.png" />
+    <Content Include="Dungchung\Images\button\Save.gif" />
+    <Content Include="Dungchung\Images\button\Send.png" />
+    <Content Include="Dungchung\Images\button_left.png" />
+    <Content Include="Dungchung\Images\button_right.png" />
+    <Content Include="Dungchung\Images\Calendar_scheduleHS.png" />
+    <Content Include="Dungchung\Images\cancel.gif" />
+    <Content Include="Dungchung\Images\cancel1.gif" />
+    <Content Include="Dungchung\Images\cancel2.gif" />
+    <Content Include="Dungchung\Images\Center.jpg" />
+    <Content Include="Dungchung\Images\Center_Bottom.jpg" />
+    <Content Include="Dungchung\Images\checked.gif" />
+    <Content Include="Dungchung\Images\chuyenmuc.gif" />
+    <Content Include="Dungchung\Images\clear.gif" />
+    <Content Include="Dungchung\Images\click.gif" />
+    <Content Include="Dungchung\Images\cmd_button_left.jpg" />
+    <Content Include="Dungchung\Images\cmd_button_right.jpg" />
+    <Content Include="Dungchung\Images\Collapse.gif" />
+    <Content Include="Dungchung\Images\Collapse.jpg" />
+    <Content Include="Dungchung\Images\Copy.gif" />
+    <Content Include="Dungchung\Images\cross_icon_normal.png" />
+    <Content Include="Dungchung\Images\DatePicker\Images\close.gif" />
+    <Content Include="Dungchung\Images\DatePicker\Images\drop1.gif" />
+    <Content Include="Dungchung\Images\DatePicker\Images\drop2.gif" />
+    <Content Include="Dungchung\Images\DatePicker\Images\events.gif" />
+    <Content Include="Dungchung\Images\DatePicker\Images\icon-calendar.gif" />
+    <Content Include="Dungchung\Images\DatePicker\Images\left1.gif" />
+    <Content Include="Dungchung\Images\DatePicker\Images\left2.gif" />
+    <Content Include="Dungchung\Images\DatePicker\Images\right1.gif" />
+    <Content Include="Dungchung\Images\DatePicker\Images\right2.gif" />
+    <Content Include="Dungchung\Images\delete.gif" />
+    <Content Include="Dungchung\Images\details.gif" />
+    <Content Include="Dungchung\Images\divider.gif" />
+    <Content Include="Dungchung\Images\divider.jpg" />
+    <Content Include="Dungchung\Images\dividerHoriz.jpg" />
+    <Content Include="Dungchung\Images\dn.gif" />
+    <Content Include="Dungchung\Images\dn1.gif" />
+    <Content Include="Dungchung\Images\dn3.gif" />
+    <Content Include="Dungchung\Images\DNNExplorer_Unzip.gif" />
+    <Content Include="Dungchung\Images\doc.gif" />
+    <Content Include="Dungchung\Images\document_new.png" />
+    <Content Include="Dungchung\Images\dot_w.gif" />
+    <Content Include="Dungchung\Images\downicon.png" />
+    <Content Include="Dungchung\Images\drop.gif" />
+    <Content Include="Dungchung\Images\edit.gif" />
+    <Content Include="Dungchung\Images\edit1 %282%29.gif" />
+    <Content Include="Dungchung\Images\email_attach.png" />
+    <Content Include="Dungchung\Images\email_go.png" />
+    <Content Include="Dungchung\Images\english.gif" />
+    <Content Include="Dungchung\Images\events.gif" />
+    <Content Include="Dungchung\Images\exists.gif" />
+    <Content Include="Dungchung\Images\exit.gif" />
+    <Content Include="Dungchung\Images\Expande.gif" />
+    <Content Include="Dungchung\Images\Explorer_folder.small.gif" />
+    <Content Include="Dungchung\Images\ffwd.gif" />
+    <Content Include="Dungchung\Images\find.gif" />
+    <Content Include="Dungchung\Images\flash\logo-flash.swf" />
+    <Content Include="Dungchung\Images\flash\logo.png" />
+    <Content Include="Dungchung\Images\flash\logo1.png" />
+    <Content Include="Dungchung\Images\flash\mediaplayer.swf" />
+    <Content Include="Dungchung\Images\flash\mpw_player.swf" />
+    <Content Include="Dungchung\Images\flash\player.swf" />
+    <Content Include="Dungchung\Images\flash\preview.jpg" />
+    <Content Include="Dungchung\Images\flash\sao.png" />
+    <Content Include="Dungchung\Images\flash\trusted.jpg" />
+    <Content Include="Dungchung\Images\flash\yt.swf" />
+    <Content Include="Dungchung\Images\fly.jpeg" />
+    <Content Include="Dungchung\Images\folder.gif" />
+    <Content Include="Dungchung\Images\folder.jpg" />
+    <Content Include="Dungchung\Images\folder.png" />
+    <Content Include="Dungchung\Images\folder_closed.png" />
+    <Content Include="Dungchung\Images\folder_cubes.jpg" />
+    <Content Include="Dungchung\Images\folder_delete.jpg" />
+    <Content Include="Dungchung\Images\folder_new.jpg" />
+    <Content Include="Dungchung\Images\folder_out.jpg" />
+    <Content Include="Dungchung\Images\footer_bg.png" />
+    <Content Include="Dungchung\Images\form_yellow.jpg" />
+    <Content Include="Dungchung\Images\fwd.gif" />
+    <Content Include="Dungchung\Images\f_moved.gif" />
+    <Content Include="Dungchung\Images\gear_preferences.jpg" />
+    <Content Include="Dungchung\Images\gear_time.jpg" />
+    <Content Include="Dungchung\Images\Group.gif" />
+    <Content Include="Dungchung\Images\Hethong.png" />
+    <Content Include="Dungchung\Images\history.jpg" />
+    <Content Include="Dungchung\Images\Home.png" />
+    <Content Include="Dungchung\Images\hsi_ni06.gif" />
+    <Content Include="Dungchung\Images\ico-faq.gif" />
+    <Content Include="Dungchung\Images\icon-calendar.gif" />
+    <Content Include="Dungchung\Images\icon-delete.gif" />
+    <Content Include="Dungchung\Images\icon-floppy.gif" />
+    <Content Include="Dungchung\Images\icon-pencil-x.gif" />
+    <Content Include="Dungchung\Images\icon-pencil.gif" />
+    <Content Include="Dungchung\Images\icon-print.gif" />
+    <Content Include="Dungchung\Images\ICONAdmin.jpg" />
+    <Content Include="Dungchung\Images\IconHPC\adv_login.png" />
+    <Content Include="Dungchung\Images\IconHPC\banber_cms.jpg" />
+    <Content Include="Dungchung\Images\IconHPC\close.gif" />
+    <Content Include="Dungchung\Images\IconHPC\CMSLogo.png" />
+    <Content Include="Dungchung\Images\IconHPC\CMSTitle.png" />
+    <Content Include="Dungchung\Images\IconHPC\CMSUser.png" />
+    <Content Include="Dungchung\Images\IconHPC\CMS_Changepass.png" />
+    <Content Include="Dungchung\Images\IconHPC\CMS_ImageHPC.png" />
+    <Content Include="Dungchung\Images\IconHPC\Exit.png" />
+    <Content Include="Dungchung\Images\IconHPC\Help_button.png" />
+    <Content Include="Dungchung\Images\IconHPC\Ho Guom 7.jpg" />
+    <Content Include="Dungchung\Images\IconHPC\icon_computer.png" />
+    <Content Include="Dungchung\Images\IconHPC\icon_mail.png" />
+    <Content Include="Dungchung\Images\IconHPC\icon_products.png" />
+    <Content Include="Dungchung\Images\IconHPC\icon_support.png" />
+    <Content Include="Dungchung\Images\IconHPC\keyboard.gif" />
+    <Content Include="Dungchung\Images\IconHPC\Login_Button.png" />
+    <Content Include="Dungchung\Images\IconHPC\LoGoBaoAnhDong.png" />
+    <Content Include="Dungchung\Images\IconHPC\LogoHPC_Tran.gif" />
+    <Content Include="Dungchung\Images\Icons\Add.gif" />
+    <Content Include="Dungchung\Images\Icons\AddB.gif" />
+    <Content Include="Dungchung\Images\Icons\Arrow01.gif" />
+    <Content Include="Dungchung\Images\Icons\Article.gif" />
+    <Content Include="Dungchung\Images\Icons\btnSearch.gif" />
+    <Content Include="Dungchung\Images\Icons\Cancel.gif" />
+    <Content Include="Dungchung\Images\Icons\category.png" />
+    <Content Include="Dungchung\Images\Icons\Chart-icon.png" />
+    <Content Include="Dungchung\Images\Icons\chart.png" />
+    <Content Include="Dungchung\Images\Icons\Close.gif" />
+    <Content Include="Dungchung\Images\Icons\cog-edit-icon.png" />
+    <Content Include="Dungchung\Images\Icons\DangNhap.gif" />
+    <Content Include="Dungchung\Images\Icons\delete.gif" />
+    <Content Include="Dungchung\Images\Icons\disk.gif" />
+    <Content Include="Dungchung\Images\Icons\Display.gif" />
+    <Content Include="Dungchung\Images\Icons\dn.gif" />
+    <Content Include="Dungchung\Images\Icons\Document.gif" />
+    <Content Include="Dungchung\Images\Icons\download-link.gif" />
+    <Content Include="Dungchung\Images\Icons\Download.gif" />
+    <Content Include="Dungchung\Images\Icons\Earth.png" />
+    <Content Include="Dungchung\Images\Icons\edit.gif" />
+    <Content Include="Dungchung\Images\Icons\email.gif" />
+    <Content Include="Dungchung\Images\Icons\ForgotPassword.gif" />
+    <Content Include="Dungchung\Images\Icons\Function.gif" />
+    <Content Include="Dungchung\Images\Icons\FVideo-icon.png" />
+    <Content Include="Dungchung\Images\Icons\GoBack.gif" />
+    <Content Include="Dungchung\Images\Icons\Group.gif" />
+    <Content Include="Dungchung\Images\Icons\Gui.gif" />
+    <Content Include="Dungchung\Images\Icons\GuiQuaEmail.gif" />
+    <Content Include="Dungchung\Images\Icons\GuiQuaEmail_Off.gif" />
+    <Content Include="Dungchung\Images\Icons\Help.gif" />
+    <Content Include="Dungchung\Images\Icons\Home.gif" />
+    <Content Include="Dungchung\Images\Icons\house_2.png" />
+    <Content Include="Dungchung\Images\Icons\Image-48.png" />
+    <Content Include="Dungchung\Images\Icons\Invalid.gif" />
+    <Content Include="Dungchung\Images\Icons\key.gif" />
+    <Content Include="Dungchung\Images\Icons\Learning.gif" />
+    <Content Include="Dungchung\Images\Icons\Live-Gallery.png" />
+    <Content Include="Dungchung\Images\Icons\lock.gif" />
+    <Content Include="Dungchung\Images\Icons\lt.gif" />
+    <Content Include="Dungchung\Images\Icons\manager.gif" />
+    <Content Include="Dungchung\Images\Icons\manage_user.png" />
+    <Content Include="Dungchung\Images\Icons\MediaFileIcon.png" />
+    <Content Include="Dungchung\Images\Icons\news.png" />
+    <Content Include="Dungchung\Images\Icons\Numbers\0.jpg" />
+    <Content Include="Dungchung\Images\Icons\Numbers\1.jpg" />
+    <Content Include="Dungchung\Images\Icons\Numbers\2.jpg" />
+    <Content Include="Dungchung\Images\Icons\Numbers\3.jpg" />
+    <Content Include="Dungchung\Images\Icons\Numbers\4.jpg" />
+    <Content Include="Dungchung\Images\Icons\Numbers\5.jpg" />
+    <Content Include="Dungchung\Images\Icons\Numbers\6.jpg" />
+    <Content Include="Dungchung\Images\Icons\Numbers\7.jpg" />
+    <Content Include="Dungchung\Images\Icons\Numbers\8.jpg" />
+    <Content Include="Dungchung\Images\Icons\Numbers\9.jpg" />
+    <Content Include="Dungchung\Images\Icons\OK.gif" />
+    <Content Include="Dungchung\Images\Icons\Orange_Learning.gif" />
+    <Content Include="Dungchung\Images\Icons\PhanHoi.gif" />
+    <Content Include="Dungchung\Images\Icons\photo.gif" />
+    <Content Include="Dungchung\Images\Icons\pictures.png" />
+    <Content Include="Dungchung\Images\Icons\pictures_48.png" />
+    <Content Include="Dungchung\Images\Icons\PortalSettings.gif" />
+    <Content Include="Dungchung\Images\Icons\Properties.gif" />
+    <Content Include="Dungchung\Images\Icons\Publish.gif" />
+    <Content Include="Dungchung\Images\Icons\QuayLai.gif" />
+    <Content Include="Dungchung\Images\Icons\Rate\star-left-off.gif" />
+    <Content Include="Dungchung\Images\Icons\Rate\star-left-on.gif" />
+    <Content Include="Dungchung\Images\Icons\Rate\star-right-off.gif" />
+    <Content Include="Dungchung\Images\Icons\Rate\star-right-on.gif" />
+    <Content Include="Dungchung\Images\Icons\Reply.png" />
+    <Content Include="Dungchung\Images\Icons\Reset.gif" />
+    <Content Include="Dungchung\Images\Icons\rt.gif" />
+    <Content Include="Dungchung\Images\Icons\Security.gif" />
+    <Content Include="Dungchung\Images\Icons\Settings.gif" />
+    <Content Include="Dungchung\Images\Icons\SmallDownload.gif" />
+    <Content Include="Dungchung\Images\Icons\SmallDownload02.gif" />
+    <Content Include="Dungchung\Images\Icons\Sms-48.png" />
+    <Content Include="Dungchung\Images\Icons\TaiVe.gif" />
+    <Content Include="Dungchung\Images\Icons\TaiVe_Blue.gif" />
+    <Content Include="Dungchung\Images\Icons\Them.gif" />
+    <Content Include="Dungchung\Images\Icons\to-do-list-cheked-all-icon.png" />
+    <Content Include="Dungchung\Images\Icons\topic_announce.png" />
+    <Content Include="Dungchung\Images\Icons\topic_announce_new.png" />
+    <Content Include="Dungchung\Images\Icons\topic_new.png" />
+    <Content Include="Dungchung\Images\Icons\topic_normal.png" />
+    <Content Include="Dungchung\Images\Icons\topic_poll.png" />
+    <Content Include="Dungchung\Images\Icons\topic_poll_new.png" />
+    <Content Include="Dungchung\Images\Icons\uncheck.gif" />
+    <Content Include="Dungchung\Images\Icons\up.gif" />
+    <Content Include="Dungchung\Images\Icons\upload.gif" />
+    <Content Include="Dungchung\Images\Icons\upload.png" />
+    <Content Include="Dungchung\Images\Icons\User.gif" />
+    <Content Include="Dungchung\Images\Icons\User_Deactive.gif" />
+    <Content Include="Dungchung\Images\Icons\video-icon.png" />
+    <Content Include="Dungchung\Images\Icons\video.gif" />
+    <Content Include="Dungchung\Images\Icons\View.png" />
+    <Content Include="Dungchung\Images\Icons\workflow.png" />
+    <Content Include="Dungchung\Images\Icons\Xem.gif" />
+    <Content Include="Dungchung\Images\Icons\XemTiep.jpg" />
+    <Content Include="Dungchung\Images\Icons\Xoa.gif" />
+    <Content Include="Dungchung\Images\icon_add.gif" />
+    <Content Include="Dungchung\Images\icon_authentication_32px.gif" />
+    <Content Include="Dungchung\Images\icon_bulkmail_16px.gif" />
+    <Content Include="Dungchung\Images\icon_filemanager_32px.gif" />
+    <Content Include="Dungchung\Images\icon_moduledefinitions_32px.gif" />
+    <Content Include="Dungchung\Images\icon_scheduler_39px.gif" />
+    <Content Include="Dungchung\Images\icon_search_32px.gif" />
+    <Content Include="Dungchung\Images\icon_sitesettings_36px.gif" />
+    <Content Include="Dungchung\Images\icon_tabs_34px.gif" />
+    <Content Include="Dungchung\Images\icon_users_32px.gif" />
+    <Content Include="Dungchung\Images\icon_users_32px1.gif" />
+    <Content Include="Dungchung\Images\id_card_add.png" />
+    <Content Include="Dungchung\Images\image.jpg" />
+    <Content Include="Dungchung\Images\images.jpg" />
+    <Content Include="Dungchung\Images\indicator.gif" />
+    <Content Include="Dungchung\Images\key.gif" />
+    <Content Include="Dungchung\Images\key21.bmp" />
+    <Content Include="Dungchung\Images\KeyLock.gif" />
+    <Content Include="Dungchung\Images\Learning.gif" />
+    <Content Include="Dungchung\Images\Left.jpg" />
+    <Content Include="Dungchung\Images\leftArrow.gif" />
+    <Content Include="Dungchung\Images\Left_Bottom.jpg" />
+    <Content Include="Dungchung\Images\left_Content.jpg" />
+    <Content Include="Dungchung\Images\letter_32.png" />
+    <Content Include="Dungchung\Images\link.gif" />
+    <Content Include="Dungchung\Images\listitem.gif" />
+    <Content Include="Dungchung\Images\Loading.gif" />
+    <Content Include="Dungchung\Images\lock.jpg" />
+    <Content Include="Dungchung\Images\lock1.gif" />
+    <Content Include="Dungchung\Images\login_bg.png" />
+    <Content Include="Dungchung\Images\login_icon.gif" />
+    <Content Include="Dungchung\Images\Logout.gif" />
+    <Content Include="Dungchung\Images\lt.gif" />
+    <Content Include="Dungchung\Images\lt1.gif" />
+    <Content Include="Dungchung\Images\mail.gif" />
+    <Content Include="Dungchung\Images\MailSend.png" />
+    <Content Include="Dungchung\Images\Master\Apple\1.gif" />
+    <Content Include="Dungchung\Images\Master\Apple\1.png" />
+    <Content Include="Dungchung\Images\Master\Apple\10.png" />
+    <Content Include="Dungchung\Images\Master\Apple\11.png" />
+    <Content Include="Dungchung\Images\Master\Apple\12.png" />
+    <Content Include="Dungchung\Images\Master\Apple\2.png" />
+    <Content Include="Dungchung\Images\Master\Apple\3.png" />
+    <Content Include="Dungchung\Images\Master\Apple\4.png" />
+    <Content Include="Dungchung\Images\Master\Apple\5.png" />
+    <Content Include="Dungchung\Images\Master\Apple\6.png" />
+    <Content Include="Dungchung\Images\Master\Apple\7.png" />
+    <Content Include="Dungchung\Images\Master\Apple\8.png" />
+    <Content Include="Dungchung\Images\Master\Apple\9.png" />
+    <Content Include="Dungchung\Images\Master\Apple\C01.png" />
+    <Content Include="Dungchung\Images\Master\Apple\C02.png" />
+    <Content Include="Dungchung\Images\Master\Apple\C03.png" />
+    <Content Include="Dungchung\Images\Master\Apple\C04.png" />
+    <Content Include="Dungchung\Images\Master\Apple\C05.png" />
+    <Content Include="Dungchung\Images\Master\Apple\C06.png" />
+    <Content Include="Dungchung\Images\Master\Apple\C07.png" />
+    <Content Include="Dungchung\Images\Master\Apple\C08.png" />
+    <Content Include="Dungchung\Images\Master\Apple\L01.png" />
+    <Content Include="Dungchung\Images\Master\Apple\L02.png" />
+    <Content Include="Dungchung\Images\Master\Apple\L03.png" />
+    <Content Include="Dungchung\Images\Master\Apple\Pane01.png" />
+    <Content Include="Dungchung\Images\Master\Apple\Pane02.png" />
+    <Content Include="Dungchung\Images\Master\Backbase\menu-bg.gif" />
+    <Content Include="Dungchung\Images\Master\Backbase\menu-divider.gif" />
+    <Content Include="Dungchung\Images\Master\Backbase\menu-left.gif" />
+    <Content Include="Dungchung\Images\Master\Backbase\menu-right.gif" />
+    <Content Include="Dungchung\Images\Master\Blue\0.gif" />
+    <Content Include="Dungchung\Images\Master\Blue\1.gif" />
+    <Content Include="Dungchung\Images\Master\Blue\1.jpg" />
+    <Content Include="Dungchung\Images\Master\Blue\10.jpg" />
+    <Content Include="Dungchung\Images\Master\Blue\11.jpg" />
+    <Content Include="Dungchung\Images\Master\Blue\12.jpg" />
+    <Content Include="Dungchung\Images\Master\Blue\13.jpg" />
+    <Content Include="Dungchung\Images\Master\Blue\14.jpg" />
+    <Content Include="Dungchung\Images\Master\Blue\15.jpg" />
+    <Content Include="Dungchung\Images\Master\Blue\2.jpg" />
+    <Content Include="Dungchung\Images\Master\Blue\3.jpg" />
+    <Content Include="Dungchung\Images\Master\Blue\4.jpg" />
+    <Content Include="Dungchung\Images\Master\Blue\5.jpg" />
+    <Content Include="Dungchung\Images\Master\Blue\6.jpg" />
+    <Content Include="Dungchung\Images\Master\Blue\7.jpg" />
+    <Content Include="Dungchung\Images\Master\Blue\8.jpg" />
+    <Content Include="Dungchung\Images\Master\Blue\8_5.jpg" />
+    <Content Include="Dungchung\Images\Master\Blue\9.jpg" />
+    <Content Include="Dungchung\Images\Master\Brown\0.gif" />
+    <Content Include="Dungchung\Images\Master\Brown\1.gif" />
+    <Content Include="Dungchung\Images\Master\Brown\1.jpg" />
+    <Content Include="Dungchung\Images\Master\Brown\10.jpg" />
+    <Content Include="Dungchung\Images\Master\Brown\11.jpg" />
+    <Content Include="Dungchung\Images\Master\Brown\12.jpg" />
+    <Content Include="Dungchung\Images\Master\Brown\13.jpg" />
+    <Content Include="Dungchung\Images\Master\Brown\14.jpg" />
+    <Content Include="Dungchung\Images\Master\Brown\15.jpg" />
+    <Content Include="Dungchung\Images\Master\Brown\2.jpg" />
+    <Content Include="Dungchung\Images\Master\Brown\3.jpg" />
+    <Content Include="Dungchung\Images\Master\Brown\4.jpg" />
+    <Content Include="Dungchung\Images\Master\Brown\5.jpg" />
+    <Content Include="Dungchung\Images\Master\Brown\6.jpg" />
+    <Content Include="Dungchung\Images\Master\Brown\7.jpg" />
+    <Content Include="Dungchung\Images\Master\Brown\8.jpg" />
+    <Content Include="Dungchung\Images\Master\Brown\8_5.jpg" />
+    <Content Include="Dungchung\Images\Master\Brown\9.jpg" />
+    <Content Include="Dungchung\Images\Master\Green\0.gif" />
+    <Content Include="Dungchung\Images\Master\Green\1.gif" />
+    <Content Include="Dungchung\Images\Master\Green\10.jpg" />
+    <Content Include="Dungchung\Images\Master\Green\11.jpg" />
+    <Content Include="Dungchung\Images\Master\Green\12.jpg" />
+    <Content Include="Dungchung\Images\Master\Green\8.jpg" />
+    <Content Include="Dungchung\Images\Master\Green\8_5.jpg" />
+    <Content Include="Dungchung\Images\Master\Green\9.jpg" />
+    <Content Include="Dungchung\Images\Master\Orange\0.gif" />
+    <Content Include="Dungchung\Images\Master\Orange\0.jpg" />
+    <Content Include="Dungchung\Images\Master\Orange\1.gif" />
+    <Content Include="Dungchung\Images\Master\Orange\10.jpg" />
+    <Content Include="Dungchung\Images\Master\Orange\11.jpg" />
+    <Content Include="Dungchung\Images\Master\Orange\12.jpg" />
+    <Content Include="Dungchung\Images\Master\Orange\8.jpg" />
+    <Content Include="Dungchung\Images\Master\Orange\8_5.jpg" />
+    <Content Include="Dungchung\Images\Master\Orange\9.jpg" />
+    <Content Include="Dungchung\Images\Master\Violet\0.gif" />
+    <Content Include="Dungchung\Images\Master\Violet\1.gif" />
+    <Content Include="Dungchung\Images\Master\Violet\10.jpg" />
+    <Content Include="Dungchung\Images\Master\Violet\11.jpg" />
+    <Content Include="Dungchung\Images\Master\Violet\12.jpg" />
+    <Content Include="Dungchung\Images\Master\Violet\8.jpg" />
+    <Content Include="Dungchung\Images\Master\Violet\8_5.jpg" />
+    <Content Include="Dungchung\Images\Master\Violet\9.jpg" />
+    <Content Include="Dungchung\Images\Master\WindowsLive\1.png" />
+    <Content Include="Dungchung\Images\Master\WindowsLive\2.jpg" />
+    <Content Include="Dungchung\Images\Master\WindowsLive\2.png" />
+    <Content Include="Dungchung\Images\Master\WindowsLive\3.png" />
+    <Content Include="Dungchung\Images\Master\WindowsLive\4.png" />
+    <Content Include="Dungchung\Images\Master\WindowsLive\5.png" />
+    <Content Include="Dungchung\Images\Master\WindowsLive\6.png" />
+    <Content Include="Dungchung\Images\Master\WindowsLive\Logo.png" />
+    <Content Include="Dungchung\Images\Master\XP\0.gif" />
+    <Content Include="Dungchung\Images\Master\XP\1.gif" />
+    <Content Include="Dungchung\Images\Master\XP\10.jpg" />
+    <Content Include="Dungchung\Images\Master\XP\11.jpg" />
+    <Content Include="Dungchung\Images\Master\XP\12.jpg" />
+    <Content Include="Dungchung\Images\Master\XP\8.jpg" />
+    <Content Include="Dungchung\Images\Master\XP\8_5.jpg" />
+    <Content Include="Dungchung\Images\Master\XP\9.jpg" />
+    <Content Include="Dungchung\Images\max.gif" />
+    <Content Include="Dungchung\Images\Menu_BGR.jpg" />
+    <Content Include="Dungchung\Images\min.gif" />
+    <Content Include="Dungchung\Images\minus.gif" />
+    <Content Include="Dungchung\Images\mod.gif" />
+    <Content Include="Dungchung\Images\navlink.gif" />
+    <Content Include="Dungchung\Images\new.gif" />
+    <Content Include="Dungchung\Images\new1.gif" />
+    <Content Include="Dungchung\Images\new2.gif" />
+    <Content Include="Dungchung\Images\node.gif" />
+    <Content Include="Dungchung\Images\NoImage.png" />
+    <Content Include="Dungchung\Images\note.gif" />
+    <Content Include="Dungchung\Images\no_images.jpeg" />
+    <Content Include="Dungchung\Images\OrtherFile.png" />
+    <Content Include="Dungchung\Images\Password.png" />
+    <Content Include="Dungchung\Images\PicturePreview\MediaFileIcon.png" />
+    <Content Include="Dungchung\Images\plainbutton.gif" />
+    <Content Include="Dungchung\Images\Player-icon.png" />
+    <Content Include="Dungchung\Images\plus.gif" />
+    <Content Include="Dungchung\Images\poll.gif" />
+    <Content Include="Dungchung\Images\PostCar.gif" />
+    <Content Include="Dungchung\Images\prev.gif" />
+    <Content Include="Dungchung\Images\print.gif" />
+    <Content Include="Dungchung\Images\Processing.gif" />
+    <Content Include="Dungchung\Images\product.gif" />
+    <Content Include="Dungchung\Images\profile.ico" />
+    <Content Include="Dungchung\Images\pronew.gif" />
+    <Content Include="Dungchung\Images\pronewsmall.gif" />
+    <Content Include="Dungchung\Images\px1.gif" />
+    <Content Include="Dungchung\Images\QLCM.gif" />
+    <Content Include="Dungchung\Images\reg.gif" />
+    <Content Include="Dungchung\Images\reg.png" />
+    <Content Include="Dungchung\Images\remove.gif" />
+    <Content Include="Dungchung\Images\reply_icon.gif" />
+    <Content Include="Dungchung\Images\reply_icon1.gif" />
+    <Content Include="Dungchung\Images\reply_icon2.gif" />
+    <Content Include="Dungchung\Images\rew.gif" />
+    <Content Include="Dungchung\Images\Right.jpg" />
+    <Content Include="Dungchung\Images\rightArrow.gif" />
+    <Content Include="Dungchung\Images\Right_Bottom.jpg" />
+    <Content Include="Dungchung\Images\Right_Content.jpg" />
+    <Content Include="Dungchung\Images\roles.gif" />
+    <Content Include="Dungchung\Images\rt.gif" />
+    <Content Include="Dungchung\Images\rt1.gif" />
+    <Content Include="Dungchung\Images\save.gif" />
+    <Content Include="Dungchung\Images\search_center.jpg" />
+    <Content Include="Dungchung\Images\Separator.gif" />
+    <Content Include="Dungchung\Images\smallLogo_.gif" />
+    <Content Include="Dungchung\Images\spacer.gif" />
+    <Content Include="Dungchung\Images\sub_d.gif" />
+    <Content Include="Dungchung\Images\Synchronize.gif" />
+    <Content Include="Dungchung\Images\Table_bgBottom.jpg" />
+    <Content Include="Dungchung\Images\tabs\tab-active-left.gif" />
+    <Content Include="Dungchung\Images\tabs\tab-active-right.gif" />
+    <Content Include="Dungchung\Images\tabs\tab-active.gif" />
+    <Content Include="Dungchung\Images\tabs\tab-hover-left.gif" />
+    <Content Include="Dungchung\Images\tabs\tab-hover-right.gif" />
+    <Content Include="Dungchung\Images\tabs\tab-hover.gif" />
+    <Content Include="Dungchung\Images\tabs\tab-left.gif" />
+    <Content Include="Dungchung\Images\tabs\tab-line.gif" />
+    <Content Include="Dungchung\Images\tabs\tab-right.gif" />
+    <Content Include="Dungchung\Images\tabs\tab.gif" />
+    <Content Include="Dungchung\Images\tab_image\ie\ie_tabbacker_720x296.jpg" />
+    <Content Include="Dungchung\Images\tab_image\ie\tab_selected.gif" />
+    <Content Include="Dungchung\Images\tab_image\ie\tab_unselected.gif" />
+    <Content Include="Dungchung\Images\tab_image\msngallery\displaypictures.png" />
+    <Content Include="Dungchung\Images\tab_image\msngallery\emoticons.png" />
+    <Content Include="Dungchung\Images\tab_image\msngallery\sidebar.png" />
+    <Content Include="Dungchung\Images\tab_image\msngallery\sideshow.png" />
+    <Content Include="Dungchung\Images\tab_image\msngallery\tab-line.png" />
+    <Content Include="Dungchung\Images\tab_image\msngallery\toolbarbuttons.png" />
+    <Content Include="Dungchung\Images\tab_image\msngallery\webgadgets.png" />
+    <Content Include="Dungchung\Images\tab_image\msngallery\winks.png" />
+    <Content Include="Dungchung\Images\tab_image\technorati\tab-line.png" />
+    <Content Include="Dungchung\Images\tab_image\technorati\tab.png" />
+    <Content Include="Dungchung\Images\tab_image\xp\tab-active-left.gif" />
+    <Content Include="Dungchung\Images\tab_image\xp\tab-active-right.gif" />
+    <Content Include="Dungchung\Images\tab_image\xp\tab-active.gif" />
+    <Content Include="Dungchung\Images\tab_image\xp\tab-hover-left.gif" />
+    <Content Include="Dungchung\Images\tab_image\xp\tab-hover-right.gif" />
+    <Content Include="Dungchung\Images\tab_image\xp\tab-hover.gif" />
+    <Content Include="Dungchung\Images\tab_image\xp\tab-left.gif" />
+    <Content Include="Dungchung\Images\tab_image\xp\tab-line.gif" />
+    <Content Include="Dungchung\Images\tab_image\xp\tab-right.gif" />
+    <Content Include="Dungchung\Images\tab_image\xp\tab.gif" />
+    <Content Include="Dungchung\Images\tab_image\yui\sprite.png" />
+    <Content Include="Dungchung\Images\thumbnail.gif" />
+    <Content Include="Dungchung\Images\Title_bg.jpg" />
+    <Content Include="Dungchung\Images\title_body.png" />
+    <Content Include="Dungchung\Images\ToolBarFilterEnabled.gif" />
+    <Content Include="Dungchung\Images\top.gif" />
+    <Content Include="Dungchung\Images\top_bg.png" />
+    <Content Include="Dungchung\Images\Train.gif" />
+    <Content Include="Dungchung\Images\unchecked.gif" />
+    <Content Include="Dungchung\Images\undo.gif" />
+    <Content Include="Dungchung\Images\unlock.jpg" />
+    <Content Include="Dungchung\Images\up.gif" />
+    <Content Include="Dungchung\Images\up1.gif" />
+    <Content Include="Dungchung\Images\up3.gif" />
+    <Content Include="Dungchung\Images\uplt.gif" />
+    <Content Include="Dungchung\Images\uprt.gif" />
+    <Content Include="Dungchung\Images\Video-icon.png" />
+    <Content Include="Dungchung\Images\vietnam.gif" />
+    <Content Include="Dungchung\Images\view.gif" />
+    <Content Include="Dungchung\Images\viewDetail.jpeg" />
+    <Content Include="Dungchung\Images\View_en.png" />
+    <Content Include="Dungchung\Images\warning.gif" />
+    <Content Include="Dungchung\Images\warning16x16.gif" />
+    <Content Include="Dungchung\Images\workstation_network.gif" />
+    <Content Include="Dungchung\Images\xem.GIF" />
+    <Content Include="Dungchung\Images\zip.gif" />
+    <Content Include="Dungchung\Images\zoom.gif" />
+    <Content Include="Dungchung\jscolor\arrow.gif" />
+    <Content Include="Dungchung\jscolor\cross.gif" />
+    <Content Include="Dungchung\jscolor\hs.png" />
+    <Content Include="Dungchung\jscolor\hv.png" />
+    <Content Include="Dungchung\jscolor\jscolor.js" />
+    <Content Include="Dungchung\Scripts\AutoFormatDatTime.js" />
+    <Content Include="Dungchung\Scripts\ColorPicker.js" />
+    <Content Include="Dungchung\Scripts\datepicker.js" />
+    <Content Include="Dungchung\Scripts\DatePicker\datepicker.js" />
+    <Content Include="Dungchung\Scripts\DatePicker\images\close.gif" />
+    <Content Include="Dungchung\Scripts\DatePicker\images\drop1.gif" />
+    <Content Include="Dungchung\Scripts\DatePicker\images\drop2.gif" />
+    <Content Include="Dungchung\Scripts\DatePicker\images\icon-calendar.gif" />
+    <Content Include="Dungchung\Scripts\DatePicker\images\icon-calendar1.gif" />
+    <Content Include="Dungchung\Scripts\DatePicker\images\left1.gif" />
+    <Content Include="Dungchung\Scripts\DatePicker\images\left2.gif" />
+    <Content Include="Dungchung\Scripts\DatePicker\images\newappt.gif" />
+    <Content Include="Dungchung\Scripts\DatePicker\images\right1.gif" />
+    <Content Include="Dungchung\Scripts\DatePicker\images\right2.gif" />
+    <Content Include="Dungchung\Scripts\DatetimePicker\arrow-down.gif" />
+    <Content Include="Dungchung\Scripts\DatetimePicker\arrow-up.gif" />
+    <Content Include="Dungchung\Scripts\DatetimePicker\datepicker.css" />
+    <Content Include="Dungchung\Scripts\DatetimePicker\datepicker.js" />
+    <Content Include="Dungchung\Scripts\DatetimePicker\datepicker\calendar.gif" />
+    <Content Include="Dungchung\Scripts\DatetimePicker\DatetimePicker.js" />
+    <Content Include="Dungchung\Scripts\DatetimePicker\protoplasm.css" />
+    <Content Include="Dungchung\Scripts\DatetimePicker\protoplasm.js" />
+    <Content Include="Dungchung\Scripts\DatetimePicker\prototype.js" />
+    <Content Include="Dungchung\Scripts\DatetimePicker\timepicker.css" />
+    <Content Include="Dungchung\Scripts\DatetimePicker\timepicker.js" />
+    <Content Include="Dungchung\Scripts\DatetimePicker\timepicker\clock.png" />
+    <Content Include="Dungchung\Scripts\dhtmlgoodies_calendar\dhtmlgoodies_calendar.css" />
+    <Content Include="Dungchung\Scripts\dhtmlgoodies_calendar\dhtmlgoodies_calendar.js" />
+    <Content Include="Dungchung\Scripts\jquery-1.4.2.min.js" />
+    <Content Include="Dungchung\Scripts\JsAutoload\jquery.autocomplete.min.js" />
+    <Content Include="Dungchung\Scripts\JsAutoload\jquery.js" />
+    <Content Include="Dungchung\Scripts\jsforEdit\jquery-ui.min1.8.5.js" />
+    <Content Include="Dungchung\Scripts\jsforEdit\jquery.ae.image.resize.js" />
+    <Content Include="Dungchung\Scripts\jsforEdit\jquery.ae.image.resize.min.js" />
+    <Content Include="Dungchung\Scripts\jsforEdit\jquery.color.js" />
+    <Content Include="Dungchung\Scripts\jsforEdit\jquery.Jcrop.js" />
+    <Content Include="Dungchung\Scripts\jsforEdit\jquery.Jcrop.min.js" />
+    <Content Include="Dungchung\Scripts\jsforEdit\jquery.min.js" />
+    <Content Include="Dungchung\Scripts\jsUpload\CSS\Uploadicon.css" />
+    <Content Include="Dungchung\Scripts\jsUpload\CSS\uploadify.css" />
+    <Content Include="Dungchung\Scripts\jsUpload\images\cancel.png" />
+    <Content Include="Dungchung\Scripts\jsUpload\scripts\jquery-1.3.2.min.js" />
+    <Content Include="Dungchung\Scripts\jsUpload\scripts\jquery.uploadify.js" />
+    <Content Include="Dungchung\Scripts\jsUpload\scripts\uploader.swf" />
+    <Content Include="Dungchung\Scripts\keyboard.js" />
+    <Content Include="Dungchung\Scripts\Lib.js" />
+    <Content Include="Dungchung\Style\AdminLogin.css" />
+    <Content Include="Dungchung\Style\CssforEdit\images\1336190992_button-rotate-ccw_basic_blue.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\1336191006_button-rotate-cw_basic_blue.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\1336191158_transform_rotate.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\1336191232_transform_crop.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\Actions-session-exit-icon.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\bgToppage.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\Brightness_icon.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\exit-32.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\gnome_zoom_in.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\gnome_zoom_out.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\iconCrop.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\iconCrop24.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\iconOK.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\iconResize.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\iconResize24.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\iconRotate.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\iconRotate24.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\iconSave.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\iconSave24.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\redo.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\reset.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\reset1.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\reset2.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\Rotate270.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\Rotate90.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\rotateLeft.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\rotateRight.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\select.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\selectIMG.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\undo.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\zoomIn.png" />
+    <Content Include="Dungchung\Style\CssforEdit\images\zoomOut.png" />
+    <Content Include="Dungchung\Style\CssforEdit\Jcrop.gif" />
+    <Content Include="Dungchung\Style\CssforEdit\jquery-ui.css" />
+    <Content Include="Dungchung\Style\CssforEdit\jquery.Jcrop.css" />
+    <Content Include="Dungchung\Style\CssforEdit\jquery.Jcrop.min.css" />
+    <Content Include="Dungchung\Style\CssforEdit\loading.gif" />
+    <Content Include="Dungchung\Style\CssforEdit\Stylesheet1.css" />
+    <Content Include="Dungchung\Style\jquery.autocomplete.css" />
+    <Content Include="Dungchung\Style\Libraries\styleupload.css" />
+    <Content Include="Dungchung\Style\MenuBar.css" />
+    <Content Include="Dungchung\Style\print.css" />
+    <Content Include="Dungchung\Style\style.css" />
+    <Content Include="Dungchung\Style\vnpfix.css" />
+    <Content Include="Errors\AccessDenied.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Masters\ITC.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Danhmuc\UploadFile.ashx" />
+    <None Include="aceoffix-runtime\res\file001.w03" />
+    <None Include="aceoffix-runtime\res\file001.w07" />
+    <None Include="aceoffix-runtime\res\file002.e03" />
+    <None Include="aceoffix-runtime\res\file002.e07" />
+    <None Include="aceoffix-runtime\res\file003.p03" />
+    <None Include="aceoffix-runtime\res\file003.p07" />
+    <None Include="App_Themes\Default\images\Thumbs.db" />
+    <Content Include="Chatting\SecureChatServer.ashx" />
+    <Content Include="Captcha.ashx" />
+    <Content Include="Anh24h\UploadAnhTS.ashx" />
+    <None Include="Chatting\js\bg\Thumbs.db" />
+    <None Include="ckeditor\.htaccess" />
+    <Content Include="Danhmuc\UploadFileLogo.ashx" />
+    <Content Include="ckeditor\plugins\insert_image\UploadImgEditor.ashx" />
+    <Content Include="ckeditor\plugins\insert_image\Web.config" />
+    <None Include="DLL\cuteeditor.lic" />
+    <None Include="Dungchung\Images\Active\Thumbs.db" />
+    <None Include="Dungchung\Images\button\Thumbs.db" />
+    <None Include="Dungchung\Images\DatePicker\Images\Thumbs.db" />
+    <None Include="Dungchung\Images\flash\logo-flash.fla" />
+    <None Include="Dungchung\Images\flash\Thumbs.db" />
+    <None Include="Dungchung\Images\flash\video.flv" />
+    <None Include="Dungchung\Images\IconHPC\Thumbs.db" />
+    <None Include="Dungchung\Images\Icons\Numbers\Thumbs.db" />
+    <None Include="Dungchung\Images\Icons\Rate\Thumbs.db" />
+    <None Include="Dungchung\Images\Icons\Thumbs.db" />
+    <None Include="Dungchung\Images\PicturePreview\Thumbs.db" />
+    <None Include="Dungchung\Images\tabs\Thumbs.db" />
+    <None Include="Dungchung\Images\tab_image\yui\Thumbs.db" />
+    <None Include="Dungchung\Scripts\DatePicker\images\Thumbs.db" />
+    <None Include="Dungchung\Scripts\jsUpload\scripts\uploader.fla" />
+    <None Include="Dungchung\Scripts\Slide\css\themes\dark\Thumbs.db" />
+    <None Include="Dungchung\Scripts\Slide\css\themes\light\Thumbs.db" />
+    <None Include="Dungchung\Scripts\Slide\css\Thumbs.db" />
+    <None Include="Dungchung\Style\CssforEdit\images\Thumbs.db" />
+    <None Include="Dungchung\Style\font\NiDAKhmerEmpire.eot" />
+    <None Include="Dungchung\Style\font\NiDAKhmerEmpire.ttf" />
+    <None Include="Dungchung\Style\font\NiDAKhmerEmpire.woff" />
+    <Content Include="PhongSuAnh\UploadImgMulti.ashx" />
+    <Content Include="PhongSuAnh\AutoCompleteSearch.ashx" />
+    <None Include="Dungchung\Style\Slide\icons\Thumbs.db" />
+    <None Include="Template\Baivietchuyenmuc.xlt" />
+    <None Include="Template\Baivietuser.xlt" />
+    <None Include="Template\BIENLAITHANHTOAN.xlt" />
+    <None Include="Template\NBCTV_QDND.xlt" />
+    <Content Include="Until\CropImage.ashx" />
+    <None Include="Template\ThongKeNhuanbut.xlt" />
+    <None Include="Template\TinDocnhieunhat.XLT" />
+    <None Include="Template\TruycapWebsite.XLT" />
+    <None Include="Until\jscrop\css\images\Thumbs.db" />
+    <None Include="Until\scripts\uploader.fla" />
+    <Content Include="Until\UploadImg.ashx" />
+    <Content Include="UploadFileMulti\UploadVideos.ashx" />
+    <Content Include="UploadFileMulti\uploadmedia.ashx" />
+    <None Include="View\Layout\font\NiDAKhmerEmpire.eot" />
+    <None Include="View\Layout\font\NiDAKhmerEmpire.ttf" />
+    <None Include="View\Layout\font\NiDAKhmerEmpire.woff" />
+    <None Include="View\Layout\font\UTM Avo.eot" />
+    <None Include="View\Layout\font\UTM Avo.ttf" />
+    <None Include="View\Layout\font\UTM Avo.woff" />
+    <None Include="View\Layout\font\UTM AvoBold.eot" />
+    <None Include="View\Layout\font\UTM AvoBold.ttf" />
+    <None Include="View\Layout\font\UTM AvoBold.woff" />
+    <None Include="View\Layout\font\UTM AvoBold_Italic.eot" />
+    <None Include="View\Layout\font\UTM AvoBold_Italic.ttf" />
+    <None Include="View\Layout\font\UTM AvoBold_Italic.woff" />
+    <None Include="View\Layout\font\UTM AvoItalic.eot" />
+    <None Include="View\Layout\font\UTM AvoItalic.ttf" />
+    <None Include="View\Layout\font\UTM AvoItalic.woff" />
+    <Content Include="UploadFileMulti\UploadFilePDF.ashx" />
+    <Content Include="QlyAnh\Handler.ashx" />
+    <Content Include="Quytrinh\SearchTacGia.ashx" />
+    <Content Include="Phathanh\AutoCompleteSearch.ashx" />
+    <Content Include="QL_SanXuat\LuuCongviec.ashx" />
+    <Content Include="QL_SanXuat\LayoutHandler.ashx" />
+    <Content Include="UploadFileMulti\UploadFileQuangcao.ashx" />
+    <Content Include="Masters\ITCv2.Master" />
+    <Content Include="QlyAnh\HandlerUpload.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="aceoffix-runtime\server.aspx" />
+    <Content Include="aceoffix-runtime\support\pluginsetup.exe" />
+    <Content Include="Ajax\GetData.asmx" />
+    <Content Include="Anh24h\AddMutiPhotos.aspx" />
+    <Content Include="Anh24h\Edit_PhotoChoDuyet.aspx" />
+    <Content Include="Anh24h\Edit_PhotoDexuat.aspx" />
+    <Content Include="Anh24h\List_PhotoDaDuyet.aspx" />
+    <Content Include="Anh24h\List_PhotosChoDuyet.aspx" />
+    <Content Include="Anh24h\List_PhotosDexuat.aspx" />
+    <Content Include="AnPhamBao.aspx" />
+    <Content Include="App_Themes\Default\images\bg.gif" />
+    <Content Include="App_Themes\Default\images\close_vista.gif" />
+    <Content Include="App_Themes\Default\style.css" />
+    <Content Include="BannerDanToc\DanTocDanhSach.aspx" />
+    <Content Include="BannerDanToc\DanTocEdit.aspx" />
+    <Content Include="Baocaothongke\Baocaolichsuthaotachethong.aspx" />
+    <Content Include="Baocaothongke\Lichsuthaotactinbai.aspx" />
+    <Content Include="Baocaothongke\Thongkethanhtoannhuanbut.aspx" />
+    <Content Include="BaoCao\ActionHistory_List.aspx" />
+    <Content Include="BaoCao\ThongketheoChuyenMuc.aspx" />
+    <Content Include="BaoCao\ThongketheoUser.aspx" />
+    <Content Include="BaoCao\ThongKeTruyCap.aspx" />
+    <Content Include="BaoCao\Tindocnhieunhat.aspx" />
+    <Content Include="BaoDienTu\ArticleApproveEdit.aspx" />
+    <Content Include="BaoDienTu\ArticleApproveEditTB.aspx" />
+    <Content Include="BaoDienTu\ArticleApproveImage.aspx" />
+    <Content Include="BaoDienTu\ArticleApproveList.aspx" />
+    <Content Include="BaoDienTu\ArticleApproveListTB.aspx" />
+    <Content Include="BaoDienTu\ArticleEdit.aspx" />
+    <Content Include="BaoDienTu\ArticleList.aspx" />
+    <Content Include="BaoDienTu\ArticleSearch.aspx" />
+    <Content Include="BaoDienTu\ListArticleLock.aspx" />
+    <Content Include="BaoDienTu\PublishedEdit.aspx" />
+    <Content Include="BaoDienTu\PublishedList.aspx" />
+    <Content Include="BaoDienTu\PublishingEdit.aspx" />
+    <Content Include="BaoDienTu\PublishingList.aspx" />
+    <Content Include="BaoDienTu\ViewAndPrint.aspx" />
+    <Content Include="Chatting\images\active.png" />
+    <Content Include="Chatting\images\add.gif" />
+    <Content Include="Chatting\images\alert.gif" />
+    <Content Include="Chatting\images\bc.gif" />
+    <Content Include="Chatting\images\bg-box-body.gif" />
+    <Content Include="Chatting\images\bg-box-body.png" />
+    <Content Include="Chatting\images\bg-box-bottom.gif" />
+    <Content Include="Chatting\images\bg-box-bottom.png" />
+    <Content Include="Chatting\images\bg-box-top.png" />
+    <Content Include="Chatting\images\bl.gif" />
+    <Content Include="Chatting\images\black_arrow.png" />
+    <Content Include="Chatting\images\black_arrow_bottom.png" />
+    <Content Include="Chatting\images\br.gif" />
+    <Content Include="Chatting\images\button.gif" />
+    <Content Include="Chatting\images\button_hover.png" />
+    <Content Include="Chatting\images\close.gif" />
+    <Content Include="Chatting\images\close_vista.gif" />
+    <Content Include="Chatting\images\delete.gif" />
+    <Content Include="Chatting\images\dialog-error.png" />
+    <Content Include="Chatting\images\dialog-help.png" />
+    <Content Include="Chatting\images\dialog-warning.png" />
+    <Content Include="Chatting\images\Emoticons\angry.png" />
+    <Content Include="Chatting\images\Emoticons\bad.png" />
+    <Content Include="Chatting\images\Emoticons\crying.png" />
+    <Content Include="Chatting\images\Emoticons\face_glasses.png" />
+    <Content Include="Chatting\images\Emoticons\face_laughing.png" />
+    <Content Include="Chatting\images\Emoticons\face_smile.png" />
+    <Content Include="Chatting\images\Emoticons\face_smile_big.png" />
+    <Content Include="Chatting\images\Emoticons\good.png" />
+    <Content Include="Chatting\images\Emoticons\sad.png" />
+    <Content Include="Chatting\images\Emoticons\shock.png" />
+    <Content Include="Chatting\images\Emoticons\shut-mouth.png" />
+    <Content Include="Chatting\images\Emoticons\sick.png" />
+    <Content Include="Chatting\images\Emoticons\sleepy.png" />
+    <Content Include="Chatting\images\Emoticons\smile-big.png" />
+    <Content Include="Chatting\images\Emoticons\tongue.png" />
+    <Content Include="Chatting\images\Emoticons\wink.png" />
+    <Content Include="Chatting\images\info.gif" />
+    <Content Include="Chatting\images\man-icon.png" />
+    <Content Include="Chatting\images\msg.gif" />
+    <Content Include="Chatting\images\sprite.gif" />
+    <Content Include="Chatting\images\support-online.png" />
+    <Content Include="Chatting\images\user.gif" />
+    <Content Include="Chatting\js\alertbox.js" />
+    <Content Include="Chatting\js\bg\K-BC.png" />
+    <Content Include="Chatting\js\bg\K-BL.png" />
+    <Content Include="Chatting\js\bg\K-BLL.png" />
+    <Content Include="Chatting\js\bg\K-BR.png" />
+    <Content Include="Chatting\js\bg\K-MC.png" />
+    <Content Include="Chatting\js\bg\K-ML.png" />
+    <Content Include="Chatting\js\bg\K-MR.png" />
+    <Content Include="Chatting\js\bg\K-point.png" />
+    <Content Include="Chatting\js\bg\K-TC.png" />
+    <Content Include="Chatting\js\bg\K-TL.png" />
+    <Content Include="Chatting\js\bg\K-TLL.png" />
+    <Content Include="Chatting\js\bg\K-TR.png" />
+    <Content Include="Chatting\js\bg\K1-BC.png" />
+    <Content Include="Chatting\js\bg\K1-BL.png" />
+    <Content Include="Chatting\js\bg\K1-BLL.png" />
+    <Content Include="Chatting\js\bg\K1-BR.png" />
+    <Content Include="Chatting\js\bg\K1-MC.png" />
+    <Content Include="Chatting\js\bg\K1-ML.png" />
+    <Content Include="Chatting\js\bg\K1-MR.png" />
+    <Content Include="Chatting\js\bg\K1-point.png" />
+    <Content Include="Chatting\js\bg\K1-TC.png" />
+    <Content Include="Chatting\js\bg\K1-TL.png" />
+    <Content Include="Chatting\js\bg\K1-TLL.png" />
+    <Content Include="Chatting\js\bg\K1-TR.png" />
+    <Content Include="Chatting\js\GeneralScripts.js" />
+    <Content Include="Chatting\js\jquery-ui.css" />
+    <Content Include="Chatting\js\jquery-ui.min.js" />
+    <Content Include="Chatting\js\jquery.easing.1.3.js" />
+    <Content Include="Chatting\js\jquery.min.1.4.js" />
+    <Content Include="Chatting\js\jquery.min.js" />
+    <Content Include="Chatting\js\jquery.tools.min.js" />
+    <Content Include="Chatting\js\style.css" />
+    <Content Include="Chatting\js\Window.js" />
+    <Content Include="Chatting\js\WindowStyles.css" />
+    <Content Include="Chatting\MessageCommunicator.js" />
+    <Content Include="ckeditor\adapters\jquery.js" />
+    <Content Include="ckeditor\CHANGES.html" />
+    <Content Include="ckeditor\ckeditor.js" />
+    <Content Include="ckeditor\ckeditor_basic.js" />
+    <Content Include="ckeditor\config.js" />
+    <Content Include="ckeditor\contents.css" />
+    <Content Include="ckeditor\contentsbdt.css" />
+    <Content Include="ckeditor\images\spacer.gif" />
+    <Content Include="ckeditor\INSTALL.html" />
+    <Content Include="ckeditor\lang\af.js" />
+    <Content Include="ckeditor\lang\ar.js" />
+    <Content Include="ckeditor\lang\bg.js" />
+    <Content Include="ckeditor\lang\bn.js" />
+    <Content Include="ckeditor\lang\bs.js" />
+    <Content Include="ckeditor\lang\ca.js" />
+    <Content Include="ckeditor\lang\cs.js" />
+    <Content Include="ckeditor\lang\cy.js" />
+    <Content Include="ckeditor\lang\da.js" />
+    <Content Include="ckeditor\lang\de.js" />
+    <Content Include="ckeditor\lang\el.js" />
+    <Content Include="ckeditor\lang\en-au.js" />
+    <Content Include="ckeditor\lang\en-ca.js" />
+    <Content Include="ckeditor\lang\en-gb.js" />
+    <Content Include="ckeditor\lang\en.js" />
+    <Content Include="ckeditor\lang\eo.js" />
+    <Content Include="ckeditor\lang\es.js" />
+    <Content Include="ckeditor\lang\et.js" />
+    <Content Include="ckeditor\lang\eu.js" />
+    <Content Include="ckeditor\lang\fa.js" />
+    <Content Include="ckeditor\lang\fi.js" />
+    <Content Include="ckeditor\lang\fo.js" />
+    <Content Include="ckeditor\lang\fr-ca.js" />
+    <Content Include="ckeditor\lang\fr.js" />
+    <Content Include="ckeditor\lang\gl.js" />
+    <Content Include="ckeditor\lang\gu.js" />
+    <Content Include="ckeditor\lang\he.js" />
+    <Content Include="ckeditor\lang\hi.js" />
+    <Content Include="ckeditor\lang\hr.js" />
+    <Content Include="ckeditor\lang\hu.js" />
+    <Content Include="ckeditor\lang\id.js" />
+    <Content Include="ckeditor\lang\is.js" />
+    <Content Include="ckeditor\lang\it.js" />
+    <Content Include="ckeditor\lang\ja.js" />
+    <Content Include="ckeditor\lang\ka.js" />
+    <Content Include="ckeditor\lang\km.js" />
+    <Content Include="ckeditor\lang\ko.js" />
+    <Content Include="ckeditor\lang\ku.js" />
+    <Content Include="ckeditor\lang\lt.js" />
+    <Content Include="ckeditor\lang\lv.js" />
+    <Content Include="ckeditor\lang\mk.js" />
+    <Content Include="ckeditor\lang\mn.js" />
+    <Content Include="ckeditor\lang\ms.js" />
+    <Content Include="ckeditor\lang\nb.js" />
+    <Content Include="ckeditor\lang\nl.js" />
+    <Content Include="ckeditor\lang\no.js" />
+    <Content Include="ckeditor\lang\pl.js" />
+    <Content Include="ckeditor\lang\pt-br.js" />
+    <Content Include="ckeditor\lang\pt.js" />
+    <Content Include="ckeditor\lang\ro.js" />
+    <Content Include="ckeditor\lang\ru.js" />
+    <Content Include="ckeditor\lang\sk.js" />
+    <Content Include="ckeditor\lang\sl.js" />
+    <Content Include="ckeditor\lang\sr-latn.js" />
+    <Content Include="ckeditor\lang\sr.js" />
+    <Content Include="ckeditor\lang\sv.js" />
+    <Content Include="ckeditor\lang\th.js" />
+    <Content Include="ckeditor\lang\tr.js" />
+    <Content Include="ckeditor\lang\ug.js" />
+    <Content Include="ckeditor\lang\uk.js" />
+    <Content Include="ckeditor\lang\vi.js" />
+    <Content Include="ckeditor\lang\zh-cn.js" />
+    <Content Include="ckeditor\lang\zh.js" />
+    <Content Include="ckeditor\lang\_languages.js" />
+    <Content Include="ckeditor\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\LICENSE.html" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\cs.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\cy.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\da.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\de.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\el.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\en.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\eo.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\fa.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\fi.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\fr.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\gu.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\he.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\it.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\ku.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\lv.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\mk.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\nb.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\nl.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\no.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\pt-br.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\ro.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\sk.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\tr.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\ug.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\vi.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="ckeditor\plugins\adobeair\plugin.js" />
+    <Content Include="ckeditor\plugins\ajax\plugin.js" />
+    <Content Include="ckeditor\plugins\autogrow\plugin.js" />
+    <Content Include="ckeditor\plugins\bbcode\plugin.js" />
+    <Content Include="ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\bg.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\cs.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\cy.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\da.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\de.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\el.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\en.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\eo.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\et.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\fa.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\fi.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\fr.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\gu.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\he.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\hr.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\it.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\ku.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\lv.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\nb.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\nl.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\no.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\pl.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\pt-br.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\sk.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\tr.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\ug.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\uk.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\vi.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\devtools\plugin.js" />
+    <Content Include="ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="ckeditor\plugins\docprops\dialogs\docprops.js" />
+    <Content Include="ckeditor\plugins\docprops\plugin.js" />
+    <Content Include="ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="ckeditor\plugins\iframedialog\plugin.js" />
+    <Content Include="ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="ckeditor\plugins\InsertImage2\icons_imagegallery.png" />
+    <Content Include="ckeditor\plugins\InsertImage2\InsertImages.aspx" />
+    <Content Include="ckeditor\plugins\InsertImage2\plugin.js" />
+    <Content Include="ckeditor\plugins\Insertyoutube\FVideo-icon.png" />
+    <Content Include="ckeditor\plugins\Insertyoutube\Insertyoutube.aspx" />
+    <Content Include="ckeditor\plugins\Insertyoutube\plugin.js" />
+    <Content Include="ckeditor\plugins\insert_image\icons_imagegallery.png" />
+    <Content Include="ckeditor\plugins\insert_image\InsertImage.aspx" />
+    <Content Include="ckeditor\plugins\insert_image\Photo.png" />
+    <Content Include="ckeditor\plugins\insert_image\plugin.js" />
+    <Content Include="ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="ckeditor\plugins\link\images\anchor.gif" />
+    <Content Include="ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="ckeditor\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="ckeditor\plugins\placeholder\dialogs\placeholder.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\bg.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\cs.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\cy.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\da.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\de.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\el.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\en.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\eo.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\et.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\fa.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\fi.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\fr.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\he.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\hr.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\it.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\ku.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\lv.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\nb.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\nl.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\no.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\pl.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\pt-br.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\sk.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\tr.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\ug.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\uk.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\vi.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\placeholder\placeholder.gif" />
+    <Content Include="ckeditor\plugins\placeholder\plugin.js" />
+    <Content Include="ckeditor\plugins\preview\preview.html" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\cs.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\cy.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\de.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\el.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\en.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\eo.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\et.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\fa.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\fi.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\fr.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\he.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\hr.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\it.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\ku.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\lv.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\nb.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\nl.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\no.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\pt-br.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\sk.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\tr.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\ug.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\stylesheetparser\plugin.js" />
+    <Content Include="ckeditor\plugins\styles\styles\default.js" />
+    <Content Include="ckeditor\plugins\tableresize\plugin.js" />
+    <Content Include="ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="ckeditor\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\bg.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\cs.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\cy.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\da.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\de.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\el.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\en.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\eo.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\et.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\fa.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\fi.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\fr.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\he.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\hr.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\it.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\ku.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\lv.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\mk.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\nb.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\nl.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\no.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\pl.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\pt-br.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\sk.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\tr.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\ug.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\uk.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\vi.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\uicolor\plugin.js" />
+    <Content Include="ckeditor\plugins\uicolor\uicolor.gif" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="ckeditor\plugins\uicolor\yui\yui.js" />
+    <Content Include="ckeditor\plugins\wordcount\plugin.js" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="ckeditor\plugins\xml\plugin.js" />
+    <Content Include="ckeditor\skins\kama\dialog.css" />
+    <Content Include="ckeditor\skins\kama\editor.css" />
+    <Content Include="ckeditor\skins\kama\icons.png" />
+    <Content Include="ckeditor\skins\kama\icons_rtl.png" />
+    <Content Include="ckeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="ckeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="ckeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="ckeditor\skins\kama\images\mini.gif" />
+    <Content Include="ckeditor\skins\kama\images\noimage.png" />
+    <Content Include="ckeditor\skins\kama\images\sprites.png" />
+    <Content Include="ckeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="ckeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="ckeditor\skins\kama\skin.js" />
+    <Content Include="ckeditor\skins\kama\templates.css" />
+    <Content Include="ckeditor\skins\office2003\dialog.css" />
+    <Content Include="ckeditor\skins\office2003\editor.css" />
+    <Content Include="ckeditor\skins\office2003\icons.png" />
+    <Content Include="ckeditor\skins\office2003\icons_rtl.png" />
+    <Content Include="ckeditor\skins\office2003\images\dialog_sides.gif" />
+    <Content Include="ckeditor\skins\office2003\images\dialog_sides.png" />
+    <Content Include="ckeditor\skins\office2003\images\dialog_sides_rtl.png" />
+    <Content Include="ckeditor\skins\office2003\images\mini.gif" />
+    <Content Include="ckeditor\skins\office2003\images\noimage.png" />
+    <Content Include="ckeditor\skins\office2003\images\sprites.png" />
+    <Content Include="ckeditor\skins\office2003\images\sprites_ie6.png" />
+    <Content Include="ckeditor\skins\office2003\skin.js" />
+    <Content Include="ckeditor\skins\office2003\templates.css" />
+    <Content Include="ckeditor\skins\v2\dialog.css" />
+    <Content Include="ckeditor\skins\v2\editor.css" />
+    <Content Include="ckeditor\skins\v2\icons.png" />
+    <Content Include="ckeditor\skins\v2\icons_rtl.png" />
+    <Content Include="ckeditor\skins\v2\images\dialog_sides.gif" />
+    <Content Include="ckeditor\skins\v2\images\dialog_sides.png" />
+    <Content Include="ckeditor\skins\v2\images\dialog_sides_rtl.png" />
+    <Content Include="ckeditor\skins\v2\images\mini.gif" />
+    <Content Include="ckeditor\skins\v2\images\noimage.png" />
+    <Content Include="ckeditor\skins\v2\images\sprites.png" />
+    <Content Include="ckeditor\skins\v2\images\sprites_ie6.png" />
+    <Content Include="ckeditor\skins\v2\images\toolbar_start.gif" />
+    <Content Include="ckeditor\skins\v2\skin.js" />
+    <Content Include="ckeditor\skins\v2\templates.css" />
+    <Content Include="ckeditor\themes\default\theme.js" />
+    <Content Include="Congviec\EditCongviec.aspx" />
+    <Content Include="Congviec\NoidungCV.aspx" />
+    <Content Include="Congviec\PhanCongCV.aspx" />
+    <Content Include="Danhmuc\EditAnPham.aspx" />
+    <Content Include="Danhmuc\EditChuyenMuc.aspx" />
+    <Content Include="Danhmuc\EditKhachHang.aspx" />
+    <Content Include="Danhmuc\EditSobao.aspx" />
+    <Content Include="Danhmuc\ListAnPham.aspx" />
+    <Content Include="Danhmuc\ListAnPhamMau.aspx" />
+    <Content Include="Danhmuc\ListChuyenMuc.aspx" />
+    <Content Include="Danhmuc\ListDoiTuong.aspx" />
+    <Content Include="Danhmuc\ListKhachHang.aspx" />
+    <Content Include="Danhmuc\ListKichthuoc.aspx" />
+    <Content Include="Danhmuc\ListLayout.aspx" />
+    <Content Include="Danhmuc\ListSobao.aspx" />
+    <Content Include="Danhmuc\List_NgonNgu.aspx" />
+    <Content Include="Danhmuc\List_PhongBan.aspx" />
+    <Content Include="Danhmuc\PreviewTemplate.aspx" />
+    <Content Include="Danhmuc\UploadFile.aspx" />
+    <Content Include="Danhmuc\UploadLogo.aspx" />
+    <Content Include="DeTai\Edit_DuyetDeTaiTBT.aspx" />
+    <Content Include="DeTai\Edit_DuyetDeTaiTPPV.aspx" />
+    <Content Include="DeTai\Edit_Idiea.aspx" />
+    <Content Include="DeTai\Edit_XuLyCongViec.aspx" />
+    <Content Include="DeTai\List_DuyetDeTaiTBT.aspx" />
+    <Content Include="DeTai\List_DuyetDeTaiTPPV.aspx" />
+    <Content Include="DeTai\List_Idiea.aspx" />
+    <Content Include="DeTai\List_VietBaiPV.aspx" />
+    <Content Include="DeTai\List_XuLyCongViec.aspx" />
+    <Content Include="DeTai\ViewCompare.aspx" />
+    <Content Include="DeTai\ViewNews1.aspx" />
+    <Content Include="DLL\aceoffix.dll" />
+    <Content Include="DLL\AjaxControlToolkit.dll" />
+    <Content Include="DLL\AJAXExtensionsToolbox.dll" />
+    <Content Include="DLL\Anthem.AutoSuggest.dll" />
+    <Content Include="DLL\Anthem.dll" />
+    <Content Include="DLL\BusyBoxDotNet.dll" />
+    <Content Include="DLL\CKEditor.NET.dll" />
+    <Content Include="DLL\CuteEditor.dll" />
+    <Content Include="DLL\CuteEditor.ImageEditor.dll" />
+    <Content Include="DLL\HPCBusinessLogic.dll" />
+    <Content Include="DLL\HPCBusinessLogic.pdb" />
+    <Content Include="DLL\HPCComponents.dll" />
+    <Content Include="DLL\HPCComponents.pdb" />
+    <Content Include="DLL\HPCInfo.dll" />
+    <Content Include="DLL\HPCInfo.pdb" />
+    <Content Include="DLL\HPCServerDataAccess.dll" />
+    <Content Include="DLL\HPCServerDataAccess.pdb" />
+    <Content Include="DLL\HPCShareDLL.dll" />
+    <Content Include="DLL\HPCShareDLL.pdb" />
+    <Content Include="DLL\HtmlAgilityPack.dll" />
+    <Content Include="DLL\Interop.Office.dll" />
+    <Content Include="DLL\Interop.Word.dll" />
+    <Content Include="DLL\JockerSoft.Media.dll" />
+    <Content Include="DLL\MSCaptcha.dll" />
+    <Content Include="DLL\OFFICE.dll" />
+    <Content Include="DLL\PubDataInfor.dll" />
+    <Content Include="DLL\PutDataBusinessLogic.dll" />
+    <Content Include="DLL\Rainbow.MergeEngine.dll" />
+    <Content Include="DLL\ServicesInfor.dll" />
+    <Content Include="DLL\ServicesPutDataBusines.dll" />
+    <Content Include="DLL\SSOLib.dll" />
+    <Content Include="DLL\System.Web.Extensions.Design.dll" />
+    <Content Include="DLL\System.Web.Extensions.dll" />
+    <Content Include="DLL\WDF.Component.dll" />
+    <Content Include="DLL\WDF.UI.WebControls.dll" />
+    <Content Include="Dungchung\Commons.aspx" />
+    <Content Include="Dungchung\CSSVIEW\content.css" />
+    <Content Include="Dungchung\CSSVIEW\css.css" />
+    <Content Include="Dungchung\CSSVIEW\default.css" />
+    <Content Include="Dungchung\CSSVIEW\ie6.css" />
+    <Content Include="Dungchung\CSSVIEW\iepngfix.htc" />
+    <Content Include="Dungchung\CSSVIEW\import.css" />
+    <Content Include="Dungchung\CSSVIEW\menu_hpc.css" />
+    <Content Include="Dungchung\CSSVIEW\noobSlide.css" />
+    <Content Include="Dungchung\CSSVIEW\reset.css" />
+    <Content Include="Dungchung\CSSVIEW\style.css" />
+    <Content Include="Dungchung\CSSVIEW\tabcontent.css" />
+    <Content Include="Dungchung\CSSVIEW\view.css" />
+    <Content Include="Dungchung\Images\accept.gif" />
+    <Content Include="Dungchung\Images\acces_file.png" />
+    <Content Include="Dungchung\Images\addok.gif" />
+    <Content Include="Dungchung\Images\add_blue.png" />
+    <Content Include="Dungchung\Images\add_green.png" />
+    <Content Include="Dungchung\Images\add_orange.png" />
+    <Content Include="Dungchung\Images\add_yellow.png" />
+    <Content Include="Dungchung\Images\alert1.png" />
+    <Content Include="Dungchung\Images\alert2.png" />
+    <Content Include="Dungchung\Images\anpham.png" />
+    <Content Include="Dungchung\Images\attachment.png" />
+    <Content Include="Dungchung\Images\back-icon.png" />
+    <Content Include="Dungchung\Images\baigac.gif" />
+    <Content Include="Dungchung\Images\Banner\banner-badtmn1.png" />
+    <Content Include="Dungchung\Images\Button-Back.png" />
+    <Content Include="Dungchung\Images\button\copy.png" />
+    <Content Include="Dungchung\Images\button\Crop.png" />
+    <Content Include="Dungchung\Images\button\edit-find.png" />
+    <Content Include="Dungchung\Images\button\imageIcon.png" />
+    <Content Include="Dungchung\Images\button\Login.png" />
+    <Content Include="Dungchung\Images\button\save-icon.png" />
+    <Content Include="Dungchung\Images\button\Saves.gif" />
+    <Content Include="Dungchung\Images\circle_blue.png" />
+    <Content Include="Dungchung\Images\Circle_Green.png" />
+    <Content Include="Dungchung\Images\Circle_Grey.png" />
+    <Content Include="Dungchung\Images\circle_orange.png" />
+    <Content Include="Dungchung\Images\circle_red.png" />
+    <Content Include="Dungchung\Images\Circle_Yellow.png" />
+    <Content Include="Dungchung\Images\control-power.png" />
+    <Content Include="Dungchung\Images\control_power_blue.png" />
+    <Content Include="Dungchung\Images\DatePicker\calendar.gif" />
+    <Content Include="Dungchung\Images\DatePicker\calendar.png" />
+    <Content Include="Dungchung\Images\Detail.png" />
+    <Content Include="Dungchung\Images\Dialog_warning.png" />
+    <Content Include="Dungchung\Images\Dialog_warning24.png" />
+    <Content Include="Dungchung\Images\Document_edit24.png" />
+    <Content Include="Dungchung\Images\Dollar__Green.png" />
+    <Content Include="Dungchung\Images\EditImg.png" />
+    <Content Include="Dungchung\Images\Exit1.png" />
+    <Content Include="Dungchung\Images\History.png" />
+    <Content Include="Dungchung\Images\Hourglass.png" />
+    <Content Include="Dungchung\Images\iconfind.png" />
+    <Content Include="Dungchung\Images\IconHPC\CMSTittle.jpg" />
+    <Content Include="Dungchung\Images\IconRar.png" />
+    <Content Include="Dungchung\Images\Icons\checklist-icon.png" />
+    <Content Include="Dungchung\Images\Icons\copy_icon.jpg" />
+    <Content Include="Dungchung\Images\Icons\i-image.png" />
+    <Content Include="Dungchung\Images\Icons\i-video.png" />
+    <Content Include="Dungchung\Images\Icons\mail_delete.png" />
+    <Content Include="Dungchung\Images\Icons\preview.png" />
+    <Content Include="Dungchung\Images\Icons\preview1.png" />
+    <Content Include="Dungchung\Images\important32.png" />
+    <Content Include="Dungchung\Images\loader.gif" />
+    <Content Include="Dungchung\Images\loadingAnim.gif" />
+    <Content Include="Dungchung\Images\mark.png" />
+    <Content Include="Dungchung\Images\modify.png" />
+    <Content Include="Dungchung\Images\modify1.png" />
+    <Content Include="Dungchung\Images\modify2.png" />
+    <Content Include="Dungchung\Images\modify3.png" />
+    <Content Include="Dungchung\Images\modify4.png" />
+    <Content Include="Dungchung\Images\modify5.png" />
+    <Content Include="Dungchung\Images\next-icon.png" />
+    <Content Include="Dungchung\Images\Ngonngu.png" />
+    <Content Include="Dungchung\Images\no_images.jpg" />
+    <Content Include="Dungchung\Images\payment.JPG" />
+    <Content Include="Dungchung\Images\pdf.png" />
+    <Content Include="Dungchung\Images\Pencil3.png" />
+    <Content Include="Dungchung\Images\Power__Yellow.png" />
+    <Content Include="Dungchung\Images\Quangcao.png" />
+    <Content Include="Dungchung\Images\reload.png" />
+    <Content Include="Dungchung\Images\rollqtbt.png" />
+    <Content Include="Dungchung\Images\Room-icon.png" />
+    <Content Include="Dungchung\Images\save1.png" />
+    <Content Include="Dungchung\Images\Sign_Select24.png" />
+    <Content Include="Dungchung\Images\spacebtn.png" />
+    <Content Include="Dungchung\Images\Statusdialog_warning24.png" />
+    <Content Include="Dungchung\Images\thanhtoan.png" />
+    <Content Include="Dungchung\Images\undo.png" />
+    <Content Include="Dungchung\Images\Warning32.png" />
+    <Content Include="Dungchung\Images\word.jpg" />
+    <Content Include="Dungchung\preview.png" />
+    <Content Include="Dungchung\Scripts\DatetimeNews\jquery-calendar.css" />
+    <Content Include="Dungchung\Scripts\DatetimeNews\jquery-calendar.js" />
+    <Content Include="Dungchung\Scripts\datetimepicker-master\index.html" />
+    <Content Include="Dungchung\Scripts\datetimepicker-master\jquery.datetimepicker.css" />
+    <Content Include="Dungchung\Scripts\datetimepicker-master\jquery.datetimepicker.js" />
+    <Content Include="Dungchung\Scripts\datetimepicker-master\jquery.js" />
+    <Content Include="Dungchung\Scripts\datetimepicker-master\screen\1.png" />
+    <Content Include="Dungchung\Scripts\DatetimePicker\jquery-ui.min.js" />
+    <Content Include="Dungchung\Scripts\DragDrop\jquery-1.4.4.min.js" />
+    <Content Include="Dungchung\Scripts\DragDrop\jquery-ui.min.js" />
+    <Content Include="Dungchung\Scripts\FlashDetection.js" />
+    <Content Include="Dungchung\Scripts\hpc.js" />
+    <Content Include="Dungchung\Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Dungchung\Scripts\jquery.ad-gallery.js" />
+    <Content Include="Dungchung\Scripts\jquery.datepick.js" />
+    <Content Include="Dungchung\Scripts\jquery.min.js" />
+    <Content Include="Dungchung\Scripts\JSDantrang\jquery.zclip.js" />
+    <Content Include="Dungchung\Scripts\JSDantrang\jquery.zclip.min.js" />
+    <Content Include="Dungchung\Scripts\JSDantrang\ZeroClipboard.swf" />
+    <Content Include="Dungchung\Scripts\JsDatePicker\images\calendar.gif" />
+    <Content Include="Dungchung\Scripts\JsDatePicker\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Dungchung\Scripts\JsDatePicker\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Dungchung\Scripts\JsDatePicker\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Dungchung\Scripts\JsDatePicker\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Dungchung\Scripts\JsDatePicker\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Dungchung\Scripts\JsDatePicker\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Dungchung\Scripts\JsDatePicker\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Dungchung\Scripts\JsDatePicker\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Dungchung\Scripts\JsDatePicker\images\ui-icons_222222_256x240.png" />
+    <Content Include="Dungchung\Scripts\JsDatePicker\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Dungchung\Scripts\JsDatePicker\images\ui-icons_454545_256x240.png" />
+    <Content Include="Dungchung\Scripts\JsDatePicker\images\ui-icons_888888_256x240.png" />
+    <Content Include="Dungchung\Scripts\JsDatePicker\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Dungchung\Scripts\JsDatePicker\Jquery-ui-calender.css" />
+    <Content Include="Dungchung\Scripts\JsDatePicker\jquery-ui.css" />
+    <Content Include="Dungchung\Scripts\JsDatePicker\jquery-ui.min.js" />
+    <Content Include="Dungchung\Scripts\check.js" />
+    <Content Include="Dungchung\Scripts\jquery-1.4.2.js" />
+    <Content Include="Dungchung\Scripts\jquery.1.4.min.js" />
+    <Content Include="Dungchung\Scripts\jquery.autocomplete.js" />
+    <Content Include="Dungchung\Scripts\jquery.blockUI.js" />
+    <Content Include="Dungchung\Scripts\jquery.validate.min.js" />
+    <Content Include="Dungchung\Scripts\JSDantrang\effects.js" />
+    <Content Include="Dungchung\Scripts\JSDantrang\lightbox.js" />
+    <Content Include="Dungchung\Scripts\JSDantrang\prototype.js" />
+    <Content Include="Dungchung\Scripts\JSDantrang\scriptaculous.js" />
+    <Content Include="Dungchung\Scripts\JSDantrang\tooltip.js" />
+    <Content Include="Dungchung\Scripts\JSDantrang\vietuni.js" />
+    <Content Include="Dungchung\Scripts\JSDantrang\vietuni8.js" />
+    <Content Include="Dungchung\Scripts\JSDantrang\vumaps.js" />
+    <Content Include="Dungchung\Scripts\JSDantrang\vumaps2.js" />
+    <Content Include="Dungchung\Scripts\JSDantrang\vumods.js" />
+    <Content Include="Dungchung\Scripts\JSDantrang\vuspella.js" />
+    <Content Include="Dungchung\Scripts\JSDantrang\vuspellb.js" />
+    <Content Include="Dungchung\Scripts\jsUpload\CSS\uploadify_small.css" />
+    <Content Include="Dungchung\Scripts\jwplayer\jwplayer.flash.swf" />
+    <Content Include="Dungchung\Scripts\jwplayer\jwplayer.html5.js" />
+    <Content Include="Dungchung\Scripts\jwplayer\jwplayer.js" />
+    <Content Include="Dungchung\Scripts\Layout\JDialog.js" />
+    <Content Include="Dungchung\Scripts\Layout\Showtoggle.js" />
+    <Content Include="Dungchung\Scripts\Layout\dragresize.js" />
+    <Content Include="Dungchung\Scripts\Layout\jquery-1.4.2.min.js" />
+    <Content Include="Dungchung\Scripts\Ninja\btndrllinks.png" />
+    <Content Include="Dungchung\Scripts\Ninja\jquery.min.js" />
+    <Content Include="Dungchung\Scripts\Ninja\ninja.css" />
+    <Content Include="Dungchung\Scripts\Ninja\ninja.js" />
+    <Content Include="Dungchung\Scripts\Paging.js" />
+    <Content Include="Dungchung\Scripts\Slide\css\img-loader.gif" />
+    <Content Include="Dungchung\Scripts\Slide\css\jquery.galleryview-3.0-dev.css" />
+    <Content Include="Dungchung\Scripts\Slide\css\themes\dark\next.png" />
+    <Content Include="Dungchung\Scripts\Slide\css\themes\dark\panel-next-big.png" />
+    <Content Include="Dungchung\Scripts\Slide\css\themes\dark\panel-next.png" />
+    <Content Include="Dungchung\Scripts\Slide\css\themes\dark\panel-prev-big.png" />
+    <Content Include="Dungchung\Scripts\Slide\css\themes\dark\panel-prev.png" />
+    <Content Include="Dungchung\Scripts\Slide\css\themes\dark\pause-big.png" />
+    <Content Include="Dungchung\Scripts\Slide\css\themes\dark\pause.png" />
+    <Content Include="Dungchung\Scripts\Slide\css\themes\dark\play-big.png" />
+    <Content Include="Dungchung\Scripts\Slide\css\themes\dark\play.png" />
+    <Content Include="Dungchung\Scripts\Slide\css\themes\dark\prev.png" />
+    <Content Include="Dungchung\Scripts\Slide\css\themes\light\info.png" />
+    <Content Include="Dungchung\Scripts\Slide\css\themes\light\next.png" />
+    <Content Include="Dungchung\Scripts\Slide\css\themes\light\panel-next-big.png" />
+    <Content Include="Dungchung\Scripts\Slide\css\themes\light\panel-next.png" />
+    <Content Include="Dungchung\Scripts\Slide\css\themes\light\panel-prev-big.png" />
+    <Content Include="Dungchung\Scripts\Slide\css\themes\light\panel-prev.png" />
+    <Content Include="Dungchung\Scripts\Slide\css\themes\light\pause-big.png" />
+    <Content Include="Dungchung\Scripts\Slide\css\themes\light\pause.png" />
+    <Content Include="Dungchung\Scripts\Slide\css\themes\light\play-big.png" />
+    <Content Include="Dungchung\Scripts\Slide\css\themes\light\play.png" />
+    <Content Include="Dungchung\Scripts\Slide\css\themes\light\prev.png" />
+    <Content Include="Dungchung\Scripts\Slide\js\jquery-ui.min.js" />
+    <Content Include="Dungchung\Scripts\Slide\js\jquery.easing.1.3.js" />
+    <Content Include="Dungchung\Scripts\Slide\js\jquery.galleryview-3.0-dev.js" />
+    <Content Include="Dungchung\Scripts\Slide\js\jquery.min.js" />
+    <Content Include="Dungchung\Scripts\Slide\js\jquery.timers-1.2.js" />
+    <Content Include="Dungchung\Scripts\StateMachine\AutoLoadComplete.js" />
+    <Content Include="Dungchung\Scripts\StateMachine\ControlManager.js" />
+    <Content Include="Dungchung\Scripts\StateMachine\demo-helper-jquery.js" />
+    <Content Include="Dungchung\Scripts\StateMachine\demo-list.js" />
+    <Content Include="Dungchung\Scripts\StateMachine\DemoDragresize.js" />
+    <Content Include="Dungchung\Scripts\StateMachine\jquery-ui.min.js" />
+    <Content Include="Dungchung\Scripts\StateMachine\jquery.jsPlumb-1.3.11-all-min.js" />
+    <Content Include="Dungchung\Scripts\StateMachine\jquery.min.js" />
+    <Content Include="Dungchung\Scripts\StateMachine\stateMachineDemo-jquery.js" />
+    <Content Include="Dungchung\Scripts\StateMachine\stateMachineDemo.js" />
+    <Content Include="Dungchung\Scripts\TraCuuTin.js" />
+    <Content Include="Dungchung\Scripts\UploadMulti\jquery-1.7.2.min.js" />
+    <Content Include="Dungchung\Scripts\UploadMulti\jquery.uploadify-3.1.js" />
+    <Content Include="Dungchung\Scripts\UploadMulti\jquery.uploadify-3.1.min.js" />
+    <Content Include="Dungchung\Scripts\UploadMulti\uploadify-cancel.png" />
+    <Content Include="Dungchung\Scripts\UploadMulti\uploadify.css" />
+    <Content Include="Dungchung\Scripts\UploadMulti\uploadify.swf" />
+    <Content Include="Dungchung\Scripts\watermark\jquery-1.4.2.min.js" />
+    <Content Include="Dungchung\Scripts\watermark\jquery-ui-1.8.6.custom.min.js" />
+    <Content Include="Dungchung\Scripts\watermark\jquery-watermarker-0.3.js" />
+    <Content Include="Dungchung\Style\css\Login\animate.css" />
+    <Content Include="Dungchung\Style\css\Login\reset.css" />
+    <Content Include="Dungchung\Style\css\Login\styles.css" />
+    <Content Include="Dungchung\Style\DragDrop.css" />
+    <Content Include="Dungchung\Style\fonts.css" />
+    <Content Include="Dungchung\Style\HoverImage.css" />
+    <Content Include="Dungchung\Style\jquery.datepick.css" />
+    <Content Include="Dungchung\Style\Slide\css\style.css" />
+    <Content Include="Dungchung\Style\Slide\icons\grid.png" />
+    <Content Include="Dungchung\Style\Slide\icons\IconsByGentleface.txt" />
+    <Content Include="Dungchung\Style\Slide\icons\loading.gif" />
+    <Content Include="Dungchung\Style\Slide\icons\next.png" />
+    <Content Include="Dungchung\Style\Slide\icons\next_thumb.png" />
+    <Content Include="Dungchung\Style\Slide\icons\pause.png" />
+    <Content Include="Dungchung\Style\Slide\icons\play.png" />
+    <Content Include="Dungchung\Style\Slide\icons\prev.png" />
+    <Content Include="Dungchung\Style\Slide\icons\prev_thumb.png" />
+    <Content Include="Dungchung\Style\Slide\icons\up.png" />
+    <Content Include="Dungchung\Style\stateMachineDemo.css" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_glass_100_f0f0f0_1x400.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_glass_50_99c2ff_1x400.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_glass_55_fbf5d0_1x400.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_glass_80_e6e6e6_1x400.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_highlight-hard_100_f9f9f9_1x100.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_highlight-soft_100_e7eef3_1x100.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-icons_222222_256x240.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-icons_454545_256x240.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-icons_888888_256x240.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Dungchung\Style\StateMachine\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Dungchung\Style\StateMachine\jquery-ui.css" />
+    <Content Include="Dungchung\Style\Layout\DemoDragresize.css" />
+    <Content Include="Dungchung\Style\Layout\save1.png" />
+    <Content Include="Dungchung\Style\Layout\turnoff.png" />
+    <Content Include="Dungchung\Style\Layout\turnoff1.png" />
+    <Content Include="Dungchung\Style\StateMachine\stateMachineDemo.css" />
+    <Content Include="Dungchung\Style\Layout\accept.gif" />
+    <Content Include="Dungchung\Style\Layout\activity.gif" />
+    <Content Include="Dungchung\Style\Layout\advertising_icon_menu.gif" />
+    <Content Include="Dungchung\Style\Layout\advertising_icon_menu.png" />
+    <Content Include="Dungchung\Style\Layout\arrow.png" />
+    <Content Include="Dungchung\Style\Layout\bgmenu.png" />
+    <Content Include="Dungchung\Style\Layout\bgMenuLeft.png" />
+    <Content Include="Dungchung\Style\Layout\bgTabhome.png" />
+    <Content Include="Dungchung\Style\Layout\bg_buttomTab.png" />
+    <Content Include="Dungchung\Style\Layout\bg_Left_tabActive.png" />
+    <Content Include="Dungchung\Style\Layout\bg_right_tabAc.png" />
+    <Content Include="Dungchung\Style\Layout\BoxClose.png" />
+    <Content Include="Dungchung\Style\Layout\btnSave.png" />
+    <Content Include="Dungchung\Style\Layout\delete-icon.png" />
+    <Content Include="Dungchung\Style\Layout\Delete_en1.png" />
+    <Content Include="Dungchung\Style\Layout\Delitem.png" />
+    <Content Include="Dungchung\Style\Layout\dragresize.css" />
+    <Content Include="Dungchung\Style\Layout\iconSave24.png" />
+    <Content Include="Dungchung\Style\Layout\JBox.css" />
+    <Content Include="Dungchung\Style\Layout\qlPhanviec.gif" />
+    <Content Include="Dungchung\Style\Layout\Refresh-icon.png" />
+    <Content Include="Dungchung\Style\Layout\reset.png" />
+    <Content Include="Dungchung\Style\Layout\Search_Bottom_Center.png" />
+    <Content Include="Dungchung\Style\Layout\Search_Bottom_Left.png" />
+    <Content Include="Dungchung\Style\Layout\Search_Bottom_Right.png" />
+    <Content Include="Dungchung\Style\Layout\Search_Toggle_Down.png" />
+    <Content Include="Dungchung\Style\Layout\Search_Toggle_Up.png" />
+    <Content Include="Dungchung\Style\Layout\Sign-Select-icon.png" />
+    <Content Include="Dungchung\Style\Layout\spacebtn.png" />
+    <Content Include="Dungchung\Style\Layout\sprite.png" />
+    <Content Include="Dungchung\Style\Layout\StyleSheet.css" />
+    <Content Include="Dungchung\Style\Layout\VChung.jpg" />
+    <Content Include="Dungchung\Style\Layout\VRed.jpg" />
+    <Content Include="Dungchung\Style\Layout\Vvang.jpg" />
+    <Content Include="Dungchung\Style\Layout\Vvang.png" />
+    <Content Include="Dungchung\Style\Layout\VXanh.jpg" />
+    <Content Include="Hethong\ButDanh.aspx" />
+    <Content Include="Hethong\CreateWorkFlowDynamic.aspx" />
+    <Content Include="Hethong\EditGroup.aspx" />
+    <Content Include="Hethong\EditUser.aspx" />
+    <Content Include="Hethong\Edit_CTV.aspx" />
+    <Content Include="Hethong\Edit_QuyTrinh.aspx" />
+    <Content Include="Hethong\Edit_ThongTinCaNhan.aspx" />
+    <Content Include="Hethong\ListGroup.aspx" />
+    <Content Include="Hethong\ListUser.aspx" />
+    <Content Include="Hethong\List_CTV.aspx" />
+    <Content Include="Hethong\LoadDoiTuong.aspx" />
+    <Content Include="Hethong\QuytrinhDynamic.aspx" />
+    <Content Include="Hethong\SaveQuytrinh.asmx" />
+    <Content Include="InboxService.asmx" />
+    <Content Include="Menu\EditMenu.aspx" />
+    <Content Include="Menu\ListMenu.aspx" />
+    <Content Include="Multimedia\Edit_Multimedia.aspx" />
+    <Content Include="Multimedia\List_Multimedia.aspx" />
+    <Content Include="Multimedia\Multimedia_Approve.aspx" />
+    <Content Include="Multimedia\Multimedia_Approve_Edit.aspx" />
+    <Content Include="Multimedia\Multimedia_Published.aspx" />
+    <Content Include="Multimedia\Multimedia_Published_Edit.aspx" />
+    <Content Include="Multimedia\ViewVideo.aspx" />
+    <Content Include="Multimedia\ViewVideoPath.aspx" />
+    <Content Include="Nhuanbut\Taichinhthanhtoannhuanbut_Anh.aspx" />
+    <Content Include="Nhuanbut\Taichinhthanhtoannhuanbut_Tinbai.aspx" />
+    <Content Include="Nhuanbut\Thanhtoannhuanbut_Anh.aspx" />
+    <Content Include="Nhuanbut\Thanhtoannhuanbut_tinbai.aspx" />
+    <Content Include="Nhuanbut\Tracuunhuanbut.aspx" />
+    <Content Include="Phathanh\ChiTiet_PhatHanh_Edit.aspx" />
+    <Content Include="Phathanh\ChiTiet_PhatHanh_List.aspx" />
+    <Content Include="Phathanh\DatbaoEdit.aspx" />
+    <Content Include="Phathanh\DatbaoList.aspx" />
+    <Content Include="Phathanh\HopdongPHEdit.aspx" />
+    <Content Include="Phathanh\HopdongPHList.aspx" />
+    <Content Include="Phathanh\KhachHangEdit.aspx" />
+    <Content Include="Phathanh\KhachHangList.aspx" />
+    <Content Include="Phathanh\YeucauPHEdit.aspx" />
+    <Content Include="Phathanh\YeucauPHList.aspx" />
+    <Content Include="PhongSuAnh\Album_Edit.aspx" />
+    <Content Include="PhongSuAnh\Album_List.aspx" />
+    <Content Include="PhongSuAnh\Approved_List.aspx" />
+    <Content Include="PhongSuAnh\Approves_List.aspx" />
+    <Content Include="PhongSuAnh\CSS\ad_next.png" />
+    <Content Include="PhongSuAnh\CSS\ad_prev.png" />
+    <Content Include="PhongSuAnh\CSS\ad_scroll_back.png" />
+    <Content Include="PhongSuAnh\CSS\ad_scroll_back1.png" />
+    <Content Include="PhongSuAnh\CSS\ad_scroll_forward.png" />
+    <Content Include="PhongSuAnh\CSS\ad_scroll_forward1.png" />
+    <Content Include="PhongSuAnh\CSS\jquery.ad-gallery.css" />
+    <Content Include="PhongSuAnh\CSS\loader.gif" />
+    <Content Include="PhongSuAnh\CSS\opa75.png" />
+    <Content Include="PhongSuAnh\CSS\uploadify.css" />
+    <Content Include="PhongSuAnh\PhotoAlbum_EditMullti.aspx" />
+    <Content Include="PhongSuAnh\T_Album_Categories_View.aspx" />
+    <Content Include="QlyAnh\AutoComplete.asmx" />
+    <Content Include="QlyAnh\ListImages.aspx" />
+    <Content Include="QlyAnh\ListImgstores.aspx" />
+    <Content Include="QL_SanXuat\BindLayout.aspx" />
+    <Content Include="QL_SanXuat\BindLayoutAdv.aspx" />
+    <Content Include="QL_SanXuat\BindLayoutCV.aspx" />
+    <Content Include="QL_SanXuat\BindLayoutTB.aspx" />
+    <Content Include="QL_SanXuat\BindListAdv.aspx" />
+    <Content Include="QL_SanXuat\BindListCongviec.aspx" />
+    <Content Include="QL_SanXuat\BindReview.aspx" />
+    <Content Include="QL_SanXuat\BindText.aspx" />
+    <Content Include="QL_SanXuat\BindTextAdv.aspx" />
+    <Content Include="QL_SanXuat\BindTextCongviec.aspx" />
+    <Content Include="QL_SanXuat\DelItemLayout.aspx" />
+    <Content Include="QL_SanXuat\LayouPhanviec.aspx" />
+    <Content Include="QL_SanXuat\LayoutAdv.aspx" />
+    <Content Include="QL_SanXuat\LayoutReview.aspx" />
+    <Content Include="QL_SanXuat\Layouts.aspx" />
+    <Content Include="QL_SanXuat\LayoutTinbai.aspx" />
+    <Content Include="QL_SanXuat\LoadTinbai.aspx" />
+    <Content Include="QL_SanXuat\updateItemLayout.aspx" />
+    <Content Include="Quangcao\AdsLogoEdit.aspx" />
+    <Content Include="Quangcao\AdsLogoList.aspx" />
+    <Content Include="Quangcao\AdsPosEdit.aspx" />
+    <Content Include="Quangcao\AdsPostList.aspx" />
+    <Content Include="Quangcao\CustomerEdit.aspx" />
+    <Content Include="Quangcao\CustomerList.aspx" />
+    <Content Include="Quangcao\DanTrangQC.aspx" />
+    <Content Include="Quangcao\Edit_KTQC.aspx" />
+    <Content Include="Quangcao\Edit_QuangCao.aspx" />
+    <Content Include="Quangcao\Edit_TLBTQC.aspx" />
+    <Content Include="Quangcao\Edit_TPQC.aspx" />
+    <Content Include="Quangcao\Edit_TTQC.aspx" />
+    <Content Include="Quangcao\List_KTQC.aspx" />
+    <Content Include="Quangcao\List_QuangCao.aspx" />
+    <Content Include="Quangcao\List_TLBTQC.aspx" />
+    <Content Include="Quangcao\List_TPQC.aspx" />
+    <Content Include="Quangcao\List_TTQC.aspx" />
+    <Content Include="Quangcao\ViewDTQC.aspx" />
+    <Content Include="Quangcao\ViewPhienBanQC.aspx" />
+    <Content Include="Quangcao\View_SoBao.aspx" />
+    <Content Include="Quangcao\WebLinksEdit.aspx" />
+    <Content Include="Quangcao\WeblinksList.aspx" />
+    <Content Include="Quanlynhanbut\Duyetnhanbut_Anh.aspx" />
+    <Content Include="Quanlynhanbut\Duyetnhanbut_Tin.aspx" />
+    <Content Include="Quanlynhanbut\ThongKeNhuanBut.aspx" />
+    <Content Include="Quanlynhanbut\ViewImage.aspx" />
+    <Content Include="Quytrinh\AutoSave.asmx" />
+    <Content Include="Quytrinh\Dantrang.aspx" />
+    <Content Include="Quytrinh\DeskEditor.aspx" />
+    <Content Include="Quytrinh\DeskList.aspx" />
+    <Content Include="Quytrinh\DuyetAnh.aspx" />
+    <Content Include="Quytrinh\Edit_DuyetBai.aspx" />
+    <Content Include="Quytrinh\Edit_PV.aspx" />
+    <Content Include="Quytrinh\List_DuyetBai.aspx" />
+    <Content Include="Quytrinh\List_PublistPDF.aspx" />
+    <Content Include="Quytrinh\List_PV.aspx" />
+    <Content Include="Quytrinh\MiTrang.aspx" />
+    <Content Include="Quytrinh\NhapFilePDF.aspx" />
+    <Content Include="Quytrinh\Preview.aspx" />
+    <Content Include="Quytrinh\Send_Email.aspx" />
+    <None Include="Service References\WS_TTX\ToasoanTTXVN.WS_TTX.ListContent.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_TTX\ToasoanTTXVN.WS_TTX.ListImage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_TTX\ToasoanTTXVN.WS_TTX.ListNews.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_TTX\ToasoanTTXVN.WS_TTX.LoginResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_TTX\ToasoanTTXVN.WS_TTX.ObjectImage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_TTX\ToasoanTTXVN.WS_TTX.ObjectNews.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WS_TTX\webservice1.disco" />
+    <None Include="Service References\WS_TTX\webservice1.wsdl" />
+    <None Include="Service References\WS_TTX\configuration91.svcinfo" />
+    <None Include="Service References\WS_TTX\configuration.svcinfo" />
+    <None Include="Service References\WS_TTX\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="UploadFileMulti\AutoSelectMulti.ashx" />
+    <Content Include="TTXTraCuu\SaveImgFromComputer.ashx" />
+    <Content Include="TimKiem\BaiNhap.aspx" />
+    <Content Include="TimKiem\TimKiemTinBaiTrongQuyTrinh.aspx" />
+    <Content Include="Quytrinh\ViewPhienBanTinBai.aspx" />
+    <Content Include="Quytrinh\ViewTinbaiDantrang.aspx" />
+    <Content Include="TimKiem\TinBaiXuatBan.aspx" />
+    <Content Include="TimKiem\ViewBaiNhap.aspx" />
+    <Content Include="Tracuutinnguon\loading-gif-animation.gif" />
+    <Content Include="Tracuutinnguon\tracuu.aspx" />
+    <Content Include="TTXTraCuu\loading-gif-animation.gif" />
+    <Content Include="TTXTraCuu\TraCuuTin.asmx" />
+    <Content Include="TTXTraCuu\TraCuuTin.aspx" />
+    <Content Include="Tulieu\List_TuLieuAnh.aspx" />
+    <Content Include="Tulieu\List_Tulieutin.aspx" />
+    <Content Include="Tulieu\ViewsTulieu.aspx" />
+    <Content Include="Until\btn-quaylai.png" />
+    <Content Include="Until\btn-xemtiep.png" />
+    <Content Include="Until\FileManager.aspx" />
+    <Content Include="Until\InsertNewsRelations.aspx" />
+    <Content Include="Until\jscrop\css\images\1336190992_button-rotate-ccw_basic_blue.png" />
+    <Content Include="Until\jscrop\css\images\1336191006_button-rotate-cw_basic_blue.png" />
+    <Content Include="Until\jscrop\css\images\1336191158_transform_rotate.png" />
+    <Content Include="Until\jscrop\css\images\1336191232_transform_crop.png" />
+    <Content Include="Until\jscrop\css\images\bgToppage.png" />
+    <Content Include="Until\jscrop\css\images\Brightness_icon.png" />
+    <Content Include="Until\jscrop\css\images\gnome_zoom_in.png" />
+    <Content Include="Until\jscrop\css\images\gnome_zoom_out.png" />
+    <Content Include="Until\jscrop\css\images\iconCrop.png" />
+    <Content Include="Until\jscrop\css\images\iconCrop24.png" />
+    <Content Include="Until\jscrop\css\images\iconOK.png" />
+    <Content Include="Until\jscrop\css\images\iconResize.png" />
+    <Content Include="Until\jscrop\css\images\iconResize24.png" />
+    <Content Include="Until\jscrop\css\images\iconRotate.png" />
+    <Content Include="Until\jscrop\css\images\iconRotate24.png" />
+    <Content Include="Until\jscrop\css\images\iconSave.png" />
+    <Content Include="Until\jscrop\css\images\iconSave24.png" />
+    <Content Include="Until\jscrop\css\images\redo.png" />
+    <Content Include="Until\jscrop\css\images\reset.png" />
+    <Content Include="Until\jscrop\css\images\reset1.png" />
+    <Content Include="Until\jscrop\css\images\reset2.png" />
+    <Content Include="Until\jscrop\css\images\Rotate270.png" />
+    <Content Include="Until\jscrop\css\images\Rotate90.png" />
+    <Content Include="Until\jscrop\css\images\rotateLeft.png" />
+    <Content Include="Until\jscrop\css\images\rotateRight.png" />
+    <Content Include="Until\jscrop\css\images\select.png" />
+    <Content Include="Until\jscrop\css\images\selectIMG.png" />
+    <Content Include="Until\jscrop\css\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Until\jscrop\css\images\undo.png" />
+    <Content Include="Until\jscrop\css\images\zoomIn.png" />
+    <Content Include="Until\jscrop\css\images\zoomOut.png" />
+    <Content Include="Until\jscrop\css\Jcrop.gif" />
+    <Content Include="Until\jscrop\css\jquery-ui.css" />
+    <Content Include="Until\jscrop\css\jquery.Jcrop.css" />
+    <Content Include="Until\jscrop\css\jquery.Jcrop.min.css" />
+    <Content Include="Until\jscrop\css\Stylesheet1.css" />
+    <Content Include="Until\jscrop\js\jquery-ui.min1.8.5.js" />
+    <Content Include="Until\jscrop\js\jquery.ae.image.resize.js" />
+    <Content Include="Until\jscrop\js\jquery.ae.image.resize.min.js" />
+    <Content Include="Until\jscrop\js\jquery.color.js" />
+    <Content Include="Until\jscrop\js\jquery.Jcrop.js" />
+    <Content Include="Until\jscrop\js\jquery.Jcrop.min.js" />
+    <Content Include="Until\jscrop\js\jquery.min.js" />
+    <Content Include="Until\scripts\jquery-1.3.2.min.js" />
+    <Content Include="Until\scripts\jquery-1.7.2.min.js" />
+    <Content Include="Until\scripts\jquery.uploadify-3.1.js" />
+    <Content Include="Until\scripts\jquery.uploadify-3.1.min.js" />
+    <Content Include="Until\scripts\jquery.uploadify.js" />
+    <Content Include="Until\scripts\jquery.uploadify.min.js" />
+    <Content Include="Until\scripts\uploader.swf" />
+    <Content Include="Until\scripts\uploadify-cancel.png" />
+    <Content Include="Until\scripts\uploadify.css" />
+    <Content Include="Until\scripts\uploadify.swf" />
+    <Content Include="UploadFileMulti\AutoComplete.asmx" />
+    <Content Include="UploadFileMulti\UploadFileQuangCao.aspx" />
+    <Content Include="UploadFileMulti\Videos_Managerment.aspx" />
+    <Content Include="UploadFileMulti\Video_News.aspx" />
+    <Content Include="UploadFileMulti\ViewImages.aspx" />
+    <Content Include="View\ChiTietTin.aspx" />
+    <Content Include="View\Images\icon\ico-face.png" />
+    <Content Include="View\Images\icon\ico-google.png" />
+    <Content Include="View\Images\icon\ico-twiter.png" />
+    <Content Include="View\Images\temp\1-tn.png" />
+    <Content Include="View\Images\temp\1.png" />
+    <Content Include="View\Images\temp\10-tn.png" />
+    <Content Include="View\Images\temp\10.png" />
+    <Content Include="View\Images\temp\2-tn.png" />
+    <Content Include="View\Images\temp\2.png" />
+    <Content Include="View\Images\temp\3-tn.png" />
+    <Content Include="View\Images\temp\3.png" />
+    <Content Include="View\Images\temp\4-tn.png" />
+    <Content Include="View\Images\temp\4.png" />
+    <Content Include="View\Images\temp\5-tn.png" />
+    <Content Include="View\Images\temp\5.png" />
+    <Content Include="View\Images\temp\54_Dantoc.jpg" />
+    <Content Include="View\Images\temp\6-tn.png" />
+    <Content Include="View\Images\temp\6.png" />
+    <Content Include="View\Images\temp\7-tn.png" />
+    <Content Include="View\Images\temp\7.png" />
+    <Content Include="View\Images\temp\8-tn.png" />
+    <Content Include="View\Images\temp\8.png" />
+    <Content Include="View\Images\temp\9-tn.png" />
+    <Content Include="View\Images\temp\9.png" />
+    <Content Include="View\Images\temp\advright.jpg" />
+    <Content Include="View\Images\temp\article1.jpg" />
+    <Content Include="View\Images\temp\articlemore.jpg" />
+    <Content Include="View\Images\temp\biendao_quehuong.jpg" />
+    <Content Include="View\Images\temp\detail.jpg" />
+    <Content Include="View\Images\temp\docbaoin.jpg" />
+    <Content Include="View\Images\temp\gallery1.jpg" />
+    <Content Include="View\Images\temp\hvideo.jpg" />
+    <Content Include="View\Images\temp\like.png" />
+    <Content Include="View\Images\temp\listnews.jpg" />
+    <Content Include="View\Images\temp\logo_news.jpg" />
+    <Content Include="View\Images\temp\logo_thethaoOnline.png" />
+    <Content Include="View\Images\temp\logo_ttxvn.jpg" />
+    <Content Include="View\Images\temp\logo_vietnam+.jpg" />
+    <Content Include="View\Images\temp\logo_vietnamLaw.jpg" />
+    <Content Include="View\Images\temp\logo_vietnam_news.jpg" />
+    <Content Include="View\Images\temp\logo_v_news.jpg" />
+    <Content Include="View\Images\temp\newsfucus.png" />
+    <Content Include="View\Images\temp\playvideo.png" />
+    <Content Include="View\Images\temp\right.png" />
+    <Content Include="View\Images\temp\thoisuanh.jpg" />
+    <Content Include="View\Images\temp\trang_hanoi.jpg" />
+    <Content Include="View\Images\_resources\banner-badtmn.png" />
+    <Content Include="View\Images\_resources\banner-badtmn1.jpg" />
+    <Content Include="View\Images\_resources\banner-badtmn1.png" />
+    <Content Include="View\Layout\fonts.css" />
+    <Content Include="View\Layout\jcarousel.css" />
+    <Content Include="View\Layout\menu.css" />
+    <Content Include="View\Layout\simple-scroll.css" />
+    <Content Include="View\Layout\sliderengine\amazingslider-1.css" />
+    <Content Include="View\Layout\sliderengine\amazingslider.js" />
+    <Content Include="View\Layout\sliderengine\arrows-32-32-0.png" />
+    <Content Include="View\Layout\sliderengine\carouselarrows-32-32-4.png" />
+    <Content Include="View\Layout\sliderengine\carouselarrows-32-32-40.png" />
+    <Content Include="View\Layout\sliderengine\featuredarrow-8-16-0.png" />
+    <Content Include="View\Layout\sliderengine\html5boxplayer_fullscreen.png" />
+    <Content Include="View\Layout\sliderengine\html5boxplayer_hd.png" />
+    <Content Include="View\Layout\sliderengine\html5boxplayer_playpause.png" />
+    <Content Include="View\Layout\sliderengine\html5boxplayer_playvideo.png" />
+    <Content Include="View\Layout\sliderengine\html5boxplayer_volume.png" />
+    <Content Include="View\Layout\sliderengine\initslider-1.js" />
+    <Content Include="View\Layout\sliderengine\jquery.js" />
+    <Content Include="View\Layout\sliderengine\lightbox-close.png" />
+    <Content Include="View\Layout\sliderengine\lightbox-loading.gif" />
+    <Content Include="View\Layout\sliderengine\lightbox-navnext.png" />
+    <Content Include="View\Layout\sliderengine\lightbox-navprev.png" />
+    <Content Include="View\Layout\sliderengine\lightbox-next.png" />
+    <Content Include="View\Layout\sliderengine\lightbox-playvideo.png" />
+    <Content Include="View\Layout\sliderengine\lightbox-prev.png" />
+    <Content Include="View\Layout\sliderengine\navarrows-28-28-0.png" />
+    <Content Include="View\Layout\sliderengine\navbuttonbgimage-28-28-0.png" />
+    <Content Include="View\Layout\sliderengine\navplaypause-28-28-0.png" />
+    <Content Include="View\Layout\sliderengine\play-32-32-0.png" />
+    <Content Include="View\Layout\sliderengine\playvideo-64-64-0.png" />
+    <Content Include="View\Layout\Styles.css" />
+    <Content Include="View\Layout\_background\bg-ico-category.png" />
+    <Content Include="View\Layout\_background\bg-line-submenu.png" />
+    <Content Include="View\Layout\_background\bg-menu-active.png" />
+    <Content Include="View\Layout\_background\bg-menu-line.png" />
+    <Content Include="View\Layout\_background\btnddl.png" />
+    <Content Include="View\Layout\_background\btnsearch.png" />
+    <Content Include="View\Layout\_background\Calendar-icon.png" />
+    <Content Include="View\Layout\_background\h-gallery-next.png" />
+    <Content Include="View\Layout\_background\h-gallery-prev.png" />
+    <Content Include="View\Layout\_background\h-video-next.png" />
+    <Content Include="View\Layout\_background\h-video-prev.png" />
+    <Content Include="View\Layout\_background\ico-email.png" />
+    <Content Include="View\Layout\_background\ico-face.png" />
+    <Content Include="View\Layout\_background\ico-google.png" />
+    <Content Include="View\Layout\_background\ico-playvideo.png" />
+    <Content Include="View\Layout\_background\ico-print.png" />
+    <Content Include="View\Layout\_background\ico-titlenews.png" />
+    <Content Include="View\Layout\_background\ico-twiter.png" />
+    <Content Include="View\Layout\_background\icon-home.png" />
+    <Content Include="View\Layout\_background\icon-refresh.png" />
+    <Content Include="View\Layout\_background\next-shadow.png" />
+    <Content Include="View\Layout\_background\prev-shadow.png" />
+    <Content Include="View\Layout\_background\show-category.png" />
+    <Content Include="View\Layout\_background\_opacity.png" />
+    <Content Include="View\ViewDetails.aspx" />
+    <Content Include="View\ViewHistory.aspx" />
+    <Content Include="word\docstream.aspx" />
+    <Content Include="word\savefile.aspx" />
+    <Content Include="Xuatbandantrang.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HPCBusinessLogic\HPCBusinessLogic.csproj">
+      <Project>{D80B035B-A0C5-4ED5-B4CB-B94949D782E1}</Project>
+      <Name>HPCBusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HPCComponents\HPCComponents.csproj">
+      <Project>{1154CDFB-97EC-4B37-818F-54D925609C20}</Project>
+      <Name>HPCComponents %28HPCComponents\HPCComponents%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HPCInfo\HPCInfo.csproj">
+      <Project>{5EA19E6B-1E26-448B-8DF8-B9647ECDBBB3}</Project>
+      <Name>HPCInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HPCServerDataAccess\HPCServerDataAccess.csproj">
+      <Project>{137C5DF9-0B1A-4033-8A0F-C1893F29453E}</Project>
+      <Name>HPCServerDataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HPCShareDLL\HPCShareDLL.csproj">
+      <Project>{91BE61C0-204F-4CE4-9BA0-F382DF672D6A}</Project>
+      <Name>HPCShareDLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WS_TTX\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\cms.language.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>cms.language.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\cms.language.vi-vn.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>cms.language.vi-vn.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="BaoCao\HistorySource_List.aspx" />
+    <Content Include="DLL\ConvertNCRToUnicodeByHP.dll" />
+    <Content Include="DLL\Ionic.Zip.dll" />
+    <Content Include="Dungchung\Images\BackgroundBusy.png" />
+    <Content Include="Dungchung\Images\bullet_toggle_minus.png" />
+    <Content Include="Dungchung\Images\bullet_toggle_plus.png" />
+    <Content Include="Dungchung\Images\IconHPC\vietnam-news.png" />
+    <Content Include="Dungchung\Images\Icons\6a4928.png" />
+    <Content Include="Dungchung\Images\icon_no_images4.jpg" />
+    <Content Include="Dungchung\Images\Image-JPEG-icon.png" />
+    <Content Include="Dungchung\Images\loading-gif-animation.gif" />
+    <Content Include="Dungchung\Images\Logo.png" />
+    <Content Include="Dungchung\Images\ok-icon.png" />
+    <Content Include="Dungchung\Images\preview.png" />
+    <Content Include="Dungchung\Images\reply-icon.png" />
+    <Content Include="Dungchung\Paging\HPC.ui.css" />
+    <Content Include="Dungchung\Paging\PaggingUI.js" />
+    <Content Include="Dungchung\Paging\Phantrang.js" />
+    <Content Include="Dungchung\Scripts\AuthorMulti\AutocompleteMulti.css" />
+    <Content Include="Dungchung\Scripts\AuthorMulti\AutocompleteMulti.js" />
+    <Content Include="Dungchung\Scripts\Ninja\jquery.jcarousel.min.js" />
+    <Content Include="Dungchung\Scripts\Ninja\Lib.js" />
+    <Content Include="Dungchung\Scripts\Ninja\slide-next.png" />
+    <Content Include="Dungchung\Scripts\Ninja\slide-pre.png" />
+    <Content Include="Dungchung\Scripts\placeholders.min.js" />
+    <Content Include="Quytrinh\ChiefEditor.aspx" />
+    <Content Include="Quytrinh\ChiefList.aspx" />
+    <Content Include="Quytrinh\PreviewOLD.aspx" />
+    <Content Include="Quytrinh\Reporter.aspx" />
+    <Content Include="Quytrinh\UploadMaketPDF.aspx" />
+    <Content Include="TimKiem\DisplayContent.aspx" />
+    <Content Include="TimKiem\SearchVietnamNews.aspx" />
+    <Content Include="TimKiem\TimkiemMaketPDF.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="aceoffix-runtime\js\" />
+    <Folder Include="aceoffix-runtime\lic\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="DataExport\" />
+    <Folder Include="FilePrintView\" />
+    <Folder Include="Upload\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59693</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/cmsvnnews</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost/cmsvnnews</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

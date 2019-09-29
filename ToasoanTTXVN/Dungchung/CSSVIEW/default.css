@@ -1,0 +1,87 @@
+﻿@charset "utf-8";
+
+body {font-size: .75em;}
+html { 	overflow: -moz-scrollbars-vertical !important; }
+
+/*-Interface----------*/
+body.fullwidth div#container { width: 100%; }
+div#container {margin: 0 auto;width: 980px;text-align: left;min-height: 100%;height: auto !important;height: 100%; }
+
+div#header {width:100%;clear:both;}
+div#header-in {	width:1000px;margin:0 auto;}
+
+div#mainbody {clear: both;min-height: 100%;height: auto !important;height: 100%; width:980px;margin:0 auto;}
+
+div#content-full {width: 980px;text-align: left;margin: 0px;}
+div#content-full-in {padding:10px 0;}
+
+div#content {float: left;width: 670px;text-align: left;margin: 0px;background-color:#fff;}
+div#content-in {padding:0;}
+
+div#leftcol {float: left;width: 210px;textalign: left;background-color:#fff;}
+div#leftcol-in {padding-left:10px;}
+
+div#rightcol {	float: right;width: 300px;text-align:left;background-color:#fff;}
+div#rightcol-in {padding:0;}
+
+div#footer {clear: both;width: 100%;overflow:hidden;border-top:1px #d2d2d2 solid;}
+div#footer-in {padding: 0;margin:0 auto;}
+
+/* Clearfix */
+.clearfix:after {clear: both;display: block;content: ".";height: 0;visibility: hidden;}
+* html > body .clearfix {width: 100%;display: block;}
+* html .clearfix {height: 1%;}
+  
+/* Firefox Scrollbar Hack - Do not remove */
+html {margin-bottom: 1px;height: 100%!important;height: auto;}
+
+
+
+
+
+
+
+
+/*BOCT*/
+.line_dotadv{background:transparent repeat-x top ;overflow:hidden;margin:1px 0px 0 0px; padding:0 0 1px 0;clear:both; height:1px;overflow:hidden;}
+.pageNav {
+	-x-system-font:none;
+	color:#000000;
+	font-family:arial;
+	font-size:11px;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:normal;
+	margin-top:0px;
+	overflow:hidden;
+	padding:0px 0;
+	font-weight:bold;
+	text-align:center;
+}
+.pageNav span.current {
+background-color:#FFFFFF;
+border:1px solid #CC6600;
+color:#CC6600;
+font-weight:bold;
+padding:1px 8px;
+}
+.pageNav a:hover {
+color:#333333;
+color:Black !important;
+}
+.pageNav a {
+border:1px solid #849CC6;
+color:#203558 !important;
+line-height:2.2em;
+padding:1px 8px;
+text-decoration:none !important;
+}
+.cursor-pointerimg
+{
+	cursor:pointer;
+}
+
+/*END*/

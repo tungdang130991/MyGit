@@ -1,0 +1,1317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lblAnpham" xml:space="preserve">
+    <value>Newspaper</value>
+  </data>
+  <data name="lblChonanpham" xml:space="preserve">
+    <value>--Select Newspaper--</value>
+  </data>
+  <data name="lblChonchuyenmuc" xml:space="preserve">
+    <value>--Selet Categorys--</value>
+  </data>
+  <data name="lblChuyenmuc" xml:space="preserve">
+    <value>Categorys</value>
+  </data>
+  <data name="lblDoimatkhau" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="lblHopthuden" xml:space="preserve">
+    <value>Inbox</value>
+  </data>
+  <data name="lblKieungay" xml:space="preserve">
+    <value>Date format dd/MM/yyyy</value>
+  </data>
+  <data name="lblLuu" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="lblNgaygui" xml:space="preserve">
+    <value>Date Send</value>
+  </data>
+  <data name="lblNgayxuly" xml:space="preserve">
+    <value>Date Edit</value>
+  </data>
+  <data name="lblNgongu" xml:space="preserve">
+    <value>Languages</value>
+  </data>
+  <data name="lblNgonNgu" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="lblNguoigui" xml:space="preserve">
+    <value>User Send</value>
+  </data>
+  <data name="lblNguoixuly" xml:space="preserve">
+    <value>User Edit</value>
+  </data>
+  <data name="lblNhapbai" xml:space="preserve">
+    <value>Add new</value>
+  </data>
+  <data name="lblNhaptacgia" xml:space="preserve">
+    <value>Input author</value>
+  </data>
+  <data name="lblNhaptieudecantim" xml:space="preserve">
+    <value>Input search headlines</value>
+  </data>
+  <data name="lblSotu" xml:space="preserve">
+    <value>Word count</value>
+  </data>
+  <data name="lblTenbaiviet" xml:space="preserve">
+    <value>News name</value>
+  </data>
+  <data name="lblThemmoi" xml:space="preserve">
+    <value>Add new</value>
+  </data>
+  <data name="lblThoat" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="lblThungrac" xml:space="preserve">
+    <value>Recycle Bin</value>
+  </data>
+  <data name="lblTimkiem" xml:space="preserve">
+    <value>Find</value>
+  </data>
+  <data name="lblTinbientap" xml:space="preserve">
+    <value>News Editor</value>
+  </data>
+  <data name="lblTindagui" xml:space="preserve">
+    <value>News Send</value>
+  </data>
+  <data name="lblTindaxoa" xml:space="preserve">
+    <value>News Delete</value>
+  </data>
+  <data name="lblTinmoi" xml:space="preserve">
+    <value>News Article</value>
+  </data>
+  <data name="lblTintralai" xml:space="preserve">
+    <value>News Return</value>
+  </data>
+  <data name="lblTralai" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="lblTrang" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="lblXem" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="lblXoa" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="lblMaketpdf" xml:space="preserve">
+    <value>Maket pdf</value>
+  </data>
+  <data name="lblTinbaigac" xml:space="preserve">
+    <value>News shelved</value>
+  </data>
+  <data name="lblAnhdaidien" xml:space="preserve">
+    <value>Profile picture</value>
+  </data>
+  <data name="lblNgayhieudinh" xml:space="preserve">
+    <value>Date Revise</value>
+  </data>
+  <data name="lblNgaynhap" xml:space="preserve">
+    <value>Date Create</value>
+  </data>
+  <data name="lblNgaytra" xml:space="preserve">
+    <value>Date Return</value>
+  </data>
+  <data name="lblNgayxoa" xml:space="preserve">
+    <value>Date Delete</value>
+  </data>
+  <data name="lblNguoihieudinh" xml:space="preserve">
+    <value>User Revise</value>
+  </data>
+  <data name="lblNguoinhap" xml:space="preserve">
+    <value>User Create</value>
+  </data>
+  <data name="lblNguoitra" xml:space="preserve">
+    <value>User Return</value>
+  </data>
+  <data name="lblNguoixoa" xml:space="preserve">
+    <value>User Delete</value>
+  </data>
+  <data name="lblGuifilepdf" xml:space="preserve">
+    <value>Send pdf file </value>
+  </data>
+  <data name="lblXoafilepdf" xml:space="preserve">
+    <value>Delete pdf file</value>
+  </data>
+  <data name="lblDaguifilepdf" xml:space="preserve">
+    <value>already sent pdf file!</value>
+  </data>
+  <data name="lblGui" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="lblTatca" xml:space="preserve">
+    <value>---All---</value>
+  </data>
+  <data name="Utility_CurrentPage_text" xml:space="preserve">
+    <value>Page {0}/{1} ({2} Records)</value>
+  </data>
+  <data name="Utility_Pager_firstButton" xml:space="preserve">
+    <value>|&lt;</value>
+  </data>
+  <data name="Utility_Pager_lastButton" xml:space="preserve">
+    <value>&gt;|</value>
+  </data>
+  <data name="Utility_Pager_nextButton" xml:space="preserve">
+    <value>&gt;&gt;</value>
+  </data>
+  <data name="Utility_Pager_previousButton" xml:space="preserve">
+    <value>&lt;&lt;</value>
+  </data>
+  <data name="lblChonfilepdf" xml:space="preserve">
+    <value>Select pdf files</value>
+  </data>
+  <data name="lblDich" xml:space="preserve">
+    <value>Translate</value>
+  </data>
+  <data name="lblChonsobao" xml:space="preserve">
+    <value>-- Select Issue--</value>
+  </data>
+  <data name="lblChontrang" xml:space="preserve">
+    <value>---Select page---</value>
+  </data>
+  <data name="lblTrangthai" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="lblbanchuachonanpham" xml:space="preserve">
+    <value>You have not selected newspapers</value>
+  </data>
+  <data name="lblbanchuachonchuyenmuc" xml:space="preserve">
+    <value>You have not selected categorys</value>
+  </data>
+  <data name="lblbanchuachonsobao" xml:space="preserve">
+    <value>You have not selected publish number</value>
+  </data>
+  <data name="lblbanchuachontrang" xml:space="preserve">
+    <value>You have not selected page</value>
+  </data>
+  <data name="lblbanchuanhapchuthich" xml:space="preserve">
+    <value>You have not entered description</value>
+  </data>
+  <data name="lblbanchuanhapnhuanbut" xml:space="preserve">
+    <value>You have not entered royalties</value>
+  </data>
+  <data name="lblbanchuanhaptacgia" xml:space="preserve">
+    <value>You have not entered the author!</value>
+  </data>
+  <data name="lblbanchuanhaptieude" xml:space="preserve">
+    <value>You have not entered headlines</value>
+  </data>
+  <data name="lblChontatca" xml:space="preserve">
+    <value>Select/Unselect All</value>
+  </data>
+  <data name="lblChuthich" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="lblNgaytralai" xml:space="preserve">
+    <value>Date Return</value>
+  </data>
+  <data name="lblNguoitralai" xml:space="preserve">
+    <value>User Return</value>
+  </data>
+  <data name="lblSobao" xml:space="preserve">
+    <value>Publish number</value>
+  </data>
+  <data name="lblTieudetin" xml:space="preserve">
+    <value>Headlines</value>
+  </data>
+  <data name="lblDuyetanh" xml:space="preserve">
+    <value>Check image</value>
+  </data>
+  <data name="lblThaotac" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="lblTaibaiviet" xml:space="preserve">
+    <value>Download content</value>
+  </data>
+  <data name="lblDatlich" xml:space="preserve">
+    <value>Publishing Schedule</value>
+  </data>
+  <data name="lblNgaycapnhat" xml:space="preserve">
+    <value>Date Update</value>
+  </data>
+  <data name="lblNgayduyet" xml:space="preserve">
+    <value>Date Approver</value>
+  </data>
+  <data name="lblNguoicapnhat" xml:space="preserve">
+    <value>User Update</value>
+  </data>
+  <data name="lblNguoiduyet" xml:space="preserve">
+    <value>User Approver</value>
+  </data>
+  <data name="lblTinchoxuatban" xml:space="preserve">
+    <value>News wait Publishing</value>
+  </data>
+  <data name="lblTinhengio" xml:space="preserve">
+    <value>News Publishing schedule</value>
+  </data>
+  <data name="lblTinngungdang" xml:space="preserve">
+    <value>News Unpublish</value>
+  </data>
+  <data name="lblTinxuatban" xml:space="preserve">
+    <value>Publishing news</value>
+  </data>
+  <data name="lblXuatban" xml:space="preserve">
+    <value>Publish</value>
+  </data>
+  <data name="lblChonanhdinhkem" xml:space="preserve">
+    <value>Attach images </value>
+  </data>
+  <data name="lblNhapgopy" xml:space="preserve">
+    <value>Input comment</value>
+  </data>
+  <data name="lblNhapnhuanbut" xml:space="preserve">
+    <value>Input royalties</value>
+  </data>
+  <data name="lblNhaptieude" xml:space="preserve">
+    <value>Input headlines</value>
+  </data>
+  <data name="lblDenngay" xml:space="preserve">
+    <value>To date</value>
+  </data>
+  <data name="lblNgayngungdang" xml:space="preserve">
+    <value>Date Unpublish</value>
+  </data>
+  <data name="lblNgayXB" xml:space="preserve">
+    <value>Date Publish</value>
+  </data>
+  <data name="lblNguoingungdang" xml:space="preserve">
+    <value>User Unpublish</value>
+  </data>
+  <data name="lblNguoiXB" xml:space="preserve">
+    <value>User Publish</value>
+  </data>
+  <data name="lblNoibatchuyenmuc" xml:space="preserve">
+    <value>Featured Categories</value>
+  </data>
+  <data name="lblTungay" xml:space="preserve">
+    <value>From date</value>
+  </data>
+  <data name="lblHuydang" xml:space="preserve">
+    <value>Unpublish</value>
+  </data>
+  <data name="lblXBchuyenmuckhac" xml:space="preserve">
+    <value>Publishing to other categories</value>
+  </data>
+  <data name="lbBanmuonxoa" xml:space="preserve">
+    <value>Do you want to delete?</value>
+  </data>
+  <data name="lblBanmuongui" xml:space="preserve">
+    <value>Do you want to send?</value>
+  </data>
+  <data name="lblBanmuontralai" xml:space="preserve">
+    <value>Do you want to return?</value>
+  </data>
+  <data name="lblChamnhuanbut" xml:space="preserve">
+    <value>Royalties mark</value>
+  </data>
+  <data name="lblChonngonngudich" xml:space="preserve">
+    <value>Select the language to be translated</value>
+  </data>
+  <data name="lblNhuanbut" xml:space="preserve">
+    <value>Royalties</value>
+  </data>
+  <data name="lblSuabai" xml:space="preserve">
+    <value>Edit article</value>
+  </data>
+  <data name="lblThutu" xml:space="preserve">
+    <value>Order number</value>
+  </data>
+  <data name="lblTukhoa" xml:space="preserve">
+    <value>Keyword</value>
+  </data>
+  <data name="titDsAnh" xml:space="preserve">
+    <value>IMAGES LIST</value>
+  </data>
+  <data name="titDuyetanh" xml:space="preserve">
+    <value>CHECK IMAGES</value>
+  </data>
+  <data name="lblNhapchuthich" xml:space="preserve">
+    <value>Input caption</value>
+  </data>
+  <data name="lblTacgia" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="titTimkiem" xml:space="preserve">
+    <value>SEARCH ARTICLES</value>
+  </data>
+  <data name="lblBanchuachontacgiatronghethong" xml:space="preserve">
+    <value>you have not selected the system author!</value>
+  </data>
+  <data name="lblBientap" xml:space="preserve">
+    <value>News Editor</value>
+  </data>
+  <data name="lblChobientap" xml:space="preserve">
+    <value>News pending editor</value>
+  </data>
+  <data name="lblChotrinhbay" xml:space="preserve">
+    <value>News pending presentation </value>
+  </data>
+  <data name="lblNhaptinbai" xml:space="preserve">
+    <value>Enter News</value>
+  </data>
+  <data name="lblTralaitrinhbay" xml:space="preserve">
+    <value>News return presentation</value>
+  </data>
+  <data name="lblTrinhbay" xml:space="preserve">
+    <value>Presenting news</value>
+  </data>
+  <data name="lblBinhthuong" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="lblNoibattrangchu" xml:space="preserve">
+    <value>Featured Homepage</value>
+  </data>
+  <data name="lblTieudiem" xml:space="preserve">
+    <value>Focus</value>
+  </data>
+  <data name="lblTinnong" xml:space="preserve">
+    <value>Hot news</value>
+  </data>
+  <data name="lblTralaibientap" xml:space="preserve">
+    <value>News return editor</value>
+  </data>
+  <data name="lblTralainguoinhaptin" xml:space="preserve">
+    <value>News return user enter</value>
+  </data>
+  <data name="titIn" xml:space="preserve">
+    <value>NEWS PRINT</value>
+  </data>
+  <data name="lblNhaptacgiacantim" xml:space="preserve">
+    <value>Enter search author</value>
+  </data>
+  <data name="lblDen" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="lblTongso" xml:space="preserve">
+    <value>Sum</value>
+  </data>
+  <data name="lblTu" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="titXemversion" xml:space="preserve">
+    <value>SEE NEWS VERSION</value>
+  </data>
+  <data name="lblChucnang" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="lblDanhsachnhom" xml:space="preserve">
+    <value>List of groups</value>
+  </data>
+  <data name="lblNhom" xml:space="preserve">
+    <value>Groups</value>
+  </data>
+  <data name="lblQuytrinh" xml:space="preserve">
+    <value>Workflows</value>
+  </data>
+  <data name="lblTenchuyenmuc" xml:space="preserve">
+    <value>Category Name</value>
+  </data>
+  <data name="lblTendangnhap" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="lblTendaydu" xml:space="preserve">
+    <value>Fullname</value>
+  </data>
+  <data name="lblThanhviethuocnhom" xml:space="preserve">
+    <value>Group of user</value>
+  </data>
+  <data name="lblBanmuonguiTBT" xml:space="preserve">
+    <value>Do you want to send the editor in chief?</value>
+  </data>
+  <data name="lblBanmuonhuyXB" xml:space="preserve">
+    <value>Do you want to cancel the publication?</value>
+  </data>
+  <data name="lblBanmuonXB" xml:space="preserve">
+    <value>Do you want to publish?</value>
+  </data>
+  <data name="lblGhichu" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="lblHengioXB" xml:space="preserve">
+    <value>Publishing schedule</value>
+  </data>
+  <data name="lblNguon" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="lblTieudechinh" xml:space="preserve">
+    <value>Main header</value>
+  </data>
+  <data name="lblTieudephu" xml:space="preserve">
+    <value>Substitute header</value>
+  </data>
+  <data name="lblXacnhanLuu" xml:space="preserve">
+    <value>Before save you must enter the information for the component (*) red!</value>
+  </data>
+  <data name="lblXacnhanTien" xml:space="preserve">
+    <value>Money must be integer!</value>
+  </data>
+  <data name="lblXemtruoc" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="titCapnhatbaiviet" xml:space="preserve">
+    <value>UPDATE NEWS</value>
+  </data>
+  <data name="titSuabaiviet" xml:space="preserve">
+    <value>EDIT NEWS</value>
+  </data>
+  <data name="lblChoXB" xml:space="preserve">
+    <value>Wait Publishing</value>
+  </data>
+  <data name="lblDangcapnhat" xml:space="preserve">
+    <value>Updating</value>
+  </data>
+  <data name="lblDaXB" xml:space="preserve">
+    <value>Published</value>
+  </data>
+  <data name="lblDuongdanvideo" xml:space="preserve">
+    <value>Path Video</value>
+  </data>
+  <data name="lblMota" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="lblNhapvideo" xml:space="preserve">
+    <value>Enter video</value>
+  </data>
+  <data name="lblTieude" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="titCapnhatvideo" xml:space="preserve">
+    <value>UPDATE VIDEO CLIP</value>
+  </data>
+  <data name="lblPhongban" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="Status_BDT" xml:space="preserve">
+    <value>72</value>
+  </data>
+  <data name="lblGhichuluu" xml:space="preserve">
+    <value>The boxes marked with &lt;span class="req_Field"&gt;*&lt;/span&gt; are required to enter.</value>
+  </data>
+  <data name="msgNhapduongdan" xml:space="preserve">
+    <value>Enter path video</value>
+  </data>
+  <data name="msgNhaptieude" xml:space="preserve">
+    <value>Enter heading</value>
+  </data>
+  <data name="titNhapamthanh" xml:space="preserve">
+    <value>Input multimedia</value>
+  </data>
+  <data name="lblMotadanhmuc" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="lblPhanquyenChuyenmuc" xml:space="preserve">
+    <value>Assing access category to user:</value>
+  </data>
+  <data name="lblPhanquyenMenu" xml:space="preserve">
+    <value>Assing access menu to user:</value>
+  </data>
+  <data name="lblPhanquyenNgonngu" xml:space="preserve">
+    <value>Assign language to user:</value>
+  </data>
+  <data name="lblPhanquyenQTBT" xml:space="preserve">
+    <value>Config workflow for user:</value>
+  </data>
+  <data name="lblPhanquyenThuocnhom" xml:space="preserve">
+    <value>Assing group to user:</value>
+  </data>
+  <data name="lblBaichoduyet" xml:space="preserve">
+    <value>Waiting for approve news</value>
+  </data>
+  <data name="lblCapnhatthanhcong" xml:space="preserve">
+    <value>You have successfully updated</value>
+  </data>
+  <data name="lblChoduyet" xml:space="preserve">
+    <value>Waiting for approval</value>
+  </data>
+  <data name="lblDuyettinbai" xml:space="preserve">
+    <value>Approve news</value>
+  </data>
+  <data name="lblGocanhhuyXB" xml:space="preserve">
+    <value>Photo reportage unpublished </value>
+  </data>
+  <data name="lblNhapanh" xml:space="preserve">
+    <value>Import photos</value>
+  </data>
+  <data name="lblPsuchoduyet" xml:space="preserve">
+    <value>Reportage waiting for approve</value>
+  </data>
+  <data name="lblPsudaXB" xml:space="preserve">
+    <value>Reportage published</value>
+  </data>
+  <data name="lblPsumoi" xml:space="preserve">
+    <value>Reportage new</value>
+  </data>
+  <data name="lblPsutralai" xml:space="preserve">
+    <value>Reportage bounces</value>
+  </data>
+  <data name="lblTengocanh" xml:space="preserve">
+    <value>Name photo reportage</value>
+  </data>
+  <data name="msgNhapghichu" xml:space="preserve">
+    <value>Enter note</value>
+  </data>
+  <data name="msgXacnhanngaythang" xml:space="preserve">
+    <value>Must enter the correct date in the format dd/MM/yyyy</value>
+  </data>
+  <data name="titDuyetamthanh" xml:space="preserve">
+    <value>Approve multimedia</value>
+  </data>
+  <data name="titXBamthanh" xml:space="preserve">
+    <value>Publishing multimedia</value>
+  </data>
+  <data name="lblChonphongban" xml:space="preserve">
+    <value>Select department</value>
+  </data>
+  <data name="lblGocanhchoduyet" xml:space="preserve">
+    <value>Photo reportage waiting for approve</value>
+  </data>
+  <data name="lblGocanhmoi" xml:space="preserve">
+    <value>Photo reportage new</value>
+  </data>
+  <data name="lblGocanhtralai" xml:space="preserve">
+    <value>Photo reportage bounces</value>
+  </data>
+  <data name="lblGocanhXB" xml:space="preserve">
+    <value>Photo reportage published</value>
+  </data>
+  <data name="lblCongviecdagiao" xml:space="preserve">
+    <value>Work assignment</value>
+  </data>
+  <data name="lblCongviecduocgiao" xml:space="preserve">
+    <value>List of jobs</value>
+  </data>
+  <data name="lblDanhsachcongviec" xml:space="preserve">
+    <value>Work List</value>
+  </data>
+  <data name="lblDanhsachtinbai" xml:space="preserve">
+    <value>List Of News Articles</value>
+  </data>
+  <data name="lblChongiatri" xml:space="preserve">
+    <value>Select values</value>
+  </data>
+  <data name="lblDiachi" xml:space="preserve">
+    <value>Address:</value>
+  </data>
+  <data name="lblDienthoai" xml:space="preserve">
+    <value>Phone:</value>
+  </data>
+  <data name="lblKichhoat" xml:space="preserve">
+    <value>Active:</value>
+  </data>
+  <data name="lblMatkhau" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="lblMatkhauthongbao" xml:space="preserve">
+    <value>The password must be six or more characters , including numbers , capital letters , and special characters often as: (*^!@#$%&amp;~)</value>
+  </data>
+  <data name="lblNgaysinh" xml:space="preserve">
+    <value>Date of birth:</value>
+  </data>
+  <data name="lblSocmnd" xml:space="preserve">
+    <value>ID number:</value>
+  </data>
+  <data name="lblThudientu" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="lblVungmien" xml:space="preserve">
+    <value>Regions</value>
+  </data>
+  <data name="lblXacnhanmatkhau" xml:space="preserve">
+    <value>Confirm password:</value>
+  </data>
+  <data name="lblCMdatontai" xml:space="preserve">
+    <value>ID number  already exists !</value>
+  </data>
+  <data name="lblMatkhaukhongphuhop" xml:space="preserve">
+    <value>This password does not match !</value>
+  </data>
+  <data name="lblTaikhoandatontai" xml:space="preserve">
+    <value>This account already exists !</value>
+  </data>
+  <data name="lblCongviec" xml:space="preserve">
+    <value>Job</value>
+  </data>
+  <data name="lblHoanthanh" xml:space="preserve">
+    <value>Finish work</value>
+  </data>
+  <data name="lblHuyviec" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="lblNgayhoanthanh" xml:space="preserve">
+    <value>Date of completion</value>
+  </data>
+  <data name="lblNguoigiao" xml:space="preserve">
+    <value>Taskmaster</value>
+  </data>
+  <data name="lblNguoinhan" xml:space="preserve">
+    <value>Recipients work</value>
+  </data>
+  <data name="lblNhanviec" xml:space="preserve">
+    <value>Get jobs</value>
+  </data>
+  <data name="lblPhanhoi" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="lblPhongban_nguoinhan" xml:space="preserve">
+    <value>Departments/recipient</value>
+  </data>
+  <data name="lblSTT" xml:space="preserve">
+    <value>STT</value>
+  </data>
+  <data name="lblPhanquyenchonhomnguoidung" xml:space="preserve">
+    <value>Assign permissions for groups:</value>
+  </data>
+  <data name="lblGiaoviec" xml:space="preserve">
+    <value>Assigning</value>
+  </data>
+  <data name="lblDinhkemfile" xml:space="preserve">
+    <value>Attached files</value>
+  </data>
+  <data name="lblNoidung" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="lblNhapgocanh" xml:space="preserve">
+    <value>Enter photo reportage</value>
+  </data>
+  <data name="titDuyetgocanh" xml:space="preserve">
+    <value>Approve photo reportage</value>
+  </data>
+  <data name="titGocanhXB" xml:space="preserve">
+    <value>Publish photo reportage</value>
+  </data>
+  <data name="lblSatusDeskHNBientap" xml:space="preserve">
+    <value>Desk editor-HN</value>
+  </data>
+  <data name="lblSatusDeskHNTinmoi" xml:space="preserve">
+    <value>Desk editor-HN Pendding</value>
+  </data>
+  <data name="lblSatusReporterHNBientap" xml:space="preserve">
+    <value>Reporter editor HN </value>
+  </data>
+  <data name="lblSatusReporterHNTralai" xml:space="preserve">
+    <value>News return Reporter HN</value>
+  </data>
+  <data name="lblSatusDeskHNTralai" xml:space="preserve">
+    <value>Return Desk editor-HN</value>
+  </data>
+  <data name="lblSatusReporterHCMBientap" xml:space="preserve">
+    <value>Report editor-HCM</value>
+  </data>
+  <data name="lblSatusReporterHCMTralai" xml:space="preserve">
+    <value>Return reporter-HCM</value>
+  </data>
+  <data name="lblHinhanh" xml:space="preserve">
+    <value>Photo</value>
+  </data>
+  <data name="msgCapnhatthatbai" xml:space="preserve">
+    <value>Update unsuccessful please check back!</value>
+  </data>
+  <data name="titCapnhatgocanh" xml:space="preserve">
+    <value>UPDATE PHOTO REPORTAGE</value>
+  </data>
+  <data name="lblSatusChiefBientap" xml:space="preserve">
+    <value>Chief editor</value>
+  </data>
+  <data name="lblSatusChiefTinmoi" xml:space="preserve">
+    <value>Chief pending</value>
+  </data>
+  <data name="lblSatusChiefTralai" xml:space="preserve">
+    <value>News return Chief</value>
+  </data>
+  <data name="lblSatusDesignerTinmoi" xml:space="preserve">
+    <value>Designer pending</value>
+  </data>
+  <data name="lblSatusDeskHCMBaigac" xml:space="preserve">
+    <value>News shelved Desk HCM</value>
+  </data>
+  <data name="lblSatusDeskHCMBientap" xml:space="preserve">
+    <value>Desk editor HCM </value>
+  </data>
+  <data name="lblSatusDeskHCMTinmoi" xml:space="preserve">
+    <value>Desk editor HCM pending</value>
+  </data>
+  <data name="lblSatusDeskHCMTralai" xml:space="preserve">
+    <value>News return Desk HCM</value>
+  </data>
+  <data name="lblSatusDeskHNBaigac" xml:space="preserve">
+    <value>News shelved Desk HN</value>
+  </data>
+  <data name="lblSatusExpatBientap" xml:space="preserve">
+    <value>Expat editor</value>
+  </data>
+  <data name="lblSatusExpatTinmoi" xml:space="preserve">
+    <value>Expat pending</value>
+  </data>
+  <data name="lblSatusExpatTralai" xml:space="preserve">
+    <value>News return Expat</value>
+  </data>
+  <data name="lblActionBaigacDeskHCM" xml:space="preserve">
+    <value>Action  shelved articles Desk editor HCM</value>
+  </data>
+  <data name="lblActionBaigacDeskHN" xml:space="preserve">
+    <value>Action  shelved articles Desk editor HN</value>
+  </data>
+  <data name="lblActionReturnChief" xml:space="preserve">
+    <value>Action return articles Chief editor</value>
+  </data>
+  <data name="lblActionReturnDeskHCM" xml:space="preserve">
+    <value>Action send articles Desk editor HCM</value>
+  </data>
+  <data name="lblActionReturnDeskHN" xml:space="preserve">
+    <value>Action returns articles Desk editor HN</value>
+  </data>
+  <data name="lblActionReturnExpat" xml:space="preserve">
+    <value>Action return articles Expat editor</value>
+  </data>
+  <data name="lblActionReturnReporterHCM" xml:space="preserve">
+    <value>Action returns articles reporter HCM</value>
+  </data>
+  <data name="lblActionReturnReporterHN" xml:space="preserve">
+    <value>Action returns articles reporter HN</value>
+  </data>
+  <data name="lblActionSendChief" xml:space="preserve">
+    <value>Action send articles Chief editor</value>
+  </data>
+  <data name="lblActionSendDesigner" xml:space="preserve">
+    <value>Action send articles Designer editor</value>
+  </data>
+  <data name="lblActionSendDeskHCM" xml:space="preserve">
+    <value>Action returns articles Desk editor HCM</value>
+  </data>
+  <data name="lblActionSendDeskHN" xml:space="preserve">
+    <value>Action send articles Desk editor HN</value>
+  </data>
+  <data name="lblActionSendExpat" xml:space="preserve">
+    <value>Action send articles Expat editor</value>
+  </data>
+  <data name="lblChonanh" xml:space="preserve">
+    <value>Browse photo</value>
+  </data>
+  <data name="lblDsTinbikhoa" xml:space="preserve">
+    <value>Locked list news</value>
+  </data>
+  <data name="lblMokhoa" xml:space="preserve">
+    <value>Unlock</value>
+  </data>
+  <data name="lblNguoikhoa" xml:space="preserve">
+    <value>User lock</value>
+  </data>
+  <data name="lblXacnhandich" xml:space="preserve">
+    <value>You have not selected news to translate language !</value>
+  </data>
+  <data name="titDsTinbai" xml:space="preserve">
+    <value>LIST NEWS</value>
+  </data>
+  <data name="titDsTinbikhoa" xml:space="preserve">
+    <value>LOCKED LIST NEWS</value>
+  </data>
+  <data name="titDsTinchoduyet" xml:space="preserve">
+    <value>LIST NEWS - WAITING APPROVAL</value>
+  </data>
+  <data name="titDsTinchoXB" xml:space="preserve">
+    <value>LIST NEWS - WAITING PUBLISHING</value>
+  </data>
+  <data name="titDsTindaXB" xml:space="preserve">
+    <value>LIST NEWS - PUBLISHING</value>
+  </data>
+  <data name="lblGuiTPQC" xml:space="preserve">
+    <value>Send advertising manager</value>
+  </data>
+  <data name="lblKhachhang" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="lblKichthuocquangcao" xml:space="preserve">
+    <value>Size </value>
+  </data>
+  <data name="lblNgaydangquangcao" xml:space="preserve">
+    <value>Date advertisement</value>
+  </data>
+  <data name="lblThemngaydangquangcao" xml:space="preserve">
+    <value>Add advertising publishing date</value>
+  </data>
+  <data name="lblButdanh" xml:space="preserve">
+    <value>Penname</value>
+  </data>
+  <data name="lblHienthi" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="lblSua" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="lblSuatatca" xml:space="preserve">
+    <value>Edit all</value>
+  </data>
+  <data name="lblBaodientu" xml:space="preserve">
+    <value>Online</value>
+  </data>
+  <data name="lblBaoin" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="lblCauhinhquytrinh" xml:space="preserve">
+    <value>Setting workflow for </value>
+  </data>
+  <data name="lblChondoituong" xml:space="preserve">
+    <value>Add objects to workflow </value>
+  </data>
+  <data name="lblChonquytrinh" xml:space="preserve">
+    <value>Select workflow</value>
+  </data>
+  <data name="lblChucnangcha" xml:space="preserve">
+    <value>Parrent menu</value>
+  </data>
+  <data name="lblChuyende" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="lblChuyenmuccha" xml:space="preserve">
+    <value>Parrent category</value>
+  </data>
+  <data name="lblDangsudung" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="lblDuoi" xml:space="preserve">
+    <value>Bottom</value>
+  </data>
+  <data name="lblGiua" xml:space="preserve">
+    <value>Middle</value>
+  </data>
+  <data name="lblHienthimenu" xml:space="preserve">
+    <value>Display on top menu</value>
+  </data>
+  <data name="lblHuythietlap" xml:space="preserve">
+    <value>Reset config</value>
+  </data>
+  <data name="lblLienket" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="lblLuuvitri" xml:space="preserve">
+    <value>Save config</value>
+  </data>
+  <data name="lblMadoituong" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="lblPhai" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="lblSothutu" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="lblSotrang" xml:space="preserve">
+    <value>Total page</value>
+  </data>
+  <data name="lblTendoituong" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="lblTenngonngu" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="lblTentienganh" xml:space="preserve">
+    <value>English name</value>
+  </data>
+  <data name="lblTentiengviet" xml:space="preserve">
+    <value>Vietnamese name</value>
+  </data>
+  <data name="lblThemdoituong" xml:space="preserve">
+    <value>Add new</value>
+  </data>
+  <data name="lblTrai" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="lblTren" xml:space="preserve">
+    <value>Top</value>
+  </data>
+  <data name="lblKichthuocQC" xml:space="preserve">
+    <value>Ad sizes</value>
+  </data>
+  <data name="lblQCBientap" xml:space="preserve">
+    <value>Advertising Editorial</value>
+  </data>
+  <data name="lblQCDagui" xml:space="preserve">
+    <value>Advertisements Sent</value>
+  </data>
+  <data name="lblQCTralai" xml:space="preserve">
+    <value>Advertising Return</value>
+  </data>
+  <data name="lblChonngonngu" xml:space="preserve">
+    <value>Select language</value>
+  </data>
+  <data name="lblEdit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="lblNhaptieudeanh" xml:space="preserve">
+    <value>Enter photo title (*)</value>
+  </data>
+  <data name="msgNhaptieudeanh" xml:space="preserve">
+    <value>Enter photo title</value>
+  </data>
+  <data name="lblGuihoasy" xml:space="preserve">
+    <value>Send designer</value>
+  </data>
+  <data name="lblQCmoi" xml:space="preserve">
+    <value>New ad</value>
+  </data>
+  <data name="lblMasothue" xml:space="preserve">
+    <value>Tax code</value>
+  </data>
+  <data name="lblNguoidaidien" xml:space="preserve">
+    <value>Represented name</value>
+  </data>
+  <data name="lblSotaikhoan" xml:space="preserve">
+    <value>Account number</value>
+  </data>
+  <data name="lblTenkhachhang" xml:space="preserve">
+    <value>Advertisers</value>
+  </data>
+  <data name="lblAnhbientaplai" xml:space="preserve">
+    <value>Photo return editor</value>
+  </data>
+  <data name="lblAnhchoduyet" xml:space="preserve">
+    <value>Photo wait approves</value>
+  </data>
+  <data name="lblAnhchoxuly" xml:space="preserve">
+    <value>Photo wait dealt with</value>
+  </data>
+  <data name="lblAnhdadang" xml:space="preserve">
+    <value>Photo publishing</value>
+  </data>
+  <data name="lblAnhtralai" xml:space="preserve">
+    <value>Photo return</value>
+  </data>
+  <data name="lblBanchuachonngaydangQC" xml:space="preserve">
+    <value>You have not selected dates advertisement</value>
+  </data>
+  <data name="lblCanhbaongaydangQCkhongthuocsobao" xml:space="preserve">
+    <value>Date advertisement does not belong date of publication</value>
+  </data>
+  <data name="lblCanhbaongaydangQCphailonhonngayhientai" xml:space="preserve">
+    <value>Date posted ads must be greater than the current date</value>
+  </data>
+  <data name="lblChonkhachhangQC" xml:space="preserve">
+    <value>Select customers</value>
+  </data>
+  <data name="lblChonkichthuocQC" xml:space="preserve">
+    <value>Select size</value>
+  </data>
+  <data name="lblNhapngaydangQC" xml:space="preserve">
+    <value>dates advertisement</value>
+  </data>
+  <data name="lblNhapnoidung" xml:space="preserve">
+    <value>Import content</value>
+  </data>
+  <data name="lblCham" xml:space="preserve">
+    <value>Mark</value>
+  </data>
+  <data name="lblCongtacvien" xml:space="preserve">
+    <value>CTV/PV</value>
+  </data>
+  <data name="lblNguoicham" xml:space="preserve">
+    <value>Persons royalties</value>
+  </data>
+  <data name="lblThanhtoan" xml:space="preserve">
+    <value>Payment</value>
+  </data>
+  <data name="lblXuatbaocao" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="lblInbienlainhuanbut" xml:space="preserve">
+    <value>Print receipt</value>
+  </data>
+  <data name="lblNhapCMTNDcantim" xml:space="preserve">
+    <value>Enter ID number people looking</value>
+  </data>
+  <data name="lblNguoisudung" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="lblIn" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="lblSoluong" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="lblXembaocao" xml:space="preserve">
+    <value>Preview Report</value>
+  </data>
+  <data name="lblBanphaichontacgiahoacnhapsocmtnd" xml:space="preserve">
+    <value>You must select the name of the author, or enter the number of identity cards to output a payment receipt!</value>
+  </data>
+  <data name="lblNgaythanhtoan" xml:space="preserve">
+    <value>Date of payment</value>
+  </data>
+  <data name="lblNguoithanhtoan" xml:space="preserve">
+    <value>People pay</value>
+  </data>
+  <data name="lblSoCMTND" xml:space="preserve">
+    <value>People ID number</value>
+  </data>
+  <data name="lblLuumatkhau" xml:space="preserve">
+    <value>save the password changes</value>
+  </data>
+  <data name="lblLuuthongtin" xml:space="preserve">
+    <value>Save information</value>
+  </data>
+  <data name="lblMatkhaumoi" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="lblXacnhanmatkhaumoi" xml:space="preserve">
+    <value>Confirm New Password</value>
+  </data>
+  <data name="lblNhomdatontai" xml:space="preserve">
+    <value>group existing</value>
+  </data>
+  <data name="lblType" xml:space="preserve">
+    <value>Types</value>
+  </data>
+  <data name="lblResetmatkhauthanhcong" xml:space="preserve">
+    <value>Reset password succesfull</value>
+  </data>
+  <data name="lblAnh" xml:space="preserve">
+    <value>Photo</value>
+  </data>
+  <data name="lblNgaytao" xml:space="preserve">
+    <value>Date Create</value>
+  </data>
+  <data name="lblAmthanhhinhanh" xml:space="preserve">
+    <value>Sound - Images</value>
+  </data>
+  <data name="lblDstracuu" xml:space="preserve">
+    <value>LIST ACTION LOOKUP</value>
+  </data>
+  <data name="lblLoaitin" xml:space="preserve">
+    <value>Type news</value>
+  </data>
+  <data name="lblLuottruycap" xml:space="preserve">
+    <value>Counter access</value>
+  </data>
+  <data name="lblNgaytracuu" xml:space="preserve">
+    <value>Date lookup</value>
+  </data>
+  <data name="lblPhongsuanh" xml:space="preserve">
+    <value>Photo reportage</value>
+  </data>
+  <data name="lblTimkiemthongtin" xml:space="preserve">
+    <value>SEARCH NEWS</value>
+  </data>
+  <data name="lblTracuu" xml:space="preserve">
+    <value>Look up</value>
+  </data>
+  <data name="lblTomtat" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="lblSatusExpatHCMBientap" xml:space="preserve">
+    <value>Expat HCM is processed</value>
+  </data>
+  <data name="lblSatusExpatHCMTinmoi" xml:space="preserve">
+    <value>Expat HCM pending</value>
+  </data>
+  <data name="lblSatusExpatHCMTralai" xml:space="preserve">
+    <value>Expat HCM return</value>
+  </data>
+  <data name="lblSatusMoreInBientap" xml:space="preserve">
+    <value>More info needed is processed</value>
+  </data>
+  <data name="lblSatusMoreInfoTinmoi" xml:space="preserve">
+    <value>More info needed pending</value>
+  </data>
+  <data name="lblSatusMoreInTralai" xml:space="preserve">
+    <value>More info needed return</value>
+  </data>
+  <data name="lblTinChoDanTrang" xml:space="preserve">
+    <value>Waiting news layout</value>
+  </data>
+  <data name="lblTrangthaihoatdong" xml:space="preserve">
+    <value>Active state</value>
+  </data>
+  <data name="lblCapnhatPhongban" xml:space="preserve">
+    <value>Select/ cancel departments</value>
+  </data>
+  <data name="lbltintieudiem" xml:space="preserve">
+    <value>Highlight</value>
+  </data>
+  <data name="lblDanganh" xml:space="preserve">
+    <value>Upload photo</value>
+  </data>
+  <data name="lblChuyentrang" xml:space="preserve">
+    <value>Go to page</value>
+  </data>
+  <data name="lblTim" xml:space="preserve">
+    <value>Find</value>
+  </data>
+  <data name="titDuyetanhts" xml:space="preserve">
+    <value>Approve Daily Image</value>
+  </data>
+  <data name="titNhapanhts" xml:space="preserve">
+    <value>Input Daily Image</value>
+  </data>
+  <data name="titXbanhts" xml:space="preserve">
+    <value>Publish Daily Image</value>
+  </data>
+  <data name="msgChonanpham" xml:space="preserve">
+    <value>Select newspapers</value>
+  </data>
+  <data name="lblEditads" xml:space="preserve">
+    <value>Advertising edit information</value>
+  </data>
+  <data name="lblNgaybatdau" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="lblNgayketthuc" xml:space="preserve">
+    <value>End date</value>
+  </data>
+  <data name="lblNhapquangcao" xml:space="preserve">
+    <value>Enter Ads</value>
+  </data>
+  <data name="lblQuangcao" xml:space="preserve">
+    <value>Advertising</value>
+  </data>
+  <data name="titDsquangcao" xml:space="preserve">
+    <value>LIST OF ADVERTISING</value>
+  </data>
+  <data name="lblAnhqcvideo" xml:space="preserve">
+    <value>Avatar video ads</value>
+  </data>
+  <data name="lblFileqc" xml:space="preserve">
+    <value>File Ads</value>
+  </data>
+  <data name="lblLinkqc" xml:space="preserve">
+    <value>Ads link</value>
+  </data>
+  <data name="lblVitri" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="lblVitriqc" xml:space="preserve">
+    <value>---Ads position---</value>
+  </data>
+  <data name="lblMotaquangcao" xml:space="preserve">
+    <value>Ads description</value>
+  </data>
+  <data name="lblDiachiurl" xml:space="preserve">
+    <value>URL address</value>
+  </data>
+  <data name="lblNhapUrl" xml:space="preserve">
+    <value>Enter the URL</value>
+  </data>
+  <data name="titCapnhatlienket" xml:space="preserve">
+    <value>UPDATE LINKS</value>
+  </data>
+  <data name="titDslienket" xml:space="preserve">
+    <value>LIST OF LINKS</value>
+  </data>
+</root>

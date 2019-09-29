@@ -1,0 +1,187 @@
+
+
+.MenuBar .Hide
+{
+    visibility: hidden;
+    display: none;
+}
+
+.MenuBar .Show
+{
+    position: absolute;
+    visibility: visible;
+    display: block;
+    z-index: 1000;
+}
+
+*html .MenuBar .Show
+{    
+    z-index: 100;    
+}
+
+.MenuBar .Text
+{
+    font-size: 11px;
+    color: #424243;
+    font-weight: bold;
+    cursor: pointer;
+}
+.MenuBar .Text a
+{
+    font-size: 11px;
+    color: #424243;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration:none;
+}
+.MenuBar .Text a:hover
+{
+    font-size: 11px;
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration:none;
+}
+
+
+.MenuBar .TextActive
+{
+    font-size: 11px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.MenuBar .MenuHover
+{
+    border: solid 1px #aaccf6;
+    background: url(Images/Menu/item-over.gif) repeat-x 0px 0px;
+    height: 21px;
+    cursor: pointer;
+}
+
+/* Menu so xuong */
+.SubMenu
+{
+    border: solid 1px #bcbcbc;
+    background-color: #ffffff;
+    cursor:pointer;
+}
+
+.SubMenu .SubMenuItem
+{
+    z-index: 1;
+}
+
+
+.SubMenu .SubMenuItemOver
+{
+    background-color:#f0f0f0;
+}
+
+
+.SubMenu a.SubMenuItem:link, .SubMenu a.SubMenuItem:visited, .SubMenu a.SubMenuItem:active
+{
+    text-decoration: underline;
+    color: #000000;
+    font-size: 11px;
+    font-family: Verdana;
+    font-weight:bold;
+}
+
+/* Menu so xuong - dc chon*/
+.SubMenu_Active
+{
+    border: solid 1px #1a609e;
+    background-color: #1a609e;
+    color:White;
+    cursor:pointer;
+}
+
+.SubMenu_Active .SubMenuItem
+{
+}
+
+.SubMenu_Active .SubMenuItemOver
+{
+    background-color:#3379b7;
+}
+
+
+.SubMenu_Active .SubMenuItemDesc
+{
+    color: #ffffff;
+}
+
+
+.SubMenu_Active a.SubMenuItem:link, .SubMenu_Active a.SubMenuItem:visited, .SubMenu_Active a.SubMenuItem:active
+{
+    text-decoration: underline;
+    color: #ffffff;
+    font-size: 11px;
+    font-family: Verdana;
+    font-weight:bold;
+}
+
+
+
+/*----------------------------------------------------------------*/
+.MenuLanguage
+{
+}
+
+.MenuLanguage a.StaticMenuItemStyle:link, .MenuLanguage a.StaticMenuItemStyle:visited, .MenuLanguage a.StaticMenuItemStyle:active
+{
+    text-decoration: none;
+    color: #155f9d;
+    font-size: 11px;
+    font-family: Verdana;
+}
+
+.MenuLanguage a.StaticHoverStyle:hover
+{
+    text-decoration: underline;
+    color: Red;
+    font-size: 11px;
+    font-family: Verdana;
+}
+
+.MenuLanguage .DynamicMenuStyle
+{
+    border: solid 1px #cccccc;
+    background-color: White;
+}
+
+.MenuLanguage .DynamicMenuItemStyle
+{
+    padding: 6px;
+}
+
+.MenuLanguage a.DynamicMenuItemStyle:link, .MenuLanguage a.DynamicMenuItemStyle:visited, .MenuLanguage a.DynamicMenuItemStyle:active
+{
+    text-decoration: none;
+    color: #155f9d;
+    font-size: 11px;
+    font-family: Verdana;
+}
+
+.MenuLanguage a.DynamicMenuItemStyle:hover
+{
+    text-decoration: none;
+    color: Red;
+    font-size: 11px;
+    font-family: Verdana;
+}
+.TextAtive {
+color:#FFFFFF;
+cursor:pointer;
+font-size:11px;
+font-weight:bold;
+}
+.cssReportViewer {
+z-index:1;
+}
+
+.cssMenuTables {
+	z-index:1000000;
+}

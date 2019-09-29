@@ -1,0 +1,10 @@
+/* CSS Document */
+@font-face {
+  font-family: 'NiDAKhmerEmpire';
+   src: url('font/NiDAKhmerEmpire.eot');
+   src: local(NiDAKhmerEmpire),
+   url('font/NiDAKhmerEmpire.woff') format('woff'),
+   url('font/NiDAKhmerEmpire.ttf') format('truetype');
+  
+}
+

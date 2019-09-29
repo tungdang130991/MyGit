@@ -1,0 +1,49 @@
+﻿/* ######### CSS for Shade Tabs. Remove if not using ######### */
+
+.shadetabs{list-style-type: none;text-align: left;width:100%;}
+.shadetabs td a{text-decoration: none;position: relative;z-index: 1;margin:0 0;color: #666;display:block;background:transparent url('../../img/bg/bg-t.jpg') no-repeat left top;height:24px;line-height:24px;text-align:center;border-bottom: 1px solid #ccc;font-weight:bold;}
+.shadetabs td a:visited{color: #666;}
+.shadetabs td a:hover{text-decoration: underline;color: #2d2b2b;}
+.shadetabs td a.selected{ /*selected main tab style */position: relative;top: 1px;border: 1px solid #ccc;color:#336699;}
+.shadetabs td a.selected{ /*selected main tab style */border-bottom-color: white;background:#fff none;}
+.shadetabs td a.selected:hover{ /*selected main tab style */text-decoration: none;}
+.tabcontent{display:none;}
+@media print {
+.tabcontent {display:block !important;}
+}
+
+.jcarousel-container {    position: relative;}
+.jcarousel-clip {    z-index: 2;    padding: 0;    margin: 0;    overflow: hidden;    position: relative;}
+.jcarousel-list {    z-index: 1;    overflow: hidden;    position: relative;    top: 0;    left: 0;    margin: 0;    padding: 0;}
+.jcarousel-list li,
+.jcarousel-item {    float: left;    list-style: none;    width: 75px;    height: 75px;}
+.jcarousel-next {    z-index: 3;    display: none;}
+.jcarousel-prev {    z-index: 3;    display: none;}
+
+.jcarousel-skin-tango .jcarousel-container {}
+.jcarousel-skin-tango .jcarousel-container-horizontal {    width: 625px;    padding: 0 20px;}
+.jcarousel-skin-tango .jcarousel-clip-horizontal {    width:  625px;   }
+.jcarousel-skin-tango .jcarousel-item {    width: 114px;  height:auto;text-align:center;  }
+.jcarousel-skin-tango .jcarousel-item-horizontal {    margin-right: 11px;}
+.jcarousel-skin-tango .jcarousel-item-placeholder {    background: #fff;    color: #000;}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-tango .jcarousel-next-horizontal {    position: absolute;    top: 23px;    right: -5px;    width: 32px;    height: 32px;    cursor: pointer;    background: transparent url('../../img/vn/next-horizontal.png') no-repeat 0 0;}
+.jcarousel-skin-tango .jcarousel-next-horizontal:hover {    background-position: -32px 0;}
+.jcarousel-skin-tango .jcarousel-next-horizontal:active {    background-position: -64px 0;}
+
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:active {    cursor: default;    background-position: -96px 0;}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal {    position: absolute;    top: 23px;    left: -5px;    width: 32px;    height: 32px;    cursor: pointer;    background: transparent url('../../img/vn/prev-horizontal.png') no-repeat 0 0;}
+.jcarousel-skin-tango .jcarousel-prev-horizontal:hover {    background-position: -32px 0;}
+.jcarousel-skin-tango .jcarousel-prev-horizontal:active {    background-position: -64px 0;}
+
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:active {    cursor: default;    background-position: -96px 0;}
+
+

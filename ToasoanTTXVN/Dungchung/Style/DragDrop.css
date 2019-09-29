@@ -1,0 +1,97 @@
+﻿body 
+{
+	
+}
+#sortable1
+{
+    list-style-type: none;
+    padding-right: 5px;   
+    padding-left: 5px;
+    padding-bottom: 5px;
+    float: left;
+    width: 96%;
+    /*background-color:#F0F8FF;*/
+    color: #1E90FF;
+    clear:both;
+    min-height: 60px;
+}
+#sortable2{
+    list-style-type: none;
+    padding-right: 5px;   
+    padding-left: 5px;
+    padding-bottom: 5px;
+    float: left;
+    width: 96%;
+    /*background-color:#F0F8FF;*/
+    color: #1E90FF;
+    clear:both;
+    min-height: 60px;
+}
+#sortable1 li
+{
+    /*border-right: #000 1px solid;*/
+    padding-right: 4px;
+    /*border-top: #000 1px solid;*/
+    padding-left: 4px;
+    padding-bottom: 4px;
+    width:100%;
+    float:left;
+    font-size: 12px;
+    /*border-left: #000 1px solid;*/
+    cursor: pointer;
+    border: #f5f5f5 1px;
+    padding-top:4px;
+    /*border-bottom: #000 1px solid;*/
+    font-family: verdana, tahoma, arial;
+    /*background-color: #F0F8FF;*/
+    text-align:center;
+}
+#sortable1 li:hover
+{
+    color:Orange;
+}
+#sortable2 li
+{
+    /*border-right: #000 1px solid;*/
+    padding-right: 4px;
+    /*border-top: #000 1px solid;*/
+    padding-left: 4px;
+    padding-bottom: 4px;
+    width:100%;
+    float:left;
+    font-size: 12px;
+    /*border-left: #000 1px solid;*/
+    cursor: pointer;
+    border: #f5f5f5 1px;
+    padding-top: 4px;
+    /*border-bottom: #000 1px solid;*/
+    font-family: verdana, tahoma, arial;
+    /*background-color: #F0F8FF;*/
+    text-align:center;
+}
+#sortable2 li:hover
+{
+    color:Orange;
+}
+.thaoTac
+{
+    width: 100%; 
+    margin-bottom: 5px;
+    border-left:1px solid #D9D9D9;
+	border-right:1px solid #D9D9D9;
+	border-top:1px solid #D9D9D9;
+	border-bottom:1px solid #D9D9D9;
+}
+.thaoTac th
+{
+    background:transparent url(../Images/bgMenu.jpg) repeat-x scroll left top; 
+    border-left:1px solid #D9D9D9;
+	border-right:1px solid #D9D9D9;
+	border-top:1px solid #D9D9D9;
+	border-bottom:1px solid #D9D9D9;
+	font-family:Arial;
+	font-weight:bold;
+	height:27px;
+	white-space:nowrap;
+	color:White;   
+}

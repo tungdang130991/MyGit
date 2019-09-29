@@ -1,0 +1,11 @@
+@font-face {
+	font-family: saysettha OT;
+	src: url("saysettha_ot.eot");
+}
+* {
+	/*font-family: saysettha OT;*/
+	font-family: saysettha Unicode;
+}
+body {
+	font-family: saysettha OT;
+}

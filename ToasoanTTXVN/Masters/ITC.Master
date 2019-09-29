@@ -1,0 +1,147 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ITC.master.cs" Inherits="ToasoanTTXVN.Masters.ITC" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Import Namespace="HPCComponents" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>HỆ THỐNG QUẢN LÝ TÒA SOẠN</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="Stylesheet" href="../Dungchung/Style/style.css" />
+    <link rel="Stylesheet" type="text/css" href="../Dungchung/Scripts/jsUpload/CSS/uploadify_small.css" />
+    <link href="../Dungchung/Style/jquery.autocomplete.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../Dungchung/Style/HoverImage.css" />
+    <link type="text/css" rel="Stylesheet" href="../App_Themes/Default/style.css" />
+    <link type="text/css" rel="Stylesheet" href="../Dungchung/Scripts/JsDatePicker/Jquery-ui-calender.css" />
+    <link href="../Dungchung/Style/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="../Dungchung/Scripts/UploadMulti/uploadify.css" rel="stylesheet" type="text/css" />
+
+    <script language="javascript" type="text/javascript" src="../Dungchung/Scripts/FlashDetection.js"></script>
+
+    <script language="javascript" type="text/javascript" src="../Dungchung/Scripts/Lib.js"></script>
+
+    <script language="javascript" type="text/javascript" src="../Dungchung/Scripts/check.js"></script>
+
+    <script type="text/javascript" src='../Dungchung/Scripts/AutoFormatDatTime.js'></script>
+
+    <script src="../Dungchung/jscolor/jscolor.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="../Chatting/js/jquery.tools.min.js"></script>
+
+    <script type="text/javascript" src="../Dungchung/Scripts/JsDatePicker/jquery-ui.min.js"></script>
+
+    <script src="../Dungchung/Scripts/UploadMulti/jquery.uploadify-3.1.js" type="text/javascript"></script>
+
+    <script language="javascript" type="text/javascript" src="../Dungchung/Scripts/JsAutoload/jquery.autocomplete.min.js"></script>
+
+    <script type="text/javascript" src='../Dungchung/Scripts/jwplayer/jwplayer.js'></script>
+
+    <script language="javascript" type="text/javascript">
+        jwplayer.key = "4cFrCsBdTSWp87XH5zQW4VsWi+mFFzQIIqiC4kpnEoU=";
+        var pagesite = 'http://localhost/cmsvnnews/';
+    </script>
+
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function() {
+            if (pluginlist.indexOf("Flash") != -1) {
+
+                $('#linkdownloadflash').html('');
+            }
+            else
+                $('#linkdownloadflash').html('Cài đặt adobe_flash_player');
+
+        });
+    </script>
+
+</head>
+<body onclick="BodyClick();" style="margin: 0 0 0 0; position: relative" runat="server"
+    id="TSBI">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" AsyncPostBackTimeout="360000"
+        EnablePageMethods="true" ScriptMode="Release">
+    </asp:ScriptManager>
+    <div style="text-align: center; width: 100%; float: left">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td style="vertical-align: top; text-align: left; height: 65px; width: 50%;">
+                    <img alt="" src="<%=Global.ApplicationPath %>/Dungchung/Images/Logo.png" style="border: 0px;
+                        height: 60px; margin-top: 4px; margin-bottom: 6px; margin-left: 10px" />
+                </td>
+                <td style="width: 50%; text-align: right; height: 65px">
+                    <table cellspacing="0" width="100%">
+                        <tr>
+                            <td style="width: 100%; text-align: right; margin: 10px; padding: 5px 0 0 0; color: #005110;
+                                font-weight: bold" class="manager_system">
+                                <div style="float: left; width: 100%">
+                                    <div style="float: right; width: auto; padding-right: 10px">
+                                        <asp:LinkButton runat="server" CssClass="SiteLinkLogout" CausesValidation="false"
+                                            ID="lb_Exit" OnClick="lb_Exit_Click" Text="[ Thoát hệ thống ]"></asp:LinkButton></div>
+                                    <div style="float: right; width: auto; padding-right: 10px">
+                                        <asp:LinkButton ID="lbtVietnam" CausesValidation="false" CommandArgument="vi" OnClick="RequestLanguageChange_Click"
+                                            runat="server">Vietnam</asp:LinkButton>
+                                        <asp:LinkButton ID="lbtEnglish" CausesValidation="false" CommandArgument="en" OnClick="RequestLanguageChange_Click"
+                                            runat="server">English</asp:LinkButton>
+                                    </div>
+                                    <div style="float: right; width: auto; padding-right: 10px">
+                                        <a href="../Hethong/Edit_ThongTinCaNhan.aspx?key=2">
+                                            <%=lblDoimatkhau%></a>
+                                    </div>
+                                    <div style="float: right; width: auto; padding-right: 10px">
+                                        <%=lblXinChao%>: <a href="../Hethong/Edit_ThongTinCaNhan.aspx?key=1">
+                                            <asp:Literal runat="server" ID="litUserName"></asp:Literal></a>
+                                    </div>
+                                    <div style="float: left; width: 20%; text-align: right; padding-right: 3px; font-family: Arial;
+                                        font-size: 14px; font-weight: bold">
+                                        <a id="linkdownloadflash" href="<%=Global.TinPath%>/adobe_flash_player.exe" target="_blank">
+                                        </a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+            <asp:Literal runat="server" ID="litMenu"></asp:Literal>
+        </table>
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td style="width: 100%; vertical-align: top;">
+                    <table border="0" cellpadding="1" cellspacing="1" width="100%">
+                        <tr style="height: 30px">
+                            <td style="width: 2%; text-align: right">
+                                <asp:Literal runat="server" ID="litImageIcon"></asp:Literal>
+                            </td>
+                            <td style="text-align: left; width: 78%" class="TitleHeader">
+                                <asp:Literal runat="server" ID="litTitleMenuName"></asp:Literal>
+                            </td>
+                            <td style="text-align: right; padding-right: 2px; line-height: 20px">
+                            </td>
+                            <td style="text-align: right; padding-right: 2px; line-height: 20px">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: #ffffff;" colspan="8">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 100%; vertical-align: top">
+                    <table border="0" cellpadding="1" cellspacing="1" width="100%">
+                        <tr>
+                            <td style="text-align: center; background-color: #fff; vertical-align: top; height: 390px;
+                                width: 100%">
+                                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

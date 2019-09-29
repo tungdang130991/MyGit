@@ -1,0 +1,48 @@
+/* CSS Document */
+@font-face {
+  font-family: 'UTM Avo';
+  font-style: normal;
+  font-weight: 400;
+  src: url('font/UTM Avo.eot');
+  src: local('UTM Avo'), 
+  url('font/UTM Avo.woff') format('woff'),
+  url('font/UTM Avo.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'UTM Avo';
+  font-style: normal;
+  font-weight: 700;
+  src: url('font/UTM AvoBold.eot');
+  src: local('UTM AvoBold'),
+  url('font/UTM AvoBold.woff') format('woff'),
+  url('font/UTM AvoBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'UTM Avo';
+  font-style: italic;
+  font-weight: 400;
+  src: url('font/UTM AvoBold_Italic.eot');
+  src: local('UTM AvoBold_Italic'), 
+  url('font/UTM AvoBold_Italic.woff') format('woff'),
+  url('font/UTM AvoBold_Italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: italic;
+  font-weight: 700;
+   src: url('font/UTM AvoItalic.eot');
+  src: local('UTM AvoItalic'),
+  url('font/UTM AvoItalic.woff') format('woff'),
+  url('font/UTM AvoItalic.ttf') format('truetype');
+}
+
+/* CSS Document */
+@font-face {
+  font-family: 'NiDAKhmerEmpire';
+   src: url('font/NiDAKhmerEmpire.eot');
+   src: local(NiDAKhmerEmpire),
+   url('font/NiDAKhmerEmpire.woff') format('woff'),
+   url('font/NiDAKhmerEmpire.ttf') format('truetype');
+  
+}
+
